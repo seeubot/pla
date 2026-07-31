@@ -1,6 +1,30 @@
+import crypto from 'crypto';
+
 export default function handler(req, res) {
-  // Check API key in header
-  if (req.headers['x-api-key'] !== process.env.API_SECRET) {
+  const { token, expires } = req.query;
+  const SECRET = process.env.API_SECRET;
+
+  // Check if token and expires are provided in URL
+  if (token && expires) {
+    // Verify token
+    const expectedToken = crypto
+      .createHmac('sha256', SECRET)
+      .update(`playlist:${expires}`)
+      .digest('hex');
+
+    if (token !== expectedToken) {
+      return res.status(403).send('Invalid token');
+    }
+
+    if (Date.now() > parseInt(expires)) {
+      return res.status(403).send('Token expired');
+    }
+  }
+  // Check API key header (for direct API access)
+  else if (req.headers['x-api-key'] === SECRET) {
+    // Valid API key
+  }
+  else {
     return res.status(404).send('Not found');
   }
 

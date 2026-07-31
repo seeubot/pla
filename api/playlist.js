@@ -3,10 +3,10 @@ import crypto from 'crypto';
 export default function handler(req, res) {
   const { token, expires } = req.query;
   const SECRET = process.env.API_SECRET;
+  const userAgent = req.headers['user-agent'] || '';
 
   // Check if token and expires are provided in URL
   if (token && expires) {
-    // Verify token
     const expectedToken = crypto
       .createHmac('sha256', SECRET)
       .update(`playlist:${expires}`)
@@ -20,12 +20,19 @@ export default function handler(req, res) {
       return res.status(403).send('Token expired');
     }
   }
-  // Check API key header (for direct API access)
   else if (req.headers['x-api-key'] === SECRET) {
     // Valid API key
   }
   else {
     return res.status(404).send('Not found');
+  }
+
+  // Block browsers, allow IPTV players
+  const browserKeywords = ['Mozilla', 'Chrome', 'Safari', 'Firefox', 'Edge', 'Opera'];
+  const isBrowser = browserKeywords.some(keyword => userAgent.includes(keyword));
+  
+  if (isBrowser) {
+    return res.status(403).send('Access denied. Use this URL in IPTV player only.');
   }
 
   const playlist = `#EXTM3U
@@ -66,6 +73,5 @@ https://livestream.sunnxt.com/1893b9ab790747cb80a584873a608dcb/KochuTVB_IN_index
 https://livestream.sunnxt.com/ed4c67ad957644b69361651d9101/ChintuTVB_IN_index.mpd`;
 
   res.setHeader('Content-Type', 'audio/x-mpegurl');
-  res.setHeader('Access-Control-Allow-Origin', '*');
   res.status(200).send(playlist);
 }

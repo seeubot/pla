@@ -3,37 +3,13 @@
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        }
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
       ]
     },
     {
       "source": "/api/playlist",
       "headers": [
-        {
-          "key": "Content-Type",
-          "value": "audio/x-mpegurl"
-        }
-      ]
-    },
-    {
-      "source": "/api/channel",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        }
-      ]
-    },
-    {
-      "source": "/api/generate",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        }
+        { "key": "Content-Type", "value": "audio/x-mpegurl" }
       ]
     }
   ]

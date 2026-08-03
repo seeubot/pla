@@ -5,9 +5,9 @@
     "language": "Hindi",
     "logo": "https://sund-images.sunnxt.com/194389/640x360_SunNeoHD_194389_5edd34c1-4574-452e-a613-2f4140cd636f.jpg",
     "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/248c92b73514435686fd72ba325d4008/SunNeoHDB_IN_index.mpd",
+    "url": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
     "drm": "clearkey",
-    "license": "09ffaaff477d490abb4516b7e0711d35:759cc157a993e8a76ff4d675e34b5400"
+    "license": ""
   },
   {
     "id": "suntv",
@@ -382,7 +382,7 @@
     "language": "Hindi",
     "logo": "https://i.imgur.com/Q8ajPij.png",
     "group": "News",
-    "url": "http://103.253.18.58:8000/play/a00u",
+    "url": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
     "drm": "",
     "license": ""
   }

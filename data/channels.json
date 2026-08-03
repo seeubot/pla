@@ -15,19 +15,20 @@
     "language": "Tamil",
     "logo": "https://sund-images.sunnxt.com/194408/640x360_SunTV_194408_2617a80e-4f90-42fa-b13a-acc8d7c97f9e.jpg",
     "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/05b5df1221764bca9867054c5e65ee62/SunTVB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "6752015acf084572a08dfe21796f8b45:ff823ddbe5625c35d3e93f0ed4520115"
-  },
-  {
-    "id": "suntvhd",
-    "name": "Sun TV HD",
-    "language": "Tamil",
-    "logo": "https://sund-images.sunnxt.com/194403/640x360_SunTVHD_194403_522c701c-4770-4934-a6d3-47045b0d4fa5.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/19ee29194c4d4fc286c3e697362e60cd/SunTVHDB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "3891557f1cb14dedb7545bf52499d748:fb662f742e5f5e0c61a7c1c66d2b019a"
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/05b5df1221764bca9867054c5e65ee62/SunTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "6752015acf084572a08dfe21796f8b45:ff823ddbe5625c35d3e93f0ed4520115"
+      },
+      {
+        "name": "HD",
+        "url": "https://livestream.sunnxt.com/19ee29194c4d4fc286c3e697362e60cd/SunTVHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "3891557f1cb14dedb7545bf52499d748:fb662f742e5f5e0c61a7c1c66d2b019a"
+      }
+    ]
   },
   {
     "id": "sunmarathi",
@@ -40,24 +41,25 @@
     "license": "5ea90a1f3b1e4a0a9b72c8e0f4a9bf31:30899fda5ca4dfb5a4535ce10c4d7341"
   },
   {
-    "id": "sunmusichd",
-    "name": "Sun Music HD",
-    "language": "Tamil",
-    "logo": "https://sund-images.sunnxt.com/194406/640x360_SunMusicHD_194406_87e8d029-f695-477c-9ace-a3c2cbe15004.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/d434796d90fa4dc9b7ecfacedbe683f1/SunMusicHDB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "b5a2c6d13b9748de9ceebc0a8adc8af3:e806fec1bf1c8a844216118c94bad020"
-  },
-  {
     "id": "sunmusic",
     "name": "Sun Music",
     "language": "Tamil",
     "logo": "https://sund-images.sunnxt.com/194410/640x360_SunMusic_194410_d4d08876-9d23-432c-aab4-b5c70c58aaac.jpg",
     "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/585bb66e95c84ccea3f828c96b3567b5/SunMusicB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "21ddc14c4da94c079d4f4c343ecdcd80:5701bee4ee9b625d0c8ed7de032a7478"
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/585bb66e95c84ccea3f828c96b3567b5/SunMusicB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "21ddc14c4da94c079d4f4c343ecdcd80:5701bee4ee9b625d0c8ed7de032a7478"
+      },
+      {
+        "name": "HD",
+        "url": "https://livestream.sunnxt.com/d434796d90fa4dc9b7ecfacedbe683f1/SunMusicHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "b5a2c6d13b9748de9ceebc0a8adc8af3:e806fec1bf1c8a844216118c94bad020"
+      }
+    ]
   },
   {
     "id": "sunlife",
@@ -85,9 +87,9 @@
     "language": "Tamil",
     "logo": "https://sund-images.sunnxt.com/194404/640x360_SunNews_194404_0af09ceb-cb6f-48e6-9f5c-395749f0fcee.jpg",
     "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/491c99fb6d0c49e88e6349170d890a2f/SunNewsB_IN_index.mpd",
+    "url": "https://livestream3.sunnxt.com/491c99fb6d0c49e88e6349170d890a2f/SunNewsB_IN_index.mpd",
     "drm": "clearkey",
-    "license": "4df8f920386e4346ba6b7d7ae935d668:c5fcaa8df5663365d938a50987f71b84"
+    "license": "https://sony-token.vercel.app/api/results.php?keyid=4df8f920386e4346ba6b7d7ae935d668&key=c5fcaa8df5663365d938a50987f71b84"
   },
   {
     "id": "ktv",
@@ -95,39 +97,41 @@
     "language": "Tamil",
     "logo": "https://sund-images.sunnxt.com/194409/640x360_KTV_194409_91b39445-b996-4e46-bafa-b78548e4da2e.jpg",
     "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/6ae70edd4c1440379f5311e8fbddc7c1/KTVB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "426117d115b04497b0b0d425e8095184:aa751ae8a41ac6f87141734163ffe3b2"
-  },
-  {
-    "id": "ktvhd",
-    "name": "KTV HD",
-    "language": "Tamil",
-    "logo": "https://sund-images.sunnxt.com/194405/640x360_KTVHD_194405_3c6880f0-468e-48f4-b09a-89fd5fed775d.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/61477b4c8d8d45d5a49e044cc1dffc60/KTVHDB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "351e547391bb45cbac66d2cb9ec0c294:3bd646753f4903eee3b404646c7819d3"
-  },
-  {
-    "id": "suryahd",
-    "name": "Surya HD",
-    "language": "Malayalam",
-    "logo": "https://sund-images.sunnxt.com/194397/640x360_SuryaTVHD_194397_7b54e231-bbb9-48d2-8aae-35a5886deed3.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "eae838ccd75d4a1fbff6fd7dd1c97780:8259ce0c112725a4d2c94d154207425f"
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/6ae70edd4c1440379f5311e8fbddc7c1/KTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=426117d115b04497b0b0d425e8095184&key=aa751ae8a41ac6f87141734163ffe3b2"
+      },
+      {
+        "name": "HD",
+        "url": "https://livestream.sunnxt.com/61477b4c8d8d45d5a49e044cc1dffc60/KTVHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=351e547391bb45cbac66d2cb9ec0c294&key=3bd646753f4903eee3b404646c7819d3"
+      }
+    ]
   },
   {
     "id": "surya",
-    "name": "Surya",
+    "name": "Surya TV",
     "language": "Malayalam",
     "logo": "https://sund-images.sunnxt.com/194398/640x360_SuryaTV_194398_45a56617-7aa9-4ced-a1c8-82b80adb83a7.jpg",
     "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "56e1f5b5b72e4e45a98b6f287c265ab9:6dee8663e63cc8f8dda8478b8b2f3b71"
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "56e1f5b5b72e4e45a98b6f287c265ab9:6dee8663e63cc8f8dda8478b8b2f3b71"
+      },
+      {
+        "name": "HD",
+        "url": "https://livestream.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "eae838ccd75d4a1fbff6fd7dd1c97780:8259ce0c112725a4d2c94d154207425f"
+      }
+    ]
   },
   {
     "id": "suryamovies",
@@ -160,24 +164,25 @@
     "license": "11563b00a46b43f2a0f80ecf42a4fb77:9bad28ad6f23dbb917c63ee680f66a1f"
   },
   {
-    "id": "udayahd",
-    "name": "Udaya HD",
-    "language": "Kannada",
-    "logo": "https://sund-images.sunnxt.com/194399/640x360_UdayaTVHD_194399_728eed6e-6e9e-469c-8ad4-b9d1ef48ca8c.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/a8d28f18944c4946ad7133938860e7cf/UdayaTVHDB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "91b5f2d0205c4527b7aa3e41f35e1e7f:66ddb1a017753f966e20442ab2f91f18"
-  },
-  {
     "id": "udaya",
-    "name": "Udaya",
+    "name": "Udaya TV",
     "language": "Kannada",
     "logo": "https://sund-images.sunnxt.com/193239/640x360_TestChannel_193239_e9155a54-81ab-49a1-9b95-0cd81b234dc0.jpg",
     "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/e2f36b5d0be74780a041a8f5b65bc7e6/UdayaTVB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "3084683c80234b6bbf69abfd5bb258a0:4ae6b547e5c8f51329a12d7953ee4c72"
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/e2f36b5d0be74780a041a8f5b65bc7e6/UdayaTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "3084683c80234b6bbf69abfd5bb258a0:4ae6b547e5c8f51329a12d7953ee4c72"
+      },
+      {
+        "name": "HD",
+        "url": "https://livestream.sunnxt.com/a8d28f18944c4946ad7133938860e7cf/UdayaTVHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "91b5f2d0205c4527b7aa3e41f35e1e7f:66ddb1a017753f966e20442ab2f91f18"
+      }
+    ]
   },
   {
     "id": "udayamovies",
@@ -210,34 +215,25 @@
     "license": "71329783aeb74e6e9e1014fb9e4c30f4:1e025a9ed7e50fa35b8de2c96cccdd6b"
   },
   {
-    "id": "geminitv",
+    "id": "gemini",
     "name": "Gemini TV",
     "language": "Telugu",
     "logo": "https://sund-images.sunnxt.com/194396/640x360_GeminiTV_194396_b5217fee-8105-4d55-bdb6-f282715761d1.jpg",
     "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/a1a61fa1811c4d20a5c2d5e14cdc0cd2/GeminiTVB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "2ec6fa5b77ff4223a376c2b98032fbf8:afe96f602fd6abedcd9c2c8cdf799afd"
-  },
-  {
-    "id": "geminihd",
-    "name": "Gemini HD",
-    "language": "Telugu",
-    "logo": "https://sund-images.sunnxt.com/194392/640x360_GeminiTVHD_194392_f0f60f9d-f692-4ab4-b335-cb971893af2f.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/e778d9c98488494b9c9b38f9c48b63ec/GeminiTVHDB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "880dc94460af4197bbbf43a176fb3a95:0beb7012ffd133360889d5d56e20de4d"
-  },
-  {
-    "id": "geminimovieshd",
-    "name": "Gemini Movies HD",
-    "language": "Telugu",
-    "logo": "https://sund-images.sunnxt.com/192537/640x360_GeminiMoviesHD_192537_abeec905-1e11-4abf-98fd-16d62fce60c8.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/ec0d4961a002442295f91efc9d675c9d/GeminiMoviesHDB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "0c37231880034787bce9fd3607aa09ea:e063bb30351dac572bac24ed43d304b2"
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/a1a61fa1811c4d20a5c2d5e14cdc0cd2/GeminiTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "2ec6fa5b77ff4223a376c2b98032fbf8:afe96f602fd6abedcd9c2c8cdf799afd"
+      },
+      {
+        "name": "HD",
+        "url": "https://livestream.sunnxt.com/e778d9c98488494b9c9b38f9c48b63ec/GeminiTVHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "880dc94460af4197bbbf43a176fb3a95:0beb7012ffd133360889d5d56e20de4d"
+      }
+    ]
   },
   {
     "id": "geminimovies",
@@ -245,19 +241,20 @@
     "language": "Telugu",
     "logo": "https://sund-images.sunnxt.com/194384/640x360_GeminiMovies_194384_bc1cee7f-1f8a-4b8e-83ea-da41279c9d40.jpg",
     "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/6a59979ff0044fd3b6e0cb85d6f44432/GeminiMoviesB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "0c37231880034787bce9fd3607aa09ea:e063bb30351dac572bac24ed43d304b2"
-  },
-  {
-    "id": "geminimusichd",
-    "name": "Gemini Music HD",
-    "language": "Telugu",
-    "logo": "https://sund-images.sunnxt.com/194393/640x360_GeminiMusicHD_194393_dbfc3b93-0581-4d7c-985b-c160e0031a73.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/6a6520e446604c6e9840e5bf3a3a7d95/GeminiMusicHDB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "76230567f3c04513a7e5d1249ab65983:4ee6dc9a99d894dc41b0878d6ea22790"
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/6a59979ff0044fd3b6e0cb85d6f44432/GeminiMoviesB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "0c37231880034787bce9fd3607aa09ea:e063bb30351dac572bac24ed43d304b2"
+      },
+      {
+        "name": "HD",
+        "url": "https://livestream.sunnxt.com/ec0d4961a002442295f91efc9d675c9d/GeminiMoviesHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "0c37231880034787bce9fd3607aa09ea:e063bb30351dac572bac24ed43d304b2"
+      }
+    ]
   },
   {
     "id": "geminimusic",
@@ -265,9 +262,20 @@
     "language": "Telugu",
     "logo": "https://sund-images.sunnxt.com/194410/640x360_SunMusic_194410_d4d08876-9d23-432c-aab4-b5c70c58aaac.jpg",
     "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/52b94f70c6e64692b2497f5023b629cd/GeminiMusicB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "0faa2e9469fc45fdaf1728333351ec71:ffcf9dee6ede62bd8740dacfaa0c1e59"
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/52b94f70c6e64692b2497f5023b629cd/GeminiMusicB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "0faa2e9469fc45fdaf1728333351ec71:ffcf9dee6ede62bd8740dacfaa0c1e59"
+      },
+      {
+        "name": "HD",
+        "url": "https://livestream.sunnxt.com/6a6520e446604c6e9840e5bf3a3a7d95/GeminiMusicHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "76230567f3c04513a7e5d1249ab65983:4ee6dc9a99d894dc41b0878d6ea22790"
+      }
+    ]
   },
   {
     "id": "geminicomedy",
@@ -321,7 +329,7 @@
   },
   {
     "id": "kochutv",
-    "name": "Kochu",
+    "name": "Kochu TV",
     "language": "Malayalam",
     "logo": "https://sund-images.sunnxt.com/194348/960x540_KochuTV_194348_9777cbfd-685b-4e06-a7cc-f2902c1874e8.jpg",
     "group": "SunNxt",

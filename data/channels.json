@@ -87,9 +87,20 @@
     "language": "Tamil",
     "logo": "https://sund-images.sunnxt.com/194404/640x360_SunNews_194404_0af09ceb-cb6f-48e6-9f5c-395749f0fcee.jpg",
     "group": "SunNxt",
-    "url": "https://livestream3.sunnxt.com/491c99fb6d0c49e88e6349170d890a2f/SunNewsB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "https://sony-token.vercel.app/api/results.php?keyid=4df8f920386e4346ba6b7d7ae935d668&key=c5fcaa8df5663365d938a50987f71b84"
+    "servers": [
+      {
+        "name": "SD (Token)",
+        "url": "https://livestream3.sunnxt.com/491c99fb6d0c49e88e6349170d890a2f/SunNewsB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=4df8f920386e4346ba6b7d7ae935d668&key=c5fcaa8df5663365d938a50987f71b84"
+      },
+      {
+        "name": "SD (Direct)",
+        "url": "https://livestream3.sunnxt.com/491c99fb6d0c49e88e6349170d890a2f/SunNewsB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "4df8f920386e4346ba6b7d7ae935d668:c5fcaa8df5663365d938a50987f71b84"
+      }
+    ]
   },
   {
     "id": "ktv",
@@ -99,16 +110,28 @@
     "group": "SunNxt",
     "servers": [
       {
-        "name": "SD",
+        "name": "SD (Token)",
         "url": "https://livestream.sunnxt.com/6ae70edd4c1440379f5311e8fbddc7c1/KTVB_IN_index.mpd",
         "drm": "clearkey",
         "license": "https://sony-token.vercel.app/api/results.php?keyid=426117d115b04497b0b0d425e8095184&key=aa751ae8a41ac6f87141734163ffe3b2"
       },
       {
-        "name": "HD",
+        "name": "HD (Token)",
         "url": "https://livestream.sunnxt.com/61477b4c8d8d45d5a49e044cc1dffc60/KTVHDB_IN_index.mpd",
         "drm": "clearkey",
         "license": "https://sony-token.vercel.app/api/results.php?keyid=351e547391bb45cbac66d2cb9ec0c294&key=3bd646753f4903eee3b404646c7819d3"
+      },
+      {
+        "name": "SD (Direct)",
+        "url": "https://livestream.sunnxt.com/6ae70edd4c1440379f5311e8fbddc7c1/KTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "426117d115b04497b0b0d425e8095184:aa751ae8a41ac6f87141734163ffe3b2"
+      },
+      {
+        "name": "HD (Direct)",
+        "url": "https://livestream.sunnxt.com/61477b4c8d8d45d5a49e044cc1dffc60/KTVHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "351e547391bb45cbac66d2cb9ec0c294:3bd646753f4903eee3b404646c7819d3"
       }
     ]
   },

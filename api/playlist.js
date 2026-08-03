@@ -30,16 +30,14 @@ export default function handler(req, res) {
 
   let playlist = '#EXTM3U\n';
   channels.forEach(ch => {
-    // Check if channel has servers array
     if (ch.servers && ch.servers.length > 0) {
       ch.servers.forEach(server => {
-        playlist += `#EXTINF:-1 tvg-language="${ch.language}" tvg-logo="${ch.logo}" group-title="${ch.group}",${ch.name} (${server.name})\n`;
+        playlist += `#EXTINF:-1 tvg-language="${ch.language}" tvg-logo="${ch.logo}" group-title="${ch.group}" tvg-name="${ch.name}" server-name="${server.name}",${ch.name}\n`;
         playlist += `#KODIPROP:inputstream.adaptive.license_type=${server.drm || ''}\n`;
         playlist += `#KODIPROP:inputstream.adaptive.license_key=${server.license || ''}\n`;
         playlist += `${server.url}\n`;
       });
     } else if (ch.url) {
-      // Single URL channel
       playlist += `#EXTINF:-1 tvg-language="${ch.language}" tvg-logo="${ch.logo}" group-title="${ch.group}",${ch.name}\n`;
       playlist += `#KODIPROP:inputstream.adaptive.license_type=${ch.drm || ''}\n`;
       playlist += `#KODIPROP:inputstream.adaptive.license_key=${ch.license || ''}\n`;

@@ -62,6 +62,16 @@
     ]
   },
   {
+    "id": "zeetelugu",
+    "name": "Zee Telugu",
+    "language": "Telugu",
+    "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/6vNzRaRK.png",
+    "group": "ZEE5",
+    "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeekannada/default/manifest.mpd",
+    "drm": "clearkey",
+    "license": "https://sony-token.vercel.app/api/results.php?keyid=50e714b65ead453cbfab9b20bed5c79d&key=bc08e108b9ee4f65b99cb9dad9532f3f"
+},
+  {
     "id": "sunlife",
     "name": "Sun Life",
     "language": "Tamil",

@@ -13,5 +13,71 @@
         "license": ""
       }
     ]
+  },
+  {
+    "id": "zee_telugu",
+    "name": "Zee Telugu",
+    "language": "",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeTelugu.png",
+    "group": "Telugu",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://jiotvmblive.cdn.jio.com/bpk-tv/ZeeTelugu_MOB/WDVLive/index.mpd|User-Agent=Droovy&Cookie=__hdnea__=st=1785837640~exp=1785859240~acl=/*~hmac=d5e50f111c638aadbf17863c7dea2915cf8fb705723790b0a018257fd59ab409",
+        "drm": "clearkey",
+        "license": "fc160005672554dab9882d0092e0635d:efada6d2baa8b99416f6431e0b0dc19d"
+      },
+      {
+        "name": "HD",
+        "url": "https://jiotvmblive.cdn.jio.com/bpk-tv/ZeeTeluguHD_MOB/WDVLive/index.mpd|User-Agent=Droovy&Cookie=__hdnea__=st=1785837640~exp=1785859240~acl=/*~hmac=d5e50f111c638aadbf17863c7dea2915cf8fb705723790b0a018257fd59ab409",
+        "drm": "clearkey",
+        "license": "2b4d311b26fc558b9374e36156b42b0a:dd0545885892d99fa42c120198faaa94"
+      },
+      {
+        "name": "SD",
+        "url": "https://vortexsu.azmodz.in/vortextv/serve/proxy/zee5.php?id=0-9-9z5383485&u=Stream-star",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "HD",
+        "url": "https://vortexsu.azmodz.in/vortextv/serve/proxy/zee5.php?id=0-9-zeetelugu&u=Stream-star",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "zee_tamil",
+    "name": "Zee Tamil",
+    "language": "",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeTamil.png",
+    "group": "Tamil",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://jiotvmblive.cdn.jio.com/bpk-tv/ZeeTamil_MOB/WDVLive/index.mpd|User-Agent=Droovy&Cookie=__hdnea__=st=1785837640~exp=1785859240~acl=/*~hmac=d5e50f111c638aadbf17863c7dea2915cf8fb705723790b0a018257fd59ab409",
+        "drm": "clearkey",
+        "license": "5036572721315d12aaf769bb142f43fe:86fefa8b4f86639d644f03f7bccdc882"
+      },
+      {
+        "name": "HD",
+        "url": "https://jiotvmblive.cdn.jio.com/bpk-tv/ZeeTamilHD_MOB/WDVLive/index.mpd|User-Agent=Droovy&Cookie=__hdnea__=st=1785837640~exp=1785859240~acl=/*~hmac=d5e50f111c638aadbf17863c7dea2915cf8fb705723790b0a018257fd59ab409",
+        "drm": "clearkey",
+        "license": "e9dd4aa4accd53188659c4a7b45bd8c4:920ff1a99835cfeb26d4c0db04ee58bd"
+      },
+      {
+        "name": "SD",
+        "url": "https://vortexsu.azmodz.in/vortextv/serve/proxy/zee5.php?id=0-9-9z5383487&u=Stream-star",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "HD",
+        "url": "https://vortexsu.azmodz.in/vortextv/serve/proxy/zee5.php?id=0-9-zeetamil&u=Stream-star",
+        "drm": "",
+        "license": ""
+      }
+    ]
   }
 ]

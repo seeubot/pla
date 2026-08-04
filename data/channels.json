@@ -15,6 +15,27 @@
     ]
   },
   {
+    "id": "willow_cricket",
+    "name": "Willow Cricket",
+    "language": "English",
+    "logo": "https://files.catbox.moe/jyj8gg.jpg",
+    "group": "Sports",
+    "servers": [
+        {
+            "name": "Server 1",
+            "url": "https://tvsen5.aynaott.com/willowhd/index.m3u8",
+            "drm": "",
+            "license": ""
+        },
+        {
+            "name": "Server 2",
+            "url": "https://amg01269-amg01269c1-sportstribal-emea-5204.playouts.now.amagi.tv/ts-eu-w1-n2/playlist/amg01269-willowtvfast-willowplus-sportstribalemea/playlist.m3u8",
+            "drm": "",
+            "license": ""
+        }
+    ]
+  },
+  {
     "id": "zee_tv",
     "name": "Zee TV",
     "language": "",

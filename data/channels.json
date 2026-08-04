@@ -1,399 +1,6059 @@
 [
   {
-    "id": "sunneohd",
-    "name": "Sun Neo HD",
-    "language": "Hindi",
-    "logo": "https://sund-images.sunnxt.com/194389/640x360_SunNeoHD_194389_5edd34c1-4574-452e-a613-2f4140cd636f.jpg",
-    "group": "SunNxt",
-    "url": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
-    "drm": "clearkey",
-    "license": ""
-  },
-  {
-    "id": "suntv",
-    "name": "Sun TV",
-    "language": "Tamil",
-    "logo": "https://sund-images.sunnxt.com/194408/640x360_SunTV_194408_2617a80e-4f90-42fa-b13a-acc8d7c97f9e.jpg",
-    "group": "SunNxt",
+    "id": "welcome_to_playz_tv",
+    "name": "Welcome to PlayZ TV",
+    "language": "",
+    "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyniKyW9pUz1OKx5bgzLASwGVSuP0e7hX9FxVMTJMHxhu8X0tpucgSplBZgM8pCYrJJH0P2_dTC1-wzp4mMUU4sKnOzghGPCwWdbYOOa4jTyhpr7ydNj-UK-bc56IMsk2H3WZJ-SzSZIk0dTpyABCFR2_zjC2_c86W1pv7odFBT_Y-hyJs62g-3zCJkPGd/s1024/1000398131.png",
+    "group": "Welcome to PlayZ TV | New App",
     "servers": [
       {
         "name": "SD",
-        "url": "https://livestream.sunnxt.com/05b5df1221764bca9867054c5e65ee62/SunTVB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "6752015acf084572a08dfe21796f8b45:ff823ddbe5625c35d3e93f0ed4520115"
-      },
-      {
-        "name": "HD",
-        "url": "https://livestream.sunnxt.com/19ee29194c4d4fc286c3e697362e60cd/SunTVHDB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "3891557f1cb14dedb7545bf52499d748:fb662f742e5f5e0c61a7c1c66d2b019a"
+        "url": "https://playztv.pages.dev/promo/master.m3u8",
+        "drm": "",
+        "license": ""
       }
     ]
   },
   {
-    "id": "sunmarathi",
-    "name": "Sun Marathi",
-    "language": "Marathi",
-    "logo": "https://sund-images.sunnxt.com/194387/640x360_SunMarathi_194387_441db2e2-0fa1-48ca-be59-7f5dd70f66cb.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/b0aacde03b744564870634ecb10e8a31/SunMarathiB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "5ea90a1f3b1e4a0a9b72c8e0f4a9bf31:30899fda5ca4dfb5a4535ce10c4d7341"
-  },
-  {
-    "id": "sunmusic",
-    "name": "Sun Music",
-    "language": "Tamil",
-    "logo": "https://sund-images.sunnxt.com/194410/640x360_SunMusic_194410_d4d08876-9d23-432c-aab4-b5c70c58aaac.jpg",
-    "group": "SunNxt",
+    "id": "jamshedpur_fc_vs_sc_delhi___aug026__eng____indianoil_durand_cup026",
+    "name": "Jamshedpur FC vs SC Delhi - Aug026 [ENG] - IndianOil Durand Cup026",
+    "language": "",
+    "logo": "https://origin-staticv2.sonyliv.com/videoasset_images/manage_file/1000021747/1785705117549385_DC26_Jamshedpur_FC_vs_SC_DELHI_landscape_thumb.jpg",
+    "group": "Live Event",
     "servers": [
       {
         "name": "SD",
-        "url": "https://livestream.sunnxt.com/585bb66e95c84ccea3f828c96b3567b5/SunMusicB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "21ddc14c4da94c079d4f4c343ecdcd80:5701bee4ee9b625d0c8ed7de032a7478"
-      },
-      {
-        "name": "HD",
-        "url": "https://livestream.sunnxt.com/d434796d90fa4dc9b7ecfacedbe683f1/SunMusicHDB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "b5a2c6d13b9748de9ceebc0a8adc8af3:e806fec1bf1c8a844216118c94bad020"
+        "url": "https://sonydaimenew.akamaized.net/hls/live/20000292/Jamshedp0408/ENG/std_lrh-800300010.m3u8?hdnea=exp=1785890851~acl=/*~id=22895552827019208953081178371967~hmac=f89bcf6ed55ac90bca6789d461e814bad3885ad13edace3a80f53f10b02c5107",
+        "drm": "",
+        "license": ""
       }
     ]
   },
   {
-    "id": "zeetelugu",
-    "name": "Zee Telugu",
-    "language": "Telugu",
-    "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/6vNzRaRK.png",
-    "group": "ZEE5",
-    "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeekannada/default/manifest.mpd",
-    "drm": "clearkey",
-    "license": "https://sony-token.vercel.app/api/results.php?keyid=50e714b65ead453cbfab9b20bed5c79d&key=bc08e108b9ee4f65b99cb9dad9532f3f"
-},
-  {
-    "id": "sunlife",
-    "name": "Sun Life",
-    "language": "Tamil",
-    "logo": "https://sund-images.sunnxt.com/194391/640x360_SunLife_194391_d407948a-b7a2-4a1f-8409-56f7261cefa1.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/6b79451f54284b3fb680fd717ee008dc/SunLifeB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "81546df3f41c4a6dbc9a4efc7f2fb626:3928505f4054cf1fa935276fdbe40992"
-  },
-  {
-    "id": "sunbangla",
-    "name": "Sun Bangla",
-    "language": "Bengali",
-    "logo": "https://sund-images.sunnxt.com/192537/640x360_GeminiMoviesHD_192537_abeec905-1e11-4abf-98fd-16d62fce60c8.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/bf76ee92dd01473bb2eb57d137294484/SunBanglaB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "01f7b9f7bf7e425f86d6dfd478390e3f:5fde68100a7856d055038236ffc7c84a"
-  },
-  {
-    "id": "sunnews",
-    "name": "Sun News",
-    "language": "Tamil",
-    "logo": "https://sund-images.sunnxt.com/194404/640x360_SunNews_194404_0af09ceb-cb6f-48e6-9f5c-395749f0fcee.jpg",
-    "group": "SunNxt",
-    "servers": [
-      {
-        "name": "SD (Token)",
-        "url": "https://livestream3.sunnxt.com/491c99fb6d0c49e88e6349170d890a2f/SunNewsB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "https://sony-token.vercel.app/api/results.php?keyid=4df8f920386e4346ba6b7d7ae935d668&key=c5fcaa8df5663365d938a50987f71b84"
-      },
-      {
-        "name": "SD (Direct)",
-        "url": "https://livestream3.sunnxt.com/491c99fb6d0c49e88e6349170d890a2f/SunNewsB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "4df8f920386e4346ba6b7d7ae935d668:c5fcaa8df5663365d938a50987f71b84"
-      }
-    ]
-  },
-  {
-    "id": "ktv",
-    "name": "KTV",
-    "language": "Tamil",
-    "logo": "https://sund-images.sunnxt.com/194409/640x360_KTV_194409_91b39445-b996-4e46-bafa-b78548e4da2e.jpg",
-    "group": "SunNxt",
-    "servers": [
-      {
-        "name": "SD (Token)",
-        "url": "https://livestream.sunnxt.com/6ae70edd4c1440379f5311e8fbddc7c1/KTVB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "https://sony-token.vercel.app/api/results.php?keyid=426117d115b04497b0b0d425e8095184&key=aa751ae8a41ac6f87141734163ffe3b2"
-      },
-      {
-        "name": "HD (Token)",
-        "url": "https://livestream.sunnxt.com/61477b4c8d8d45d5a49e044cc1dffc60/KTVHDB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "https://sony-token.vercel.app/api/results.php?keyid=351e547391bb45cbac66d2cb9ec0c294&key=3bd646753f4903eee3b404646c7819d3"
-      },
-      {
-        "name": "SD (Direct)",
-        "url": "https://livestream.sunnxt.com/6ae70edd4c1440379f5311e8fbddc7c1/KTVB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "426117d115b04497b0b0d425e8095184:aa751ae8a41ac6f87141734163ffe3b2"
-      },
-      {
-        "name": "HD (Direct)",
-        "url": "https://livestream.sunnxt.com/61477b4c8d8d45d5a49e044cc1dffc60/KTVHDB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "351e547391bb45cbac66d2cb9ec0c294:3bd646753f4903eee3b404646c7819d3"
-      }
-    ]
-  },
-  {
-    "id": "surya",
-    "name": "Surya TV",
-    "language": "Malayalam",
-    "logo": "https://sund-images.sunnxt.com/194398/640x360_SuryaTV_194398_45a56617-7aa9-4ced-a1c8-82b80adb83a7.jpg",
-    "group": "SunNxt",
+    "id": "ekushey_tv",
+    "name": "Ekushey TV",
+    "language": "",
+    "logo": "https://s4.gifyu.com/images/image534fa27d7683f33d.png",
+    "group": "Akash Go",
     "servers": [
       {
         "name": "SD",
-        "url": "https://livestream.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "56e1f5b5b72e4e45a98b6f287c265ab9:6dee8663e63cc8f8dda8478b8b2f3b71"
-      },
-      {
-        "name": "HD",
-        "url": "https://livestream.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "eae838ccd75d4a1fbff6fd7dd1c97780:8259ce0c112725a4d2c94d154207425f"
+        "url": "http://210.4.72.204/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8",
+        "drm": "",
+        "license": ""
       }
     ]
   },
   {
-    "id": "suryamovies",
-    "name": "Surya Movies",
-    "language": "Malayalam",
-    "logo": "https://sund-images.sunnxt.com/194385/640x360_SuryaMovies_194385_2d5dbc38-915d-4e41-b8b0-ea98ca6c88d3.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/e24ee14c395945bd8ccb065e1bce8b9b/SuryaMoviesB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "6b67bccef7024f2da29b42e10dc13f89:2e8460c47d3f01693e193dba5963a5e1"
-  },
-  {
-    "id": "suryamusic",
-    "name": "Surya Music",
-    "language": "Malayalam",
-    "logo": "https://sund-images.sunnxt.com/194338/640x360_SuryaMusic_194338_7fe35164-9a93-45ad-92a1-31126e592a84.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/8c2352ff54954e7b9a4188045dcf3b27/SuryaMusicB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "25a1d2a4c3f848b1aed911ad691fe232:3c8b2cf8611c343e6a231b6a9c7c8b58"
-  },
-  {
-    "id": "suryacomedy",
-    "name": "Surya Comedy",
-    "language": "Malayalam",
-    "logo": "https://sund-images.sunnxt.com/194400/640x360_UdayaComedy_194400_476f38f8-3104-4816-a540-968b36f27a5f.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/6505e922bf164423ad122f404747356a/SuryaComedyB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "11563b00a46b43f2a0f80ecf42a4fb77:9bad28ad6f23dbb917c63ee680f66a1f"
-  },
-  {
-    "id": "udaya",
-    "name": "Udaya TV",
-    "language": "Kannada",
-    "logo": "https://sund-images.sunnxt.com/193239/640x360_TestChannel_193239_e9155a54-81ab-49a1-9b95-0cd81b234dc0.jpg",
-    "group": "SunNxt",
+    "id": "deepto_tv",
+    "name": "Deepto TV",
+    "language": "",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/3/31/Deepto_TV_logo.png",
+    "group": "Akash Go",
     "servers": [
       {
         "name": "SD",
-        "url": "https://livestream.sunnxt.com/e2f36b5d0be74780a041a8f5b65bc7e6/UdayaTVB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "3084683c80234b6bbf69abfd5bb258a0:4ae6b547e5c8f51329a12d7953ee4c72"
+        "url": "https://byphdgllyk.gpcdn.net/hls/deeptotv/0_1/index.m3u8",
+        "drm": "",
+        "license": ""
       },
       {
         "name": "HD",
-        "url": "https://livestream.sunnxt.com/a8d28f18944c4946ad7133938860e7cf/UdayaTVHDB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "91b5f2d0205c4527b7aa3e41f35e1e7f:66ddb1a017753f966e20442ab2f91f18"
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1711/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=deepto_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
       }
     ]
   },
   {
-    "id": "udayamovies",
-    "name": "Udaya Movies",
-    "language": "Kannada",
-    "logo": "https://sund-images.sunnxt.com/194386/640x360_UdayaMovies_194386_429c7b3b-44a9-4328-8be3-645621c6e167.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/1c02547243c041eea5dab1c343018e90/UdayaMoviesB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "b4dbffb517824732a955ca02dd6aacd9:83c2aa2946432f1ded7c049efe79feef"
-  },
-  {
-    "id": "udayamusic",
-    "name": "Udaya Music",
-    "language": "Kannada",
-    "logo": "https://sund-images.sunnxt.com/194401/640x360_UdayaMusic_194401_c6816391-ea32-4780-bf8f-25cb839cef89.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/8034b7519d6a4ab8929aa4279fda1f29/UdayaMusicB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "9ac3472b0040459cab52035ead6fe1ae:ba9fe9dd1b8e5421e2f8c9d23bd86922"
-  },
-  {
-    "id": "udayacomedy",
-    "name": "Udaya Comedy",
-    "language": "Kannada",
-    "logo": "https://sund-images.sunnxt.com/194400/640x360_UdayaComedy_194400_476f38f8-3104-4816-a540-968b36f27a5f.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/8a3d3d8d679b4f9f83a8305b4ead0644/UdayaComedyB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "71329783aeb74e6e9e1014fb9e4c30f4:1e025a9ed7e50fa35b8de2c96cccdd6b"
-  },
-  {
-    "id": "gemini",
-    "name": "Gemini TV",
-    "language": "Telugu",
-    "logo": "https://sund-images.sunnxt.com/194396/640x360_GeminiTV_194396_b5217fee-8105-4d55-bdb6-f282715761d1.jpg",
-    "group": "SunNxt",
+    "id": "deshe_bideshe",
+    "name": "Deshe Bideshe",
+    "language": "",
+    "logo": "https://pbs.twimg.com/profile_images/739539785304281088/zMwNO936_400x400.jpg",
+    "group": "BANGLA",
     "servers": [
       {
         "name": "SD",
-        "url": "https://livestream.sunnxt.com/a1a61fa1811c4d20a5c2d5e14cdc0cd2/GeminiTVB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "2ec6fa5b77ff4223a376c2b98032fbf8:afe96f602fd6abedcd9c2c8cdf799afd"
-      },
-      {
-        "name": "HD",
-        "url": "https://livestream.sunnxt.com/e778d9c98488494b9c9b38f9c48b63ec/GeminiTVHDB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "880dc94460af4197bbbf43a176fb3a95:0beb7012ffd133360889d5d56e20de4d"
-      },
-      {
-        "name": "HD (Livestream14)",
-        "url": "https://livestream14.sunnxt.com/e778d9c98488494b9c9b38f9c48b63ec/GeminiTVHDB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "880dc94460af4197bbbf43a176fb3a95:0beb7012ffd133360889d5d56e20de4d"
+        "url": "https://dbcanada.sonarbanglatv.com/deshebideshe/dbtv/index.m3u8",
+        "drm": "",
+        "license": ""
       }
     ]
   },
   {
-    "id": "geminimovies",
-    "name": "Gemini Movies",
-    "language": "Telugu",
-    "logo": "https://sund-images.sunnxt.com/194384/640x360_GeminiMovies_194384_bc1cee7f-1f8a-4b8e-83ea-da41279c9d40.jpg",
-    "group": "SunNxt",
+    "id": "bbc_news",
+    "name": "BBC News",
+    "language": "",
+    "logo": "https://seeklogo.com/images/B/bbc-news-logo-8648ABD044-seeklogo.com.png",
+    "group": "Akash Go",
     "servers": [
       {
         "name": "SD",
-        "url": "https://livestream.sunnxt.com/6a59979ff0044fd3b6e0cb85d6f44432/GeminiMoviesB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "0c37231880034787bce9fd3607aa09ea:e063bb30351dac572bac24ed43d304b2"
+        "url": "https://cdn4.skygo.mn/live/disk1/BBC_News/HLSv3-FTA/BBC_News-avc1_3000000=8-mp4a_208000_eng=2.m3u8",
+        "drm": "",
+        "license": ""
       },
       {
-        "name": "HD",
-        "url": "https://livestream.sunnxt.com/ec0d4961a002442295f91efc9d675c9d/GeminiMoviesHDB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "0c37231880034787bce9fd3607aa09ea:e063bb30351dac572bac24ed43d304b2"
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=bbc_news&format=.m3u8",
+        "drm": "",
+        "license": ""
       }
     ]
   },
   {
-    "id": "geminimusic",
-    "name": "Gemini Music",
-    "language": "Telugu",
-    "logo": "https://sund-images.sunnxt.com/194410/640x360_SunMusic_194410_d4d08876-9d23-432c-aab4-b5c70c58aaac.jpg",
-    "group": "SunNxt",
+    "id": "music_bangla",
+    "name": "MUSIC BANGLA",
+    "language": "",
+    "logo": "https://static.wikia.nocookie.net/logopedia/images/7/75/Music_Bangla_new.jpeg",
+    "group": "Bangla",
     "servers": [
       {
         "name": "SD",
-        "url": "https://livestream.sunnxt.com/52b94f70c6e64692b2497f5023b629cd/GeminiMusicB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "0faa2e9469fc45fdaf1728333351ec71:ffcf9dee6ede62bd8740dacfaa0c1e59"
-      },
-      {
-        "name": "HD",
-        "url": "https://livestream.sunnxt.com/6a6520e446604c6e9840e5bf3a3a7d95/GeminiMusicHDB_IN_index.mpd",
-        "drm": "clearkey",
-        "license": "76230567f3c04513a7e5d1249ab65983:4ee6dc9a99d894dc41b0878d6ea22790"
+        "url": "http://live.matribhumitv.com/music-bangla/index.m3u8",
+        "drm": "",
+        "license": ""
       }
     ]
   },
   {
-    "id": "geminicomedy",
-    "name": "Gemini Comedy",
-    "language": "Telugu",
-    "logo": "https://sund-images.sunnxt.com/194394/640x360_GeminiComedy_194394_f3c8c427-351c-4b4f-a67f-616ec0feb1d2.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/167c40e9521b470b87b4cf921fd0e146/GeminiComedyB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "93e686ceac134f30b0a7bc3ce5a76b26:2c37e97fa0646751e1f2b85bc4b9ff8a"
+    "id": "my_tv",
+    "name": "MY TV",
+    "language": "",
+    "logo": "https://raw.githubusercontent.com/subirkumarpaul/Logo/main/My%20TV.svg.png",
+    "group": "Bangla",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://mytvbangla.com/0.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
   },
   {
-    "id": "geminilife",
-    "name": "Gemini Life",
-    "language": "Telugu",
-    "logo": "https://sund-images.sunnxt.com/194337/640x360_TestGeminiLife_194337_1927e76e-b04a-428b-a0fc-6aa5ed06fa88.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/a4b4f71a8b4344f3a280e906657a517a/GeminiLifeB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "96d5157791ea4817a66a419e285a137f:d6d0ad2a9a6cc56e18d7557c7c693a37"
+    "id": "maasranga",
+    "name": "MAASRANGA",
+    "language": "",
+    "logo": "https://static.wikia.nocookie.net/etv-gspn-bangla/images/a/a3/Maasranga_TV_HD_logo.png",
+    "group": "Bangla",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "http://mtv.sunplex.live/MAASRANGA-TV/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
   },
   {
-    "id": "adithyatv",
-    "name": "Adithya TV",
-    "language": "Tamil",
-    "logo": "https://sund-images.sunnxt.com/194407/960x540_AdithyaTV_194407_b6f8fa30-255b-4f4a-8f8f-4264abda8b33.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/4d0eb3cde30247ada4ade679fdfbaf86/AdithyaTVB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "d674a1a7f43641a29bd8867d87c7259a:812f55dcde68619fc6ad95951b241d2c"
-  },
-  {
-    "id": "kushitv",
-    "name": "Kushi TV",
-    "language": "Tamil",
-    "logo": "https://sund-images.sunnxt.com/194346/960x540_KushiTV_194346_b0eff97b-4670-42fb-9d87-49d78fab6f3a.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/4a736d41608849758a0aed36949ded30/KushiTVB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "e16421cf7c374c57a8f7e91049f58cd9:b7e01aba2c307b1f05057e91a9d150d2"
-  },
-  {
-    "id": "chuttitv",
-    "name": "Chutti TV",
-    "language": "Tamil",
-    "logo": "https://sund-images.sunnxt.com/194390/640x360_ChuttiTV_194390_61005292-313a-45b4-b6a8-3ac5128a513e.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/3ed29d5b01b546eaa05d184cd87535f1/ChuttiTVB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "05da38a46fb7403088f41434e44de980:488046139a1e1d65323cfe4bb1b30b7b"
-  },
-  {
-    "id": "kochutv",
-    "name": "Kochu TV",
-    "language": "Malayalam",
-    "logo": "https://sund-images.sunnxt.com/194348/960x540_KochuTV_194348_9777cbfd-685b-4e06-a7cc-f2902c1874e8.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/1893b9ab790747cb80a584873a608dcb/KochuTVB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "7354fb333b0c4159bc6c433c4db13d0f:fbf8b4a11febf7d2eed2283006979176"
-  },
-  {
-    "id": "chintutv",
-    "name": "Chintu TV",
-    "language": "Kannada",
-    "logo": "https://sund-images.sunnxt.com/194347/960x540_ChintuTV_194347_64af5425-0ed0-4c8a-b071-00ef86eaefde.jpg",
-    "group": "SunNxt",
-    "url": "https://livestream.sunnxt.com/ed4c67ad957644b69361651d9101107e/ChintuTVB_IN_index.mpd",
-    "drm": "clearkey",
-    "license": "19d8a5cc002f411b89b33925acdc33e0:2a9aa7a3f69834c4f348430cc3f658bb"
-  },
-  {
-    "id": "starbharat",
-    "name": "Star Bharat",
-    "language": "Hindi",
-    "logo": "https://i.imgur.com/Q8ajPij.png",
+    "id": "somoy_tv",
+    "name": "Somoy TV",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560559088.png",
     "group": "News",
-    "url": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
-    "drm": "",
-    "license": ""
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1702/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=somoy_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "jamuna_tv",
+    "name": "Jamuna TV",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560213832.png",
+    "group": "News",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1701/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=jamuna_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "dbc_news",
+    "name": "DBC News",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770186306600.png",
+    "group": "News",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1728/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=dbc_news&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "maasranga_tv",
+    "name": "Maasranga TV",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1773680325498.png",
+    "group": "Entertainment",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1722/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=maasranga_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "ekattor",
+    "name": "Ekattor",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739963327549.png",
+    "group": "News",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1705/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "channel4",
+    "name": "Channel4",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735556516924.png",
+    "group": "News",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1703/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=channel_24&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "atn_news",
+    "name": "ATN News",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1739962961772.png",
+    "group": "News",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1706/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=atn_news&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "news4",
+    "name": "News4",
+    "language": "",
+    "logo": null,
+    "group": "News",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1708/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "star_news",
+    "name": "Star News",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770189826301.png",
+    "group": "News",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1710/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=star_news&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "islamic_tv",
+    "name": "Islamic TV",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1772728412891.png",
+    "group": "Infotainment",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1724/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "channel_9",
+    "name": "Channel 9",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770188008067.png",
+    "group": "Entertainment",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1729/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=channel_9&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "srk_tv",
+    "name": "SRK TV",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1746005940155.png",
+    "group": "Entertainment",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://srknowapp.ncare.live/srktvhlswodrm/srktv.stream/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "channel_i",
+    "name": "Channel I",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1740567626692.png",
+    "group": "Entertainment",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1723/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=channel_i&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "cineedge",
+    "name": "Cineedge",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770347851305.png",
+    "group": "Movies",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/cineedge/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "uniques",
+    "name": "Uniques",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770347327658.png",
+    "group": "Movies",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/uniques/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "superrix",
+    "name": "Superrix",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770348388925.png",
+    "group": "Movies",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/superrix/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "bangla_vision",
+    "name": "Bangla Vision",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735561344354.png",
+    "group": "Entertainment",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1715/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=bangla_vision&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "ntv",
+    "name": "NTV",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560841094.png",
+    "group": "Entertainment",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1716/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=ntv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "screem",
+    "name": "Screem",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770312098339.png",
+    "group": "Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/screem/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sports_legends",
+    "name": "Sports Legends",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770377900139.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/sportslegends/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "flash_guys",
+    "name": "Flash Guys",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770378074527.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/flashguys/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "buddystar",
+    "name": "BuddyStar",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770379038530.png",
+    "group": "Kids",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/buddystar/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "luxel",
+    "name": "Luxel",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770378560772.png",
+    "group": "Infotainment",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/luxell/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "joy",
+    "name": "Joy",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770378874717.png",
+    "group": "Kids",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/joy/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "funny_junior",
+    "name": "Funny Junior",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770379573329.png",
+    "group": "Kids",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/funnyjunior/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "crimes",
+    "name": "Crimes",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770380126540.png",
+    "group": "Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/crimes/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "true_stories",
+    "name": "True Stories",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770380306806.png",
+    "group": "Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/truestories/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "intelligence",
+    "name": "Intelligence",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770380460488.png",
+    "group": "Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/intelligence/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sports_range",
+    "name": "Sports Range",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770380601958.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/sportrange/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "thunder_er",
+    "name": "Thunder Er",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770380791303.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/thunder/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "fighters",
+    "name": "Fighters",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770380942670.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/fighter/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "smarty",
+    "name": "Smarty",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770381107924.png",
+    "group": "Kids",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/smarty/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "lucky_family",
+    "name": "Lucky Family",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770381248531.png",
+    "group": "Kids",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/luckyfamily/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "kids_stars",
+    "name": "Kids Stars",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1770381398090.png",
+    "group": "Kids",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/kidsstars/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "btv",
+    "name": "BTV",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1778082545894.png",
+    "group": "Entertainment",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1709/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "al_jazeera",
+    "name": "Al Jazeera",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1777454219313.png",
+    "group": "News",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1721/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "party_universe",
+    "name": "Party Universe",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1778083145889.png",
+    "group": "Music",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/partyuniverse/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "al_quran",
+    "name": "Al Quran",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1778086065071.png",
+    "group": "Infotainment",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1713/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "independent_tv",
+    "name": "Independent TV",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1778087037971.png",
+    "group": "News",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://owrcovcrpy.gpcdn.net/bpk-tv/1704/output/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=independent_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "nikki",
+    "name": "Nikki",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1778083459294.png",
+    "group": "Kids",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/nikky/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "originals",
+    "name": "Originals",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1778085327477.png",
+    "group": "Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/originals/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "crazy_ex",
+    "name": "Crazy Ex",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1778085745609.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/crazy_ex/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "delicious",
+    "name": "Delicious",
+    "language": "",
+    "logo": "https://tstatic.akash-go.com/cms-ui/images/custom-content/1778086478755.png",
+    "group": "Infotainment",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nomawnoijl.gpcdn.net/akash/delicious/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "new_delhi_tigers_vs_outer_delhi_warriors__delhi_premier_league_026_",
+    "name": "New Delhi Tigers vs Outer Delhi Warriors (Delhi Premier League-026)",
+    "language": "",
+    "logo": "https://www.fancode.com/skillup-uploads/cms-media/4247970_53005_NDT_ODW_fc-Web_1785835769882.png",
+    "group": "Live Event",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livecf.fancode.com/4247970_english_hls_96c0e7798b23998_1ta-di_h264/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__wc_match_recap",
+    "name": "[BD] WC Match Recap",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/V__o054BObUt2AG6LL5C/posters/84590b8d-6430-4ba8-a0a5-757bf2f57c05.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/fifa_world_cup/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__sony_ten_sports_1",
+    "name": "[BD] Sony Ten Sports 1",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/py5j-JQBv9knK3AHxDTY/posters/ea3358b9-2bec-4615-a889-daa2e396c74c.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/sony_sports_1_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__sony_ten_sports",
+    "name": "[BD] Sony Ten Sports",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/sy5m-JQBv9knK3AHYTTk/posters/5e40bf0e-633f-4d37-a3b2-3d606f0ac19a.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/sony_sports_2_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__sony_ten_sports_5",
+    "name": "[BD] Sony Ten Sports 5",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/vi5n-JQBv9knK3AHqzTC/posters/d171fd4d-0369-4213-b0c5-e241974f5459.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/sony_sports_5_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__sony_ten_cricket",
+    "name": "[BD] Sony Ten Cricket",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/ra2x_pQBrjBfS2_RWG9l/posters/795170c2-ec78-457e-9fa0-54a23d23361c.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/ten_cricket/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__eurosport",
+    "name": "[BD] Eurosport",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/Uy6Q-JQBv9knK3AHcDUQ/posters/01709bcd-6d53-4710-a64f-bc49cecf1d61.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/euro_sports_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__ntv",
+    "name": "[BD] NTV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/wHLVIJ4B7a1HdMSjaGLJ/posters/83b89557-3ae8-4ca8-8c5d-3c617359c738.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/n_tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__channel_i",
+    "name": "[BD] Channel i",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/qnv835oBcqxnFHJBuQcB/posters/348dfac3-c1e0-485d-a72b-3d282c9e2c73.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/channel_i/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__somoy_tv",
+    "name": "[BD] Somoy TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/Xi_Ga5oBNnOkwJLWkhKP/posters/ef2899d5-1ae0-4fee-aee5-45f9b0b3ba80.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/somoy_tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__ekhon_tv",
+    "name": "[BD] Ekhon TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/o3v235oBcqxnFHJBkAdC/posters/159af631-796d-4342-a2a7-c272f32bcd32.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/ekhon_tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__global_tv",
+    "name": "[BD] Global TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/0y_tDJsBNnOkwJLWNrdE/posters/2ff058e1-630f-4657-8dc6-b677e65642c5.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/globaltv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__jamuna_tv",
+    "name": "[BD] Jamuna TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/PiL635oBEef-9-uV2uCe/posters/36f380e0-6c71-4b27-a73b-2afb3ce7e982.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/jamuna_tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__rajdhani_tv",
+    "name": "[BD] Rajdhani TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/KECGB54BuUSiBsg_dHyj/posters/58af9c58-ed80-458c-af13-cf381680cec6.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/rajdhani_tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__bangla_tv",
+    "name": "[BD] Bangla TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/JiK-_poBEef-9-uVZv6L/posters/757a328e-70d6-45de-b093-0a843c69ade7.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/bangla_tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__independent_tv",
+    "name": "[BD] Independent TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/ES_cZZsBNnOkwJLW1Oz1/posters/b872b8f5-cb6b-45a1-a1cd-7609df51d614.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/independent_tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__channel_s",
+    "name": "[BD] Channel S",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/WyPuDJsBEef-9-uVUA_z/posters/ea20055c-a824-443c-8083-ce8e2da8b922.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/channel_s_tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__ekattor_tv",
+    "name": "[BD] Ekattor TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/PS_La5oBNnOkwJLWLRN_/posters/e8c444fd-ee3b-4bf3-bb0a-f969bc295f82.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/ekattor_tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__ananda_tv",
+    "name": "[BD] Ananda TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/wCM3l5sBEef-9-uVXFvD/posters/d80f7aee-5bd7-4edc-97eb-ead0e3ebbe09.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/anandatv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__bijoy_tv",
+    "name": "[BD] Bijoy TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/bns4l5sBcqxnFHJBVZ32/posters/feaf9f3d-cc3b-4a3d-81a3-2cb703e561eb.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/bijoytv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__islamic_tv",
+    "name": "[BD] Islamic TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/jehEA54BIxFjn23xAmdw/posters/2c276556-cbcd-4467-b627-4394bb20f250.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/islamic_tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__asian_tv",
+    "name": "[BD] Asian TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/MyK__poBEef-9-uVmf5l/posters/1eadef5b-28e7-4dc2-b42f-c67a3357c9a0.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/asian_tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__desh_tv",
+    "name": "[BD] Desh TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/6Hz1PJwBcqxnFHJBhgkV/posters/845f1e3f-987a-47cc-a48d-ee12d8f4d419.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/desh_tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__nexus_tv",
+    "name": "[BD] Nexus TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/FHz5PJwBcqxnFHJBdAqW/posters/419869ac-8ddf-4909-86c1-b69f0a3adf13.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/nexus_tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__mohona_tv",
+    "name": "[BD] Mohona TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/-Xz3PJwBcqxnFHJBDAlE/posters/fecea361-8b60-4aeb-a530-6e27eee8178a.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/mohona_tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__movie_bangla",
+    "name": "[BD] Movie Bangla",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/CXz4PJwBcqxnFHJBPwrG/posters/2f913e34-3a6c-45e6-9f1f-97bf129a2ff5.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/movie_bangla/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__cnn",
+    "name": "[BD] CNN",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/VC6Q-JQBv9knK3AHhTXt/posters/63e79814-8fcf-4c3e-bb66-408b2a402613.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/cnn/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__sony_max",
+    "name": "[BD] Sony MAX",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/Ai51-JQBv9knK3AH_jWs/posters/663e52a6-1a9f-4458-b4aa-7c03d84972f1.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/sony_max_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/sony_max/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/sonymax_2/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__sony_pix",
+    "name": "[BD] Sony PIX",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/Ly6C-JQBv9knK3AHOjXt/posters/252e64ca-8d99-46e7-a951-e10c1703c11d.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/sonypix_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__zee_cafe",
+    "name": "[BD] Zee Cafe",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/U3QEd5YBcqxnFHJBpYzc/posters/8bc7ae1b-1a46-4b76-bdb1-13c7dbd3a95c.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/zee_cafe_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__b4u_movies_apac",
+    "name": "[BD] B4U Movies APAC",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/PC6F-JQBv9knK3AHlTUO/posters/fb0243ba-39a0-4101-a78c-c197be550c6c.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/b4u_movies/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__zee_bangla_cinema",
+    "name": "[BD] Zee Bangla Cinema",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/-C7MX5UBv9knK3AHdKOi/posters/90d82846-70b9-44ee-9f7e-e440f00b3be8.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/zee_bangla_cinema/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__zee_cinema",
+    "name": "[BD] Zee Cinema",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/5y7HX5UBv9knK3AHs6Nk/posters/7582fb79-c15f-4247-ba5b-1d2dd27f3d71.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/zee_cinema_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd____pictures",
+    "name": "[BD] & Pictures",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/QMwWnZUBtpl-Sbt7S2sx/posters/8cad9a82-842a-47bf-a060-f17011f11c07.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/andpicture_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__toffee_movies",
+    "name": "[BD] Toffee Movies",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/b60Ss5UBrjBfS2_RJPb8/posters/2e5b8ff3-9deb-4040-947e-4ce6a4674ef0.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/toffee_movie/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__zee_bollywood",
+    "name": "[BD] Zee Bollywood",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/OnSlPJYBcqxnFHJB6lFX/posters/d9ccb2a6-227f-4a41-8714-efaddab5cf5e.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/zee_bollywood/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__zee_action",
+    "name": "[BD] Zee Action",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/Pc3RD5YBtpl-Sbt7doxr/posters/33d667ae-bcc3-4f6b-b376-76c552136923.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/zee_action/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__zee_bangla",
+    "name": "[BD] Zee Bangla",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/kK2aX5UBrjBfS2_RBcKf/posters/ba5dd8dc-4f87-414a-b57f-c9ecdeda5253.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/zee_bangla/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__hum",
+    "name": "[BD] HUM",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/0C63X5UBv9knK3AHxaOs/posters/6dce1143-1045-4fec-ac4f-86d2bfb32447.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/hum_tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__hum_masala",
+    "name": "[BD] HUM Masala",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/T9O9X5UBm1RY_In7UXFv/posters/30e0f372-eb3e-4cf9-be1e-b196a40c2fc7.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/hum_masala/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__hum_sitaray",
+    "name": "[BD] HUM Sitaray",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/WtPBX5UBm1RY_In7mXEU/posters/188d51f6-aeef-41ed-835b-e25ff911e209.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/hum_sitaray/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__sony_aath",
+    "name": "[BD] Sony Aath",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/xi6xX5UBv9knK3AH9aMk/posters/f4db1c12-b10f-46e8-a09b-e0efb8820970.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/sonyaath/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__zee_anmol",
+    "name": "[BD] Zee Anmol",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/7x0Jd5YBEef-9-uVv_Gy/posters/f9c07bfc-9fde-40d0-91a1-e28c5840f400.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/zee_anmol/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__b4u_music",
+    "name": "[BD] B4U Music",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/PS6F-JQBv9knK3AHqjVz/posters/0f83ee72-be0f-4861-94df-30b158d3df8d.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/b4u_music/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__zing",
+    "name": "[BD] Zing",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/DK8dd5YBrjBfS2_Ru22e/posters/a4e57fd0-1853-4540-a9bc-0265ee43b5cb.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/zing_sd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__sony_entertainment_television",
+    "name": "[BD] Sony Entertainment Television",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/-y50-JQBv9knK3AHLzSn/posters/0ab48ac0-ec84-4ca2-9601-746ff3cb809e.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/sonyentertainmnt_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/sony_entertainment/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__sony_sab",
+    "name": "[BD] Sony SAB",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/ES55-JQBv9knK3AHNDWC/posters/13411be9-62b9-4a99-a062-b6e91dfb1099.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/sonysab_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__zee_tv",
+    "name": "[BD] Zee TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/ltPQX5UBm1RY_In7b3F1/posters/d039d9df-9877-4969-a0b6-56888ebe2385.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/zee_tv_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd___tv",
+    "name": "[BD] &TV",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/5cwRnZUBtpl-Sbt7wWrN/posters/5779ade3-e9ba-4107-b3da-bae6f891500a.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/and_tv_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__toffee_dramas",
+    "name": "[BD] Toffee Dramas",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/DNMXs5UBm1RY_In7IJ72/posters/5638c4e8-36ba-4e8e-848e-233183b3ec17.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/toffee_drama/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__tlc",
+    "name": "[BD] TLC",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/7S6j-JQBv9knK3AHbzXC/posters/0973097c-bc5c-4b28-aaca-f04d6f6cb5e2.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/tlc_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/tlc_sd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__animal_planet",
+    "name": "[BD] Animal Planet",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/Ny61-JQBv9knK3AHgzZ7/posters/0909b36a-afd5-426a-93b3-4512800977db.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/animal_planet_sd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/animal_planet_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__sony_bbc_earth",
+    "name": "[BD] Sony BBC Earth",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/MC6C-JQBv9knK3AHUzUT/posters/a8c32fd3-2ba7-437c-85ac-de2f1b2fa6ca.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/sonybbc_earth_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__discovery",
+    "name": "[BD] Discovery",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/KS6x-JQBv9knK3AHwDZy/posters/6594d216-aaca-4eee-b6f5-bbc6b80feb15.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/discovery_sd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/discovery_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__discovery_science",
+    "name": "[BD] Discovery Science",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/AS6s-JQBv9knK3AHDTZb/posters/eab8fd0f-9351-464c-b45e-332f38b49f4b.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/discovery_science/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__discovery_turbo",
+    "name": "[BD] Discovery Turbo",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/Ay6s-JQBv9knK3AHJTY1/posters/e8f65578-e82d-4e4a-a1ff-073becc5bd71.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/discovery_turbo/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__investigation_discovery",
+    "name": "[BD] Investigation Discovery",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/ay7uX5UBv9knK3AHs6TI/posters/deb3c186-b2e1-4a91-aafb-d86f9128b851.png",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/discovary_investigation_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__cartoon_network",
+    "name": "[BD] Cartoon Network",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/mC6W-JQBv9knK3AHfDWA/posters/d2a02d82-fde4-4769-a6d9-95c0560e2120.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/cartoon_network_sd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__cartoon_network__",
+    "name": "[BD] Cartoon Network +",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/1y6e-JQBv9knK3AHNDWb/posters/ee9ba01b-1bcf-436b-b273-7b857f0810fb.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/cartoon_network_hd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__discovery_kids",
+    "name": "[BD] Discovery Kids",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/1i6e-JQBv9knK3AHHTXR/posters/325887a7-84ea-4cf9-a6fd-6111ddc25671.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/discovery_kids/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__pogo",
+    "name": "[BD] POGO",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/ny6W-JQBv9knK3AHujXC/posters/7e7c2afe-a663-4c09-983a-2d0fa0f1ca9a.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/pogo_sd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "_bd__sony_yay",
+    "name": "[BD] Sony YAY",
+    "language": "",
+    "logo": "https://assets-prod.services.toffeelive.com/f_png,w_300,q_85/IC5_-JQBv9knK3AHFDXh/posters/36df4012-80f2-4a98-9970-3b663f62093f.webp",
+    "group": "[LIVE] BDIX ♛",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bldcmprod-cdn.toffeelive.com/cdn/live/sonyyay/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "star_sports_1",
+    "name": "Star Sports 1",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/16-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn6.zohanayaan.com:1686/hls/star1in.m3u8?md5=ApuJOjwiJufrk3Rzl7-1vw&expires=1785851424",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "star_sports_1_hindi",
+    "name": "Star Sports 1 Hindi",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn2.zohanayaan.com:1686/hls/starhindi.m3u8?md5=DTVf7ck9v7xqfJ6kFZSyWg&expires=1785851425",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "ptv_sports",
+    "name": "PTV Sports",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/20-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn3.zohanayaan.com:1686/hls/ptvpk.m3u8?md5=OjYEf_RQYq2ZkWtlDvX7dw&expires=1785851425",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=ptv_sports&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "willow",
+    "name": "Willow",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/38-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://cdn1.zohanayaan.com:1686/hls/willowusa.m3u8?md5=AmZhyC5eFGP-gNXxs13w9w&expires=1785851425",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "HD",
+        "url": "https://cdn9.zohanayaan.com:1686/hls/willowextra.m3u8?md5=EHob9h-NErXgA-BeG8N1xw&expires=1785851426",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "HD",
+        "url": "https://warm-caverns-48629-92fab798385f.herokuapp.com/https://d36r8jifhgsk5j.cloudfront.net/Willow_TV540p.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "ten_sports",
+    "name": "Ten Sports",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/10-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn2.zohanayaan.com:1686/hls/tenspk.m3u8?md5=3orK001F6ikAnE9h8aXzBQ&expires=1785851426",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "a_sports",
+    "name": "A Sports",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/12-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://cdn10.zohanayaan.com:1686/hls/asportshd.m3u8?md5=paJgKvp69kU0-24oiQZx5Q&expires=1785851426",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=a_sports&format=.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "HD",
+        "url": "https://playztv-apps.pages.dev/asports/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sports_cricket",
+    "name": "Sky Sports Cricket",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/9-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn9.zohanayaan.com:1686/hls/skyscric.m3u8?md5=aNe_20H6g-1KjMr8h1tacQ&expires=1785851427",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sports_main_event",
+    "name": "Sky Sports Main Event",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/18-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn9.zohanayaan.com:1686/hls/skysme.m3u8?md5=rGtizFCcV6xSC-F4gul1KA&expires=1785851427",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "tnt_1",
+    "name": "TNT 1",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn10.zohanayaan.com:1686/hls/bbtsp1.m3u8?md5=WKZjYOUy6EO0830qqT354A&expires=1785851427",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "tnt",
+    "name": "TNT",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/tnt.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn8.zohanayaan.com:1686/hls/bbtsp2.m3u8?md5=dm9n9uVWGl8hzpgSS3Ib5Q&expires=1785851427",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://cdn5.zohanayaan.com:1686/hls/bbtsp3.m3u8?md5=FsseItsAWoVhdkcVljVjsQ&expires=1785851427",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://cdn7.zohanayaan.com:1686/hls/bbtespn.m3u8?md5=JCpX1Uh-0M8dMluXHiutgA&expires=1785851428",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sport_nz_1",
+    "name": "Sky Sport Nz 1",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn9.zohanayaan.com:1686/hls/sky1nz.m3u8?md5=JgqsRzR5q0JqlsV-GKkbBg&expires=1785851428",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sport_nz",
+    "name": "Sky Sport Nz",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn7.zohanayaan.com:1686/hls/sky2nz.m3u8?md5=WoMtjQihcrh4a7ijKKeK2g&expires=1785851428",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://cdn4.zohanayaan.com:1686/hls/sky3nz.m3u8?md5=-ByEG2AYzkVMnbitCgY9IA&expires=1785851428",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://cdn9.zohanayaan.com:1686/hls/sky4nz.m3u8?md5=Mb7u_03b3PIN6iNvIbn1gA&expires=1785851428",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sport_nz_5",
+    "name": "Sky Sport Nz 5",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn8.zohanayaan.com:1686/hls/sky5nz.m3u8?md5=zEIjKfSuuz0zX3eoEArdNQ&expires=1785851429",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sport_6_nz",
+    "name": "Sky Sport 6 Nz",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn4.zohanayaan.com:1686/hls/sky6nz.m3u8?md5=-Un9_3Ue1QGfg_Z7JzCQJw&expires=1785851429",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sport_nz_7",
+    "name": "Sky Sport Nz 7",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn10.zohanayaan.com:1686/hls/sky7nz.m3u8?md5=EO0SobDeO9sgyyQkt3E0Ow&expires=1785851429",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sport_nz_8",
+    "name": "Sky Sport Nz 8",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn6.zohanayaan.com:1686/hls/sky8nz.m3u8?md5=onxYKMAa7Yo99pa5ZPkBPw&expires=1785851430",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sport_nz_9",
+    "name": "Sky Sport Nz 9",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/56-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn9.zohanayaan.com:1686/hls/sky9nz.m3u8?md5=FcoBsqj3CCQMWApbwdRaMQ&expires=1785851430",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_cinema",
+    "name": "Sky Cinema",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/skycinema.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn9.zohanayaan.com:1686/hls/skysme.m3u8?md5=rGtizFCcV6xSC-F4gul1KA&expires=1785851427",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sports_action",
+    "name": "Sky Sports Action",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745007829332.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn5.zohanayaan.com:1686/hls/skysact.m3u8?md5=UsgstOhtgHapmGPpN_CYbQ&expires=1785851430",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sports_golf",
+    "name": "Sky Sports Golf",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008055327.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn1.zohanayaan.com:1686/hls/skysgol.m3u8?md5=wKgBM84mJsVlT8G69qvJQQ&expires=1785851430",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sports_premier_league",
+    "name": "Sky Sports Premier League",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/43-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn10.zohanayaan.com:1686/hls/skysprem.m3u8?md5=lyQynud2NGOPCKC9U7qqxA&expires=1785851431",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sports_football",
+    "name": "Sky Sports Football",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/44-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn6.zohanayaan.com:1686/hls/skysfott.m3u8?md5=0bzfEKoZadf18oTZzvIe_A&expires=1785851431",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sports_plus",
+    "name": "Sky Sports Plus",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008347584.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn1.zohanayaan.com:1686/hls/skysare.m3u8?md5=aeO8AprugnTHlpPnjj23kg&expires=1785851431",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sports_f1",
+    "name": "Sky Sports F1",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008468637.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn4.zohanayaan.com:1686/hls/skysfor1.m3u8?md5=hTOz7lELw5e4Q5B9HH-s8g&expires=1785851431",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "laliga",
+    "name": "LaLiGA",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/19-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn10.zohanayaan.com:1686/hls/laligauk.m3u8?md5=1lt2JyyDFals6JI5tULK8g&expires=1785851432",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "premier_sports_1",
+    "name": "Premier Sports 1",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/31-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn3.zohanayaan.com:1686/hls/premieruk.m3u8?md5=oODx2CgPMAvJK_AfSIlbBQ&expires=1785851432",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "premier_sports",
+    "name": "Premier Sports",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/31-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn8.zohanayaan.com:1686/hls/hdchnl2.m3u8?md5=G3Vtmi1JHd4NXzfDH8pWtg&expires=1785851432",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "super_football",
+    "name": "Super Football",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/34-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn6.zohanayaan.com:1686/hls/superfotball.m3u8?md5=fsLwgxG45cbFBcDOm50u0w&expires=1785851432",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "super_premier_league",
+    "name": "Super Premier League",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008781606.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn1.zohanayaan.com:1686/hls/superpremier.m3u8?md5=yYt5azVvc8i0M2TlxfimPQ&expires=1785851432",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "astro_cricket",
+    "name": "Astro Cricket",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745008895589.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn6.zohanayaan.com:1686/hls/fox501.m3u8?md5=Scb9ZhPnfuLXJhVe-XB6NQ&expires=1785851433",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "espn_1",
+    "name": "ESPN 1",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/17-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn5.zohanayaan.com:1686/hls/espnusa.m3u8?md5=2g5qzFym0qZjfx4ttaZrsQ&expires=1785851433",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "espn",
+    "name": "ESPN",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/17-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn7.zohanayaan.com:1686/hls/espn2.m3u8?md5=hPTmJjfN6UDBYEe7OBvuqA&expires=1785851433",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=espn&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sports_arena",
+    "name": "Sky Sports Arena",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745007829327.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn1.zohanayaan.com:1686/hls/skysare.m3u8?md5=aeO8AprugnTHlpPnjj23kg&expires=1785851431",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sports_mix",
+    "name": "Sky Sports Mix",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/13-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn6.zohanayaan.com:1686/hls/skysmixx.m3u8?md5=0M81aRl743B8J5gPI_2anQ&expires=1785851433",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_sports_tennis",
+    "name": "Sky Sports Tennis",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1745009085794.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn6.zohanayaan.com:1686/hls/skystennis.m3u8?md5=iHA8H-phqzWgZ2myk-hC4Q&expires=1785851434",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "fox_cricket_501",
+    "name": "Fox Cricket 501",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/6-by-xfireflix.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://cdn6.zohanayaan.com:1686/hls/fox501.m3u8?md5=Scb9ZhPnfuLXJhVe-XB6NQ&expires=1785851433",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_sports3",
+    "name": "Sony Sports3",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1000173192-modified.png",
+    "group": "Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn3.zohanayaan.com:1686/hls/ten1hd.m3u8?md5=E4uFsLFd_V36mr6JEY5bdw&expires=1785851434",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "btv_news",
+    "name": "BTV News",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_1b90aebe217ac437da23625feaba0b76_playmist_btv_news400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=btv_news&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "news4_bd",
+    "name": "News4 BD",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_a401495935874d01a5dcd992c40c3a2d_playmist_news24.png",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=news_24_bd&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "time_tv_usa",
+    "name": "TIME TV USA",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_c05517a566e36853dc54d325a24921ad_playmist_time_tv_usa400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=time_tv_usa&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "t_sports",
+    "name": "T Sports",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-13/images_8b38d691dfaf072e6c964dea814a44ba_playmist_t_sports_hd400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=t_sports_hd&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "btv_national",
+    "name": "BTV NATIONAL",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-06-24/84c7f041c86c63b9acc2df8762b2935b.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=btv_national_hd&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "atn_bangla",
+    "name": "ATN Bangla",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-06-24/3a36a406fcc9616cd0b32514bb29eb36.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=atn_bangla&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "rtv",
+    "name": "RTV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_d6c5ece652161d2d88ed547f00343687_playmist_rtv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=rtv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "duronto_tv",
+    "name": "Duronto TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_608bd1c995275bd65872dae5b2be9ba0_playmist_duronto_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=duronto_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "etv",
+    "name": "ETV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_0b5269c6ae6e8c382e43c2be02789c60_playmist_etv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=etv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "ekhon_tv",
+    "name": "Ekhon TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_2ae0833e484c0a032e46050cbb8c9cc0_playmist_ekhon_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=ekhon_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "ekattor_tv",
+    "name": "Ekattor TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_d5ddbbec6b7919b1003233819616e19b_playmist_ekattor_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=ekattor_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "unite8_sports",
+    "name": "Unite8 Sports",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-20/images_9bd5db31bbc4d98defd1cb51a5606d9c_playmist_unite_sports_2.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=unite8_sports_2&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "tsn_1",
+    "name": "TSN 1",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-20/images_d165c628a0db9286da3914ca916a4971_playmist_tsn_1400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=tsn_1&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "tsn",
+    "name": "TSN",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_c92bf4f46958e65be6cc370e3fc1f0dd_playmist_tsn_2_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=tsn_2&format=.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=tsn_3&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "willow_tv",
+    "name": "Willow TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-09/images_1bb4b50bd8e39a63808ed6fa38beb0df_playmist_willow_hd_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=willow_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "bein_sports_1",
+    "name": "Bein Sports 1",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-09/images_02eb54f07cbc8c01db3c545aca60d37c_playmist_4g.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=bein_sports_1&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "nfl_network",
+    "name": "NFL Network",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-09/images_cadf0a534c4de626332004067cee3103_playmist_nfl_network400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=nfl_network&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "bleav_football",
+    "name": "Bleav Football",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-09/images_c1c4607b44cda506121e777ebeafffce_playmist_bleav_football_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=bleav_football&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "cricket_gold",
+    "name": "Cricket Gold",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-06-24/63dcbec8a9ed027c46e448fb003a0a64.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=cricket_gold&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "bt_sports",
+    "name": "BT Sports",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-09/images_5c48c1df205227964277087b833a9912_playmist_bt_sport_2400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=bt_sports_2&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "tnt_sport_1",
+    "name": "TNT Sport 1",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-09/images_4af9a282522f487a6ed41692f99baad6_playmist_tnt_sports_1400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=tnt_sport_1&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "dd_sports",
+    "name": "DD Sports",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_c3b7a42d7ce8dd21ce151178bca8715d_playmist_dd_sports_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=dd_sports&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "golf_channel",
+    "name": "Golf Channel",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_bf450d05727fd678bee456e883af98e8_playmist_golf_channel_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=golf_channel&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "gazi_tv",
+    "name": "Gazi TV",
+    "language": "",
+    "logo": "https://s3.aynaott.com/storage/d60be6284234186c03d07a4ad176bcb4",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=gazi_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/gazibdz.stream/live-orgin/gazibdz.stream/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "desh_tv",
+    "name": "Desh TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_c852d6eba40e680a258e9e18aff2d9f2_playmist_desh_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=desh_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://bozztv.com/rongo/rongo-DeshTV/tracks-v1a1/mono.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "boishakhi_tv",
+    "name": "Boishakhi TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_8a69251df11b66c4e85e7a2fe6d89286_playmist_boishakhi_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=boishakhi_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "asian_tv",
+    "name": "Asian TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_a5ac9561e182c07073e46bc30b3c8cab_playmist_asian_tv.png",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=asian_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sa_tv",
+    "name": "SA TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_b6f2363fef23e117f9a13b7c185ce26c_playmist_satv.png",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=sa_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "bangla_tv",
+    "name": "Bangla TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_8fd7517559098b744a0595d094228d8d_playmist_bangla_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=bangla_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "mohona_tv",
+    "name": "Mohona TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_1c2c83a36e990c46964ce6ef25528d84_playmist_mohona_tv400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=mohona_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "nexus_tv",
+    "name": "NEXUS TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_7e6104384dddd36f39e1a27fe0a61059_playmist_nexus_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=nexus_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "bijoy_tv",
+    "name": "Bijoy TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_82c9c8c5aa07c6b94a62cf2ffbe21375_playmist_bijoy_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=bijoy_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "global_tv",
+    "name": "Global TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_e58bddfe000aa3e5df9f7c2e90416d90_playmist_global_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=global_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "my_tv",
+    "name": "My TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_6131ede1b10602da29f1271fff0cda77_playmist_my_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=my_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "ananda_tv",
+    "name": "Ananda TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_fb867854a7203c153946b83ab4e972e6_playmist_ananda_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=ananda_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "green_tv",
+    "name": "Green TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-09/images_e50aa586435e7c34aca4fedb8aa0d9da_playmist_green_tv.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=green_tv_hd&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "btv_world",
+    "name": "BTV World",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_9ea3bc79ad1fad76ae1ef2e1dd3c1b42_playmist_btv_world_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=btv_world&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "btv_ctg",
+    "name": "BTV CTG",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-06-24/b994ae24dd627fb8b680e5cd654d1e9c.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=btv_ctg&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "r_plus",
+    "name": "R Plus",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_0ec7deccac559ad2e22206dae03454e1_playmist_r_plus_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=r_plus&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "rupshi_bangla",
+    "name": "Rupshi Bangla",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-14/images_454ca4e52d414605814d0f4778fd8137_playmist_rupshi_bangla400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=rupshi_bangla&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sangeet_bangla",
+    "name": "Sangeet Bangla",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-13/images_68b8c3bbc8b629bbc2c00880b4546d74_playmist_sangeet_bangla400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=sangeet_bangla&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "news_time_bangla",
+    "name": "News Time Bangla",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_ffb6c3be0674cf2d59f66c78d4da5b9a_playmist_news_time_bangla_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=news_time_bangla&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "dw_news",
+    "name": "DW News",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_e9cbcb0f33668b33e4b5dd06143aa1c6_playmist_dw400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=dw_news&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "cnn",
+    "name": "CNN",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_3ce5ce236141274767c8ee8148b88a5d_playmist_cnn_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=cnn&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "aljazeera_news",
+    "name": "Aljazeera News",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_c8ecdf803a94e7b04619fb573f201146_playmist_aljazeera_news400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=aljazeera_news&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "bloomberg_tv",
+    "name": "Bloomberg TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_e7674693d1fdcfada9523f3b4315d417_playmist_bloomberg_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=bloomberg_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "abc_news",
+    "name": "ABC News",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_a806cf1e3ba0981e00a8f340fab8a6f8_playmist_abc_news_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=abc_news&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "cnbc_tv",
+    "name": "CNBC TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_e67654cc3d37f4eda1a16709b2b88f6d_playmist_cnbc_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=cnbc_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "cp4",
+    "name": "CP4",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_eaacf02e8523f40c627b8234c614963d_playmist_cp_24_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=cp_24&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "fox_news",
+    "name": "Fox News",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_8d6efb719d7295f50d5cbb49e3a11a0f_playmist_fox_news400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=fox_news&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_news",
+    "name": "Sky News",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_245b453c334a625e5049ee95e8a1eb13_playmist_sky_news_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=sky_news&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "abn",
+    "name": "ABN",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-14/images_8610a5f1c975ccf85e23a6077de2f1f2_playmist_abn.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=abn&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "india_today",
+    "name": "India Today",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_c7e1c6e2ec548dee61a1a754955b76e1_playmist_india_today400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=india_today&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "iran_press",
+    "name": "Iran Press",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-14/images_bf19837ffd975c6258a0f5ee993d73d1_playmist_iran_press400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=iran_press&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "dubai_tv",
+    "name": "Dubai TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-14/images_ebb056ba1a466e52261aad45829a4160_playmist_dubai_tv400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=dubai_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "tv9_bharatvarsh",
+    "name": "TV9 Bharatvarsh",
+    "language": "",
+    "logo": "https://s3.aynaott.com/storage/0d9da1f8dd16733fdcaed3729f89bca4",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=tv9_bharatvarsh&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "republic_tv_bharat",
+    "name": "Republic TV Bharat",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_c126a1f2ceda33dad15b71f1d3210b44_playmist_republic_tv_bharat_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=republic_tv_bharat&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "hindi_khabar",
+    "name": "Hindi Khabar",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_3f07da3fcbcf0b957c04c18d17bd612b_playmist_hindi_khabar_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=hindi_khabar&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "bharat_samachar",
+    "name": "Bharat Samachar",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_d52623f16135dea6bd76f7bdacd4b886_playmist_bharat_samachar_500x296.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=bharat_samachar&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "anb_news",
+    "name": "ANB News",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_86e9d3e52b45d2bb9c321b8168aa01e9_playmist_anb_news_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=anb_news&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "news_1_india",
+    "name": "News 1 India",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_292f3cc412bf05a14544657749e4a0be_playmist_news_1_india_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=news_1_india&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sadhna_prime_news",
+    "name": "Sadhna Prime News",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_ad482966b8ccc41fc9bd98dd9382ff0d_playmist_sadhna_prime_news_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=sadhna_prime_news&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "accu_weather",
+    "name": "Accu Weather",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_a220fac6da08a832112ea4603c9a3c33_playmist_accu_weather_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=accu_weather&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "fox_weather",
+    "name": "Fox Weather",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_c6a3d7e8d5ba4bd874a958a0c6f16e8e_playmist_fox_weather400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=fox_weather&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sky_news_weather",
+    "name": "Sky News Weather",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_c9929be9ffadd600f20e2d1c4fd26b95_playmist_sky_news_weather400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=sky_news_weather&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "weather_spy",
+    "name": "Weather SPY",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_12ff352e97642f2042f8e88a93eca33d_playmist_weather_spy400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=weather_spy&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "life_time",
+    "name": "LIFE TIME",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_31a018cec62068612c9dc5efa6b13856_playmist_life_time_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=life_time&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "trt_world",
+    "name": "TRT World",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_bad71649a48765ea1bfa3b043822e061_playmist_trt_world_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=trt_world&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "mtv",
+    "name": "MTV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_79fbc39a1e2b6627305b440da7c524d7_playmist_mtv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=mtv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "fox_5",
+    "name": "Fox 5",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_fd05780c80bb076f35db9e243ee2d5f7_playmist_fox_5_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=fox_5&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "fox_business",
+    "name": "Fox business",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_bbcc532afe02dc4d7edd093b4f3882c4_playmist_fox_business400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=fox_business&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "cbs_tv",
+    "name": "CBS TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_5cd9688088c2f3b2201b17378bc5081c_playmist_cbs_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=cbs_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "usa_tv",
+    "name": "USA TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_5a24c9ea31ddb4a1dd46cc0f11b79c8e_playmist_usa_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=usa_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "fx_tv",
+    "name": "FX TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_aac39f78c7d0e3df940fda4299217e86_playmist_fx_tv400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=fx_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "weather_channel",
+    "name": "WEATHER CHANNEL",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_8a12f27b8b702fb205273e384dbf83ab_playmist_weather_channel_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=weather_channel&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "vtv_usa",
+    "name": "VTV USA",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-14/images_48a2f0e255841fe6c7d77b642dd9a9b1_playmist_vtv_usa_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=vtv_usa&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "wion",
+    "name": "Wion",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_af4d270a6fc7246b2dc185399cce7dbd_playmist_wion_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=wion&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "news_india4x7",
+    "name": "News India4x7",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_50eab684012024afd51f7d4c4fcc7aa7_playmist_news_india_24x7_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=news_india_24x7&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "abc_7_bay",
+    "name": "ABC 7 Bay",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_08717fb2d69f80063278b28057347175_playmist_abc_news_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=abc_7_bay&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "fifa_",
+    "name": "FIFA+",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-06-24/26530a5da6b296078125b8fe235e349f.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=fifa&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "btv_national",
+    "name": "BTV National",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-04-06/images_25ab94e371e82ccbd0f03b2c7754c712_playmist_btv_national_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=btv_national&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "enter_10_bangla",
+    "name": "Enter 10 Bangla",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-13/images_fc0d1242765efd4c1494fbfe4ff65c7a_playmist_enter_10_bangla400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=enter_10_bangla&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_aath",
+    "name": "Sony AATH",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-14/images_6b500d2d4c6979f37f2854565a68bcf0_playmist_sony_aath_logowine.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=sony_aath&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "thikana",
+    "name": "Thikana",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_b9a8bdbfcea2fb4656204d06f615682a_playmist_thikana400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=thikana&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "cartoon_network",
+    "name": "Cartoon Network",
+    "language": "",
+    "logo": "https://s3.aynaott.com/storage/b7fc826556dc5d8465f5046ed959cf03",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=cartoon_network&format=.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://s2.itcnbd.live/server-2/stream/cartoon_network_sd.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "and_pictures",
+    "name": "And Pictures",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-08/images_b29360e9b3bf9d3ce34bd67d06d7c004_playmist_and_pictures_hd_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=and_pictures_hd&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "zee4_ghanta",
+    "name": "Zee4 Ghanta",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_281d2359842d306ac384314f30059648_playmist_zee_24_ghanta_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=zee_24_ghanta&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "talk_sport",
+    "name": "Talk Sport",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-06-24/d37be82dbf29f05cbf9ecf97ce4ebce6.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=talk_sport&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "b4u_hitz",
+    "name": "B4U Hitz",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_9cba0e4a98d7a55986c6b194441ac753_playmist_b4u_hitz_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=b4u_hitz&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "ntv_europe",
+    "name": "NTV Europe",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-06-28/images_7eb39c04f7cf7ab782e6324c484d93e5_playmist_ntv_europe_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=ntv_europe&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "dhoom_music_bangla",
+    "name": "Dhoom Music Bangla",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-14/images_308780d623c52c9b477206d44a374ff3_playmist_dhoom_music_bangla_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=dhoom_music_bangla&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "hindi_movie_classic4",
+    "name": "Hindi Movie Classic4",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_af0da7926606216768d48d2189e3e12c_playmist_hindi_movie_classic_24.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=hindi_movie_classic_24&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "drama4",
+    "name": "Drama4",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-06-24/1efe6869f35988df55cde8f973f3b5bd.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=drama_24&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "movie_bangla",
+    "name": "Movie Bangla",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-14/images_4b0e2707eaa2037e3c13948ddce9be7b_playmist_movie_bangla_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=movie_bangla&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "republic_bangla",
+    "name": "Republic Bangla",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-13/images_45a1af747f3728954d1e83ab457d8e53_playmist_republic_bangla_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=republic_bangla&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "music_india",
+    "name": "Music India",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_293d590e382ae09a9d8028c4c56d4ee3_playmist_music_india_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=music_india&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "nickjr",
+    "name": "Nickjr",
+    "language": "",
+    "logo": "https://s3.aynaott.com/storage/55f043e74c7bbb36ca4664b4fa8c9d9c",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=nickjr&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "peace_tv_bangla",
+    "name": "Peace TV Bangla",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_55fa6cf36df126454996a9e4cf7f8e85_playmist_peace_tv_bangla_hd_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=peace_tv_bangla_hd&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "goldmines_bollywood",
+    "name": "Goldmines Bollywood",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-06-24/e0eb8b0468e84add45cf9dcedc27c612.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=goldmines_bollywood&format=.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://103.175.73.12:8080/live/52/52_0.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "test_live_tv",
+    "name": "Test Live TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-04-05/thumbnails_e7c232fc971625f04bb5f1c464a92159_playmist_live_tv_placeholder.png",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=test_live_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "dd_bangla",
+    "name": "DD Bangla",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-13/images_9cd5e0424aa0759556a829aa36fd4121_playmist_dd_bangla400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=dd_bangla&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "kolkata_tv",
+    "name": "kolkata TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_067234e427ca902620258631b762cea8_playmist_kolkata_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=kolkata_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sports_fishing_tv",
+    "name": "Sports Fishing TV",
+    "language": "",
+    "logo": "https://s3.aynaott.com/storage/bf65e9176988a3523b45793c8f47bead",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=sports_fishing_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "discovery",
+    "name": "Discovery",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_e6222cfb0e0f7e22736f3496cc98a897_playmist_discovery_hd_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=discovery_hd&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "9xm",
+    "name": "9XM",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_665747d089b71dd7f26eb503b51abfed_playmist_9xm_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=9xm&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "bein_sports",
+    "name": "beIN SPORTS",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-09/images_d42ab13fe207d824670f04d717bfd88b_playmist_bein_sports.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=bein_sports&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "disney_junior",
+    "name": "Disney Junior",
+    "language": "",
+    "logo": "https://s3.aynaott.com/storage/f7bf0ed09ce9943149669a03acb4df70",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=disney_junior&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "dubai_sports_1",
+    "name": "Dubai Sports 1",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-14/images_178fd67f7c1b0e4143333962bc7600e7_playmist_dubai_sports_2_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=dubai_sports_1&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "goal_tv",
+    "name": "Goal TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_db46edea3e5aae6a063369b686c1192d_playmist_goal_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=goal_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "disney_channel",
+    "name": "Disney Channel",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_92666995d4995d2bb46b92598d2b3e48_playmist_disney_channel_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=disney_channel&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "nat_geo_tv",
+    "name": "Nat Geo TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_25b786047244481532eb505dfba85580_playmist_nat_geo_tv_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=nat_geo_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "tv9_bangla",
+    "name": "TV9 Bangla",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-02/images_4c08302f7fbe506a998e74c89fcf08ac_playmist_tv9_bangla_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=tv9_bangla&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "animal_planet",
+    "name": "Animal Planet",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_a49ebd8c1eabd8e7cc20297a0fda92f5_playmist_animal_planet_hd_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=animal_planet_hd&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "zoom_tv",
+    "name": "Zoom TV",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_d5f21c410f16519379a4ca7f1c4a14f5_playmist_zoom_tv400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=zoom_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "amc",
+    "name": "Amc",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-08/images_9db50b3bbf28a42f76b50d120b2e1db0_playmist_amc_500x296.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=amc&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "manoranjan_movies",
+    "name": "Manoranjan Movies",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_fa199bbc64f6fb27edca5b1205217dce_playmist_manoranjan_movies_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=manoranjan_movies&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "goldmines_movies",
+    "name": "Goldmines Movies",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_3f22715a97b25bb49be73ed06edcabef_playmist_goldmines_movies_400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=goldmines_movies&format=.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://cdn-2.pishow.tv/live/1460/master.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://cdn-2.pishow.tv/live/1461/master.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "hbo",
+    "name": "HBO",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-15/images_c5adf129be936d1f292d53f697e9e4ef_playmist_hbo400x400.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=hbo&format=.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=hbo_2&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "and_tv",
+    "name": "And tv",
+    "language": "",
+    "logo": "https://web.aynaott.com/storage/019dd92f-107c-7056-9e79-e5233f6e51d9/uploads/images/2026-07-16/images_845fa61e4b31dbf35e442cd6037ed2e6_playmist_and_tv.jpg",
+    "group": "General",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=and_tv&format=.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "deshi_tv__720p_",
+    "name": "Deshi TV (720p)",
+    "language": "",
+    "logo": null,
+    "group": "Unknown",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://deshitv.deshitv24.net/live/myStream/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "atn_music__360p_",
+    "name": "ATN Music (360p)",
+    "language": "",
+    "logo": null,
+    "group": "Unknown",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/atnmusic.stream/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "desh_tv__1080p_",
+    "name": "Desh TV (1080p)",
+    "language": "",
+    "logo": null,
+    "group": "Unknown",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://bozztv.com/rongo/rongo-DeshTV/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "channel_s",
+    "name": "Channel S",
+    "language": "",
+    "logo": null,
+    "group": "Unknown",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/channels.stream/live-orgin/channels.stream/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "green_tv__1080p_",
+    "name": "Green TV (1080p)",
+    "language": "",
+    "logo": null,
+    "group": "Unknown",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "rtv__720p_",
+    "name": "RTV (720p)",
+    "language": "",
+    "logo": null,
+    "group": "Unknown",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/rtv-sg.stream/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "http://tvsen5.aynascope.net/RtvHD/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://tvsen5.aynaott.com/RtvHD/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "ntv__720p_",
+    "name": "NTV (720p)",
+    "language": "",
+    "logo": null,
+    "group": "Unknown",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "rajdhani_tv__1080p_",
+    "name": "Rajdhani TV (1080p)",
+    "language": "",
+    "logo": null,
+    "group": "Unknown",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "t_sports__1080p_",
+    "name": "T Sports (1080p)",
+    "language": "",
+    "logo": null,
+    "group": "Unknown",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "iran_news",
+    "name": "Iran News",
+    "language": "",
+    "logo": null,
+    "group": "Cricket ",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://dev-live.livetvstream.co.uk/LS-63503-4/chunklist_b1196000.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "pk_sports",
+    "name": "Pk Sports",
+    "language": "",
+    "logo": null,
+    "group": "Cricket ",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://lbgo.bozztv.com/ssh101/ssh101/pksportshd/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "motor_vision",
+    "name": "Motor Vision",
+    "language": "",
+    "logo": null,
+    "group": "Cricket ",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://mvg-mv-xumo.otteravision.com/mvg/mv/mv.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "qaz_sports",
+    "name": "QAZ Sports",
+    "language": "",
+    "logo": null,
+    "group": "Football",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "http://stream.mcquack.net/72/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "live_quran_tv",
+    "name": "Live Quran TV",
+    "language": "",
+    "logo": null,
+    "group": "Cricket ",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "bein_sports_direct",
+    "name": "Bein Sports Direct",
+    "language": "",
+    "logo": null,
+    "group": "Football",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "http://145.239.5.177/557a/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sunnah_tv",
+    "name": "Sunnah Tv",
+    "language": "",
+    "logo": null,
+    "group": "ISLAMIC CHANNELS",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://m.live.net.sa:1935/live/sunnah/chunklist.m3u8?v=1",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "mundial_sports",
+    "name": "Mundial Sports",
+    "language": "",
+    "logo": null,
+    "group": "Football",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://s2.bufaloweb.com/bufalo9/tracks-v4a1/mono.ts.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "pbs_kids",
+    "name": "PBS Kids",
+    "language": "",
+    "logo": null,
+    "group": "Kids",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://2-fss-2.streamhoster.com/pl_140/amlst:200914-1298290/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "arabica_tv",
+    "name": "Arabica TV",
+    "language": "",
+    "logo": null,
+    "group": "Bangladeshi ",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://istream.binarywaves.com:8081/hls/arabica/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "quran_radiotv_smc",
+    "name": "QURAN RADIOTV SMC",
+    "language": "",
+    "logo": null,
+    "group": "ISLAMIC CHANNELS",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://live.kwikmotion.com/smcquranlive/quranradiolive/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "quran",
+    "name": "QURAN",
+    "language": "",
+    "logo": null,
+    "group": "ISLAMIC CHANNELS",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://m.live.net.sa:1935/live/quran/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "al_sunnah_tv",
+    "name": "AL SUNNAH TV",
+    "language": "",
+    "logo": null,
+    "group": "ISLAMIC CHANNELS",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://m.live.net.sa:1935/live/sunnah/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "fm_radio",
+    "name": "FM Radio",
+    "language": "",
+    "logo": null,
+    "group": "Cricket ",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://stream.spicefmbd.com/stream.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "madani_tv",
+    "name": "Madani Tv",
+    "language": "",
+    "logo": null,
+    "group": "ISLAMIC CHANNELS",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://streaming.madanichannel.tv/static/streaming-playlists/hls/d3e49b76-ac06-4689-a641-9200445b647f/master.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "g_series_drama",
+    "name": "G Series Drama",
+    "language": "",
+    "logo": null,
+    "group": "Cricket ",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://vods2.aynaott.com/gseriesDrama/tracks-v1a1/mono.ts.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "saudia_arabia",
+    "name": "Saudia Arabia",
+    "language": "",
+    "logo": null,
+    "group": "Cricket ",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-saudi-tv/2ad66056b51fd8c1b624854623112e43/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "al_ekhbaria",
+    "name": "AL EKHBARIA",
+    "language": "",
+    "logo": null,
+    "group": "ISLAMIC CHANNELS",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn-globecast.akamaized.net/live/eds/al_ekhbariya/hls_roku/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-al-ekhbaria/297b3ef1cd0633ad9cfba7473a686a06/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "almasira_mubasher",
+    "name": "ALMASIRA MUBASHER",
+    "language": "",
+    "logo": null,
+    "group": "ISLAMIC CHANNELS",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://live2.cdnbridge.tv/AlmasirahMubasher/Mubasher_All/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "travel_xp_english",
+    "name": "Travel XP English",
+    "language": "",
+    "logo": null,
+    "group": "Infotainment Channels",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://travelxp-travelxp-1-eu.rakuten.wurl.tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "travel_xp_english_nz",
+    "name": "Travel XP English NZ",
+    "language": "",
+    "logo": null,
+    "group": "Infotainment Channels",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://travelxp-travelxp-1-nz.samsung.wurl.tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sochi4",
+    "name": "Sochi4",
+    "language": "",
+    "logo": null,
+    "group": "Infotainment Channels",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "http://serv30.vintera.tv:8081/sochi/sochi24_tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "al_qamar",
+    "name": "AL QAMAR",
+    "language": "",
+    "logo": null,
+    "group": "ISLAMIC CHANNELS",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://streamer3.premio.link/alqamar/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "colors_infinity_sd",
+    "name": "Colors Infinity SD",
+    "language": "",
+    "logo": null,
+    "group": "Entertainment",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livecdn.live247stream.com/joomusic/tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "real_wild",
+    "name": "REAL WILD",
+    "language": "",
+    "logo": null,
+    "group": "Documentary",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-realwild-tcl/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "insight",
+    "name": "Insight",
+    "language": "",
+    "logo": null,
+    "group": "Documentary",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://insighttv-samsung-us.amagi.tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "bahrain_quran",
+    "name": "BAHRAIN QURAN",
+    "language": "",
+    "logo": null,
+    "group": "ISLAMIC CHANNELS",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainquran_all/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "al_istiqama",
+    "name": "AL ISTIQAMA",
+    "language": "",
+    "logo": null,
+    "group": "ISLAMIC CHANNELS",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://jmc-live.ercdn.net/alistiqama/alistiqama.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "peace_tv_english",
+    "name": "Peace Tv English",
+    "language": "",
+    "logo": null,
+    "group": "ISLAMIC CHANNELS",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://dzkyvlfyge.erbvr.com/PeaceTvEnglish/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "global_news__us_",
+    "name": "Global News (US)",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://live.corusdigitaldev.com/groupb/live/3062d0e3-ed4c-4f47-8482-95648250f4b8/live.isml/.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "t_global_news__canada_",
+    "name": "T Global News (Canada)",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://live.corusdigitaldev.com/groupd/live/49a91e7f-1023-430f-8d66-561055f3d0f7/live.isml/master.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "fashion_one",
+    "name": "FASHION ONE",
+    "language": "",
+    "logo": null,
+    "group": "Entertainment",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e2ee690051.smil/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2ee6997cb_1/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "dw_news",
+    "name": "DW NEWS",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/stream02/streamPlaylist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "rongeen_tv",
+    "name": "Rongeen TV",
+    "language": "",
+    "logo": null,
+    "group": "Kids",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://server.thelegitpro.in/rongeentv/rongeentv/tracks-v1a1/mono.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "cnn__us_",
+    "name": "CNN (US)",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "quran",
+    "name": "Quran",
+    "language": "",
+    "logo": null,
+    "group": "FM REDIO",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://download.quranicaudio.com/qdc/abdurrahmaan_as_sudais/murattal/96.mp3",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "pcv",
+    "name": "pcv",
+    "language": "",
+    "logo": null,
+    "group": "Bangladeshi ",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://padmaonline.duckdns.org:8088/pcv/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "news_max",
+    "name": "News Max",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://nmxlive.akamaized.net/hls/live/529965/Live_1/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "france_news4",
+    "name": "France News4",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL TV",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://live.france24.com/hls/live/2037179/F24_FR_HI_HLS/master_5000.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "france4_english__720p_",
+    "name": "France4 English (720p)",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://live.france24.com/hls/live/2037218-b/F24_EN_HI_HLS/master_2300.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "trt_world",
+    "name": "TRT WORLD",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL TV",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://tv-trtworld.medya.trt.com.tr/master.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "al_quran_radio",
+    "name": "Al Quran Radio",
+    "language": "",
+    "logo": null,
+    "group": "Radio FM ",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://66.45.232.131:9994/;stream.mp3",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "zb_cartoon",
+    "name": "ZB Cartoon",
+    "language": "",
+    "logo": null,
+    "group": "Kids",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://server.zillarbarta.com/zbcatun/video.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "ndtv_news",
+    "name": "NDTV NEWS",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://ndtv24x7elemarchana.akamaized.net/hls/live/2003678-b/ndtv24x7/master.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "ndtv_english",
+    "name": "NDTV English",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://ndtv24x7elemarchana.akamaized.net/hls/live/2003678/ndtv24x7/master.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "dw_english",
+    "name": "DW English",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8?v=1",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "dw_english__",
+    "name": "DW English _",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "digital_fashion",
+    "name": "Digital Fashion",
+    "language": "",
+    "logo": null,
+    "group": "Entertainment",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://115.187.41.216:8080/hls/digitalfashion/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "ndtv_hindi",
+    "name": "NDTV Hindi",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://ndtvindiaelemarchana.akamaized.net/hls/live/2003679/ndtvindia/master.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "times_of_india",
+    "name": "Times Of India",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL TV",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://live.sli.ke/live/npnhm84gz9/master.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "arihant_tv",
+    "name": "Arihant TV",
+    "language": "",
+    "logo": null,
+    "group": "Relagion Channel",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://aasthaott.akamaized.net/110923/smil:arihant.smil/chunklist_b1928000.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "ewtn_tv",
+    "name": "EWTN TV",
+    "language": "",
+    "logo": null,
+    "group": "Relagion Channel",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn3.wowza.com/1/ZVBYYXFLLzE0c3NC/Qk1FMURC/hls/qrpsvkxl/720/chunklist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "gopal_bhar_tv",
+    "name": "Gopal Bhar TV",
+    "language": "",
+    "logo": null,
+    "group": "CARTOON Drama",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://live20.bozztv.com/giatvplayout7/giatv-209611/tracks-v1a1/mono.ts.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "live_sports",
+    "name": "Live Sports",
+    "language": "",
+    "logo": null,
+    "group": "Live Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://tvsen3.aynaott.com/Sports1/mono.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://s1.itcnbd.live/T-Sports-HD/tracks-v1a1/mono.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://s1.itcnbd.live/PTV-Sports/tracks-v1a1/mono.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://s2.itcnbd.live/server-2/stream/euro_sports_hd.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://s3.itcnbd.live/channel/ea25a516d781cb1c.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://s2.itcnbd.live/server-2/stream/sony_sports_2_hd.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://s2.itcnbd.live/server-2/proxy/ten_cricket/playlist?u=https%3A%2F%2Fbldcmprod-cdn.toffeelive.com%2Fcdn%2Flive%2Fslang%2Ften_cricket_576%2Ften_cricket_576.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "tom___jerry_tv",
+    "name": "Tom & Jerry TV",
+    "language": "",
+    "logo": null,
+    "group": "CARTOON Drama",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://live20.bozztv.com/giatvplayout7/giatv-208314/tracks-v1a1/mono.ts.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "peace_tv_urdu",
+    "name": "Peace TV Urdu",
+    "language": "",
+    "logo": null,
+    "group": "Relagion Channel",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://dzkyvlfyge.erbvr.com/PeaceTvUrdu/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "nk",
+    "name": "NK",
+    "language": "",
+    "logo": null,
+    "group": "Indian Bangla News",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://amg01218-republictvfast-amg01218c1-samsung-in-1918.playouts.now.amagi.tv/playlist/amg01218-republictvfast-rbangla-samsungin/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "jalsha_movies",
+    "name": "Jalsha Movies",
+    "language": "",
+    "logo": null,
+    "group": "Kolkata Bangla Movies",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "http://103.151.61.12/Jalsha_Movie/tracks-v1a1/mono.m3u8?token=i7bZaZWaFrSIE0",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "mr_bean_animated",
+    "name": "Mr Bean Animated",
+    "language": "",
+    "logo": null,
+    "group": "CARTOON Drama",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://amg00627-amg00627c29-rakuten-it-3989.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanitcc-rakutenit/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "r_plus_gold",
+    "name": "R Plus Gold",
+    "language": "",
+    "logo": null,
+    "group": "Kolkata Bangla",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn-4.pishow.tv/live/1231/1231_1.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "rtnews_global",
+    "name": "RTNEWS GLOBAL",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://rt-rtd.rttv.com/dvr/rtdoc/playlist.m3u8?v=1",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "kolkata_tv",
+    "name": "Kolkata TV",
+    "language": "",
+    "logo": null,
+    "group": "Indian Bangla News",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn.ottlive.co.in/kolkatatv/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "rt_news_usa",
+    "name": "RT NEWS USA",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://rt-glb.rttv.com/live/rtnews/playlist.m3u8?v=1",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "rt_news__en_",
+    "name": "RT News (EN)",
+    "language": "",
+    "logo": null,
+    "group": "NEWS INTERNASIONAL",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://rt-glb.rttv.com/live/rtnews/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "zee_anmol_tv",
+    "name": "Zee Anmol TV",
+    "language": "",
+    "logo": null,
+    "group": "Hindi Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://103.175.73.12:8080/live/256/256_0.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "aakash_aath",
+    "name": "AAKASH AATH",
+    "language": "",
+    "logo": null,
+    "group": "Kolkata Bangla",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn-4.pishow.tv/live/969/master.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "zee_action",
+    "name": "Zee Action",
+    "language": "",
+    "logo": null,
+    "group": "Hindi Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://103.175.73.12:8080/live/270/270_0.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "SD",
+        "url": "https://s2.itcnbd.live/server-2/stream/zee_action.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "tom___jarry",
+    "name": "Tom & Jarry",
+    "language": "",
+    "logo": null,
+    "group": "KIDS",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://live20.bozztv.com/giatvplayout7/giatv-208314/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "big_magic",
+    "name": "Big Magic",
+    "language": "",
+    "logo": null,
+    "group": "Hindi",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://103.175.73.12:8080/live/13/13_0.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "hindi_hits",
+    "name": "Hindi Hits",
+    "language": "",
+    "logo": null,
+    "group": "Hindi Music",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "http://146.59.253.52:8080/hindihitshd/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sheemaroo_bollywood",
+    "name": "Sheemaroo Bollywood",
+    "language": "",
+    "logo": null,
+    "group": "Hindi Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "greenland__migration__2026___hindi_",
+    "name": "Greenland: Migration (2026) (Hindi)",
+    "language": "",
+    "logo": null,
+    "group": "English Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://premimum.online/movie/jen12345/jen54321/717746.mp4",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "freelancer",
+    "name": "Freelancer",
+    "language": "",
+    "logo": null,
+    "group": "English Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://premimum.online/movie/jen12345/jen54321/353751.mp4",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "surongo",
+    "name": "Surongo",
+    "language": "",
+    "logo": null,
+    "group": "Bangla Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://pub-d8f5af7f053343ed8295b16a145f6c1c.r2.dev/siam/[FGBDVibes]Surongo.(2023).480p.mkv",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "food_food",
+    "name": "Food Food",
+    "language": "",
+    "logo": null,
+    "group": "Information",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://103.175.73.12:8080/live/143/143_0.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "action_hollywood_movies",
+    "name": "Action Hollywood Movies",
+    "language": "",
+    "logo": null,
+    "group": "English Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://amg01076-lightningintern-actionhollywood-samsungnz-82rry.amagi.tv/playlist/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "goldmines",
+    "name": "Goldmines",
+    "language": "",
+    "logo": null,
+    "group": "Hindi Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn-2.pishow.tv/live/1459/master.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "b4u_kadak",
+    "name": "B4U Kadak",
+    "language": "",
+    "logo": null,
+    "group": "Hindi Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn-2.pishow.tv/live/227/master.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "yrf_music",
+    "name": "YRF Music",
+    "language": "",
+    "logo": null,
+    "group": "Unknown",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "jana_nayagan__2026___hindi_",
+    "name": "Jana Nayagan (2026) (Hindi)",
+    "language": "",
+    "logo": null,
+    "group": "Hindi Dabbing Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://premimum.online/movie/jen12345/jen54321/724489.mp4",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "nhk_world",
+    "name": "NHK World",
+    "language": "",
+    "logo": null,
+    "group": "English News",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://103.175.73.12:8080/live/417/417_0.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "baallee",
+    "name": "Baallee",
+    "language": "",
+    "logo": null,
+    "group": "MUSIC",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://mcncdndigital.com/balleballetv/tracks-v1a1/mono.ts.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "b4u_movies",
+    "name": "B4U Movies",
+    "language": "",
+    "logo": null,
+    "group": "Hindi",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://amg00877-b4unew-amg00877c2-xiaomi-in-5489.playouts.now.amagi.tv/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "pritam_and_pedro_s1e5_",
+    "name": "Pritam and Pedro(S1E5)",
+    "language": "",
+    "logo": null,
+    "group": "Web Series",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://ftp.ctgfun.com/TV_Series/Pritam%20and%20Pedro/Pritam%20and%20Pedro%20S01%20Hindi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Pritam%20and%20Pedro%20S01E05%20Hindi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "star_sports_1_hindi",
+    "name": "Star Sports-1 Hindi",
+    "language": "",
+    "logo": null,
+    "group": "SPORTS",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://starsportshindiii.pages.dev/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "zee_cinema",
+    "name": "Zee Cinema",
+    "language": "",
+    "logo": null,
+    "group": "Hindi Movies",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://s2.itcnbd.live/server-2/stream/zee_cinema_hd.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "r_plus_gould",
+    "name": "R Plus Gould",
+    "language": "",
+    "logo": null,
+    "group": "Indian-Bangla",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn-4.pishow.tv/live/1231/1231_2.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "pritam_and_pedro_s1e4_",
+    "name": "Pritam and Pedro(S1E4)",
+    "language": "",
+    "logo": null,
+    "group": "Web Series",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://ftp.ctgfun.com/TV_Series/Pritam%20and%20Pedro/Pritam%20and%20Pedro%20S01%20Hindi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Pritam%20and%20Pedro%20S01E04%20Hindi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_tv",
+    "name": "Sony TV",
+    "language": "",
+    "logo": null,
+    "group": "Hindi",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://s2.itcnbd.live/server-2/stream/sonyentertainmnt_hd.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "pritam_and_pedro_s1e3_",
+    "name": "Pritam and Pedro(S1E3)",
+    "language": "",
+    "logo": null,
+    "group": "Web Series",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://ftp.ctgfun.com/TV_Series/Pritam%20and%20Pedro/Pritam%20and%20Pedro%20S01%20Hindi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Pritam%20and%20Pedro%20S01E03%20Hindi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "pritam_and_pedro_s1e6_",
+    "name": "Pritam and Pedro(S1E6)",
+    "language": "",
+    "logo": null,
+    "group": "Web Series",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://ftp.ctgfun.com/TV_Series/Pritam%20and%20Pedro/Pritam%20and%20Pedro%20S01%20Hindi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Pritam%20and%20Pedro%20S01E06%20Hindi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "pritam_and_pedro_s1e1_",
+    "name": "Pritam and Pedro(S1E1)",
+    "language": "",
+    "logo": null,
+    "group": "Web Series",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://ftp.ctgfun.com/TV_Series/Pritam%20and%20Pedro/Pritam%20and%20Pedro%20S01%20Hindi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Pritam%20and%20Pedro%20S01E01%20Hindi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "mbc_tv",
+    "name": "MBC tv",
+    "language": "",
+    "logo": null,
+    "group": "Hindi",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "http://93.184.10.248/MBCBollywood/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "cowboy_tv",
+    "name": "Cowboy tv",
+    "language": "",
+    "logo": null,
+    "group": "SPORTS",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://amg17292-amg17292c1-distrotv-us-4170.playouts.now.amagi.tv/playlist/amg17292-tetonridgellc-tetonridgefast-distrotvus/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "pritam_and_pedro_s1e2_",
+    "name": "Pritam and Pedro(S1E2)",
+    "language": "",
+    "logo": null,
+    "group": "Web Series",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://ftp.ctgfun.com/TV_Series/Pritam%20and%20Pedro/Pritam%20and%20Pedro%20S01%20Hindi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D/Pritam%20and%20Pedro%20S01E02%20Hindi%20720p%20WEBRip%20x264%20ESub%20%5BDDN%5D.mp4",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "jalsha_movies_sd",
+    "name": "Jalsha Movies SD",
+    "language": "",
+    "logo": null,
+    "group": "Indian-Bangla",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://live.bdixbd.net/api/proxy/stream.m3u8?url=http%3A%2F%2F103.114.11.37%3A8081%2FJalsha-Movies%2Ftracks-v1a1%2Fmono.m3u8%3Ftoken%3Ddsfsdfsdfsdf",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "love_nature",
+    "name": "Love nature",
+    "language": "",
+    "logo": null,
+    "group": "Documentary",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn1.logichost.in/ajmantv/live/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "akash_aath",
+    "name": "Akash Aath",
+    "language": "",
+    "logo": null,
+    "group": "Indian-Bangla",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://live.thebosstv.com:30443/dwlive/AAKAASH-AATH/chunks.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "mk_six",
+    "name": "MK Six",
+    "language": "",
+    "logo": null,
+    "group": "Hindi",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn-3.pishow.tv/live/1253/master.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "pogo",
+    "name": "Pogo",
+    "language": "",
+    "logo": null,
+    "group": "KIDS",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://s2.itcnbd.live/server-2/stream/pogo_sd.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_pix",
+    "name": "Sony Pix",
+    "language": "",
+    "logo": null,
+    "group": "English Movies",
+    "servers": [
+      {
+        "name": "HD",
+        "url": "https://s2.itcnbd.live/server-2/stream/sonypix_hd.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_yay",
+    "name": "Sony Yay",
+    "language": "",
+    "logo": null,
+    "group": "KIDS",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://s2.itcnbd.live/server-2/stream/sonyyay.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "hindi_movies",
+    "name": "Hindi Movies",
+    "language": "",
+    "logo": null,
+    "group": "Hindi | 24/7",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://live20.bozztv.com/giatvplayout7/giatv-209612/tracks-v1a1/mono.ts.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "south_movies",
+    "name": "South Movies",
+    "language": "",
+    "logo": null,
+    "group": "Hindi | 24/7",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://live20.bozztv.com/giatvplayout7/giatv-209593/tracks-v1a1/mono.ts.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
   }
 ]

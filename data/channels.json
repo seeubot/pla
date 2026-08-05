@@ -715,7 +715,7 @@
     "license": ""
   },
   {
-    "id": "sun_tv",
+    "id": "suntv",
     "name": "Sun TV",
     "language": "",
     "logo": "https://sund-images.sunnxt.com/194408/640x360_SunTV_194408_2617a80e-4f90-42fa-b13a-acc8d7c97f9e.jpg",
@@ -736,7 +736,7 @@
     ]
   },
   {
-    "id": "surya_movies",
+    "id": "suryamovies",
     "name": "Surya Movies",
     "language": "",
     "logo": "https://sund-images.sunnxt.com/194385/640x360_SuryaMovies_194385_2d5dbc38-915d-4e41-b8b0-ea98ca6c88d3.jpg",
@@ -751,7 +751,7 @@
     ]
   },
   {
-    "id": "surya_music",
+    "id": "suryamusic",
     "name": "Surya Music",
     "language": "",
     "logo": "https://sund-images.sunnxt.com/194338/640x360_SuryaMusic_194338_7fe35164-9a93-45ad-92a1-31126e592a84.jpg",
@@ -766,7 +766,7 @@
     ]
   },
   {
-    "id": "surya_comedy",
+    "id": "suryacomedy",
     "name": "Surya Comedy",
     "language": "",
     "logo": "https://sund-images.sunnxt.com/194400/640x360_UdayaComedy_194400_476f38f8-3104-4816-a540-968b36f27a5f.jpg",
@@ -777,111 +777,6 @@
         "url": "https://livestream.sunnxt.com/6505e922bf164423ad122f404747356a/SuryaComedyB_IN_index.mpd",
         "drm": "clearkey",
         "license": "https://sony-token.vercel.app/api/results.php?keyid=11563b00a46b43f2a0f80ecf42a4fb77&key=9bad28ad6f23dbb917c63ee680f66a1f"
-      }
-    ]
-  },
-  {
-    "id": "______live_sports_promo______",
-    "name": "--- [ LIVE SPORTS PROMO ] ---",
-    "language": "",
-    "logo": "https://bdixiptvbd.com/logo.png",
-    "group": "Chill Box",
-    "servers": [
-      {
-        "name": "SD",
-        "url": "https://raw.githubusercontent.com/ibstvofficial/IBS-TV-special-movies.m3u/refs/heads/main/promo%20dual.mp4",
-        "drm": "",
-        "license": ""
-      }
-    ]
-  },
-  {
-    "id": "______sports_events_promo______",
-    "name": "--- [ SPORTS EVENTS PROMO ] ---",
-    "language": "",
-    "logo": "https://bdixiptvbd.com/logo.png",
-    "group": "Chill Box",
-    "servers": [
-      {
-        "name": "SD",
-        "url": "https://raw.githubusercontent.com/ibstvofficial/IBS-TV-special-movies.m3u/refs/heads/main/promo%20dual.mp4",
-        "drm": "",
-        "license": ""
-      }
-    ]
-  },
-  {
-    "id": "tsport",
-    "name": "T Sports (3)",
-    "language": "",
-    "logo": "https://raw.githubusercontent.com/abusaeeidx/T-Sports-Playlist-Auto-Update/refs/heads/main/images/images%20(6)%20(9).jpeg",
-    "group": "Chill Box",
-    "servers": [
-      {
-        "name": "HD",
-        "url": "http://sm-monirul.top/@monirul_Islam_SM/proxy.php?id=t_sports_hd&format=.m3u8",
-        "drm": "",
-        "license": ""
-      }
-    ]
-  },
-  {
-    "id": "tsport",
-    "name": "T Sports (1080p) (4)",
-    "language": "",
-    "logo": "https://raw.githubusercontent.com/abusaeeidx/T-Sports-Playlist-Auto-Update/refs/heads/main/images/images%20(6)%20(9).jpeg",
-    "group": "Chill Box",
-    "servers": [
-      {
-        "name": "SD",
-        "url": "https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8",
-        "drm": "",
-        "license": ""
-      }
-    ]
-  },
-  {
-    "id": "tsport",
-    "name": "T Sports (8)",
-    "language": "",
-    "logo": "https://raw.githubusercontent.com/abusaeeidx/T-Sports-Playlist-Auto-Update/refs/heads/main/images/images%20(6)%20(9).jpeg",
-    "group": "Chill Box",
-    "servers": [
-      {
-        "name": "SD",
-        "url": "https://s1.itcnbd.live/T-Sports-HD/tracks-v1a1/mono.m3u8?nocache=1783826412104",
-        "drm": "",
-        "license": ""
-      }
-    ]
-  },
-  {
-    "id": "tsport",
-    "name": "T Sports (9)",
-    "language": "",
-    "logo": "https://raw.githubusercontent.com/abusaeeidx/T-Sports-Playlist-Auto-Update/refs/heads/main/images/images%20(6)%20(9).jpeg",
-    "group": "Chill Box",
-    "servers": [
-      {
-        "name": "SD",
-        "url": "http://book4u.top/royr/index.php?id=FiFaaaah",
-        "drm": "",
-        "license": ""
-      }
-    ]
-  },
-  {
-    "id": "tsport",
-    "name": "T Sports (10)",
-    "language": "",
-    "logo": "https://raw.githubusercontent.com/abusaeeidx/T-Sports-Playlist-Auto-Update/refs/heads/main/images/images%20(6)%20(9).jpeg",
-    "group": "Chill Box",
-    "servers": [
-      {
-        "name": "SD",
-        "url": "https://tvsen3.aynaott.com/VamXuQH8/index.m3u8",
-        "drm": "",
-        "license": ""
       }
     ]
   }

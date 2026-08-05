@@ -4,7 +4,7 @@
     "name": "Zee Telugu SD",
     "language": "",
     "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/6vNzRaRK.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -19,20 +19,20 @@
     "name": "Willow Cricket",
     "language": "English",
     "logo": "https://files.catbox.moe/jyj8gg.jpg",
-    "group": "Sports",
+    "group": "Chill Box",
     "servers": [
-        {
-            "name": "Server 1",
-            "url": "https://tvsen5.aynaott.com/willowhd/index.m3u8",
-            "drm": "",
-            "license": ""
-        },
-        {
-            "name": "Server 2",
-            "url": "https://amg01269-amg01269c1-sportstribal-emea-5204.playouts.now.amagi.tv/ts-eu-w1-n2/playlist/amg01269-willowtvfast-willowplus-sportstribalemea/playlist.m3u8",
-            "drm": "",
-            "license": ""
-        }
+      {
+        "name": "Server 1",
+        "url": "https://tvsen5.aynaott.com/willowhd/index.m3u8",
+        "drm": "",
+        "license": ""
+      },
+      {
+        "name": "Server 2",
+        "url": "https://amg01269-amg01269c1-sportstribal-emea-5204.playouts.now.amagi.tv/ts-eu-w1-n2/playlist/amg01269-willowtvfast-willowplus-sportstribalemea/playlist.m3u8",
+        "drm": "",
+        "license": ""
+      }
     ]
   },
   {
@@ -40,7 +40,7 @@
     "name": "Zee TV",
     "language": "",
     "logo": "https://raw.githubusercontent.com/himanshu-temp/Logos/main/Customized_logos/zeetvhd.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "HD",
@@ -55,7 +55,7 @@
     "name": "Zee Cinema",
     "language": "",
     "logo": "https://raw.githubusercontent.com/himanshu-temp/Logos/main/Customized_logos/zeecinemahd.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "HD",
@@ -70,7 +70,7 @@
     "name": "Zee TV SD",
     "language": "",
     "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/yHNSuG1V.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -85,7 +85,7 @@
     "name": "Zee Cinema SD",
     "language": "",
     "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/qss9gFuH.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -100,7 +100,7 @@
     "name": "Zee Anmol",
     "language": "",
     "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/QjKdER9Z.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -115,7 +115,7 @@
     "name": "Zee Anoml Cinema",
     "language": "",
     "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/diYkUOnX.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -130,7 +130,7 @@
     "name": "Zee Action",
     "language": "",
     "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Action.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -145,7 +145,7 @@
     "name": "Zee Bihar Jharkhand",
     "language": "",
     "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/5zkMvEbF.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -160,7 +160,7 @@
     "name": "Zee Bollywood",
     "language": "",
     "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/EqDlflgi.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -175,7 +175,7 @@
     "name": "Zee Business",
     "language": "",
     "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/vExrDK9r.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -190,7 +190,7 @@
     "name": "Zee Hindustan",
     "language": "",
     "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/TknReKLD.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -205,7 +205,7 @@
     "name": "Zee Talkies",
     "language": "",
     "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/VGfIqjrc.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -220,7 +220,7 @@
     "name": "Zee Sarthak",
     "language": "",
     "logo": "https://d388d59m61mm0v.cloudfront.net/optimized/content/common/logos/channel/logos/zee-sarthak.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -235,7 +235,7 @@
     "name": "Zee Kannada SD",
     "language": "",
     "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/1PrOGXAh.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -250,7 +250,7 @@
     "name": "Zee Tamil SD",
     "language": "",
     "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Tamil.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -265,7 +265,7 @@
     "name": "Zee Bangala SD",
     "language": "",
     "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/9XHWylqs.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -280,7 +280,7 @@
     "name": "Zee Bangala Cinema",
     "language": "",
     "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/gLSSl4nG.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -295,7 +295,7 @@
     "name": "Zee Marathi",
     "language": "",
     "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/4bimlHJj.png",
-    "group": "Clarity TV | ZEE5",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -310,7 +310,7 @@
     "name": "Sun Neo HD",
     "language": "Hindi",
     "logo": "https://sund-images.sunnxt.com/194389/640x360_SunNeoHD_194389_5edd34c1-4574-452e-a613-2f4140cd636f.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
     "drm": "clearkey",
     "license": ""
@@ -320,7 +320,7 @@
     "name": "Sun TV",
     "language": "Tamil",
     "logo": "https://sund-images.sunnxt.com/194408/640x360_SunTV_194408_2617a80e-4f90-42fa-b13a-acc8d7c97f9e.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -341,7 +341,7 @@
     "name": "Sun Marathi",
     "language": "Marathi",
     "logo": "https://sund-images.sunnxt.com/194387/640x360_SunMarathi_194387_441db2e2-0fa1-48ca-be59-7f5dd70f66cb.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://livestream.sunnxt.com/b0aacde03b744564870634ecb10e8a31/SunMarathiB_IN_index.mpd",
     "drm": "clearkey",
     "license": "5ea90a1f3b1e4a0a9b72c8e0f4a9bf31:30899fda5ca4dfb5a4535ce10c4d7341"
@@ -351,7 +351,7 @@
     "name": "Sun Music",
     "language": "Tamil",
     "logo": "https://sund-images.sunnxt.com/194410/640x360_SunMusic_194410_d4d08876-9d23-432c-aab4-b5c70c58aaac.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -372,7 +372,7 @@
     "name": "Zee Telugu",
     "language": "Telugu",
     "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/6vNzRaRK.png",
-    "group": "ZEE5",
+    "group": "Chill Box",
     "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeekannada/default/manifest.mpd",
     "drm": "clearkey",
     "license": "https://sony-token.vercel.app/api/results.php?keyid=50e714b65ead453cbfab9b20bed5c79d&key=bc08e108b9ee4f65b99cb9dad9532f3f"
@@ -382,7 +382,7 @@
     "name": "Sun Life",
     "language": "Tamil",
     "logo": "https://sund-images.sunnxt.com/194391/640x360_SunLife_194391_d407948a-b7a2-4a1f-8409-56f7261cefa1.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://livestream.sunnxt.com/6b79451f54284b3fb680fd717ee008dc/SunLifeB_IN_index.mpd",
     "drm": "clearkey",
     "license": "81546df3f41c4a6dbc9a4efc7f2fb626:3928505f4054cf1fa935276fdbe40992"
@@ -392,7 +392,7 @@
     "name": "Sun Bangla",
     "language": "Bengali",
     "logo": "https://sund-images.sunnxt.com/192537/640x360_GeminiMoviesHD_192537_abeec905-1e11-4abf-98fd-16d62fce60c8.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://livestream.sunnxt.com/bf76ee92dd01473bb2eb57d137294484/SunBanglaB_IN_index.mpd",
     "drm": "clearkey",
     "license": "01f7b9f7bf7e425f86d6dfd478390e3f:5fde68100a7856d055038236ffc7c84a"
@@ -402,7 +402,7 @@
     "name": "Sun News",
     "language": "Tamil",
     "logo": "https://sund-images.sunnxt.com/194404/640x360_SunNews_194404_0af09ceb-cb6f-48e6-9f5c-395749f0fcee.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD (Token)",
@@ -423,7 +423,7 @@
     "name": "KTV",
     "language": "Tamil",
     "logo": "https://sund-images.sunnxt.com/194409/640x360_KTV_194409_91b39445-b996-4e46-bafa-b78548e4da2e.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD (Token)",
@@ -456,7 +456,7 @@
     "name": "Surya TV",
     "language": "Malayalam",
     "logo": "https://sund-images.sunnxt.com/194398/640x360_SuryaTV_194398_45a56617-7aa9-4ced-a1c8-82b80adb83a7.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -477,7 +477,7 @@
     "name": "Surya Movies",
     "language": "Malayalam",
     "logo": "https://sund-images.sunnxt.com/194385/640x360_SuryaMovies_194385_2d5dbc38-915d-4e41-b8b0-ea98ca6c88d3.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://livestream.sunnxt.com/e24ee14c395945bd8ccb065e1bce8b9b/SuryaMoviesB_IN_index.mpd",
     "drm": "clearkey",
     "license": "6b67bccef7024f2da29b42e10dc13f89:2e8460c47d3f01693e193dba5963a5e1"
@@ -487,7 +487,7 @@
     "name": "Surya Music",
     "language": "Malayalam",
     "logo": "https://sund-images.sunnxt.com/194338/640x360_SuryaMusic_194338_7fe35164-9a93-45ad-92a1-31126e592a84.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://livestream.sunnxt.com/8c2352ff54954e7b9a4188045dcf3b27/SuryaMusicB_IN_index.mpd",
     "drm": "clearkey",
     "license": "25a1d2a4c3f848b1aed911ad691fe232:3c8b2cf8611c343e6a231b6a9c7c8b58"
@@ -497,7 +497,7 @@
     "name": "Surya Comedy",
     "language": "Malayalam",
     "logo": "https://sund-images.sunnxt.com/194400/640x360_UdayaComedy_194400_476f38f8-3104-4816-a540-968b36f27a5f.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://livestream.sunnxt.com/6505e922bf164423ad122f404747356a/SuryaComedyB_IN_index.mpd",
     "drm": "clearkey",
     "license": "11563b00a46b43f2a0f80ecf42a4fb77:9bad28ad6f23dbb917c63ee680f66a1f"
@@ -507,7 +507,7 @@
     "name": "Udaya TV",
     "language": "Kannada",
     "logo": "https://sund-images.sunnxt.com/193239/640x360_TestChannel_193239_e9155a54-81ab-49a1-9b95-0cd81b234dc0.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -528,7 +528,7 @@
     "name": "Udaya Movies",
     "language": "Kannada",
     "logo": "https://sund-images.sunnxt.com/194386/640x360_UdayaMovies_194386_429c7b3b-44a9-4328-8be3-645621c6e167.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://livestream.sunnxt.com/1c02547243c041eea5dab1c343018e90/UdayaMoviesB_IN_index.mpd",
     "drm": "clearkey",
     "license": "b4dbffb517824732a955ca02dd6aacd9:83c2aa2946432f1ded7c049efe79feef"
@@ -538,7 +538,7 @@
     "name": "Udaya Music",
     "language": "Kannada",
     "logo": "https://sund-images.sunnxt.com/194401/640x360_UdayaMusic_194401_c6816391-ea32-4780-bf8f-25cb839cef89.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://livestream.sunnxt.com/8034b7519d6a4ab8929aa4279fda1f29/UdayaMusicB_IN_index.mpd",
     "drm": "clearkey",
     "license": "9ac3472b0040459cab52035ead6fe1ae:ba9fe9dd1b8e5421e2f8c9d23bd86922"
@@ -548,7 +548,7 @@
     "name": "Udaya Comedy",
     "language": "Kannada",
     "logo": "https://sund-images.sunnxt.com/194400/640x360_UdayaComedy_194400_476f38f8-3104-4816-a540-968b36f27a5f.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://livestream.sunnxt.com/8a3d3d8d679b4f9f83a8305b4ead0644/UdayaComedyB_IN_index.mpd",
     "drm": "clearkey",
     "license": "71329783aeb74e6e9e1014fb9e4c30f4:1e025a9ed7e50fa35b8de2c96cccdd6b"
@@ -558,7 +558,7 @@
     "name": "Gemini TV",
     "language": "Telugu",
     "logo": "https://sund-images.sunnxt.com/194396/640x360_GeminiTV_194396_b5217fee-8105-4d55-bdb6-f282715761d1.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -585,7 +585,7 @@
     "name": "Gemini Movies",
     "language": "Telugu",
     "logo": "https://sund-images.sunnxt.com/194384/640x360_GeminiMovies_194384_bc1cee7f-1f8a-4b8e-83ea-da41279c9d40.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -606,7 +606,7 @@
     "name": "Gemini Music",
     "language": "Telugu",
     "logo": "https://sund-images.sunnxt.com/194410/640x360_SunMusic_194410_d4d08876-9d23-432c-aab4-b5c70c58aaac.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "servers": [
       {
         "name": "SD",
@@ -627,7 +627,7 @@
     "name": "Gemini Comedy",
     "language": "Telugu",
     "logo": "https://sund-images.sunnxt.com/194394/640x360_GeminiComedy_194394_f3c8c427-351c-4b4f-a67f-616ec0feb1d2.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://livestream.sunnxt.com/167c40e9521b470b87b4cf921fd0e146/GeminiComedyB_IN_index.mpd",
     "drm": "clearkey",
     "license": "93e686ceac134f30b0a7bc3ce5a76b26:2c37e97fa0646751e1f2b85bc4b9ff8a"
@@ -637,7 +637,7 @@
     "name": "Gemini Life",
     "language": "Telugu",
     "logo": "https://sund-images.sunnxt.com/194337/640x360_TestGeminiLife_194337_1927e76e-b04a-428b-a0fc-6aa5ed06fa88.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://livestream.sunnxt.com/a4b4f71a8b4344f3a280e906657a517a/GeminiLifeB_IN_index.mpd",
     "drm": "clearkey",
     "license": "96d5157791ea4817a66a419e285a137f:d6d0ad2a9a6cc56e18d7557c7c693a37"
@@ -647,7 +647,7 @@
     "name": "Adithya TV",
     "language": "Tamil",
     "logo": "https://sund-images.sunnxt.com/194407/960x540_AdithyaTV_194407_b6f8fa30-255b-4f4a-8f8f-4264abda8b33.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://livestream.sunnxt.com/4d0eb3cde30247ada4ade679fdfbaf86/AdithyaTVB_IN_index.mpd",
     "drm": "clearkey",
     "license": "d674a1a7f43641a29bd8867d87c7259a:812f55dcde68619fc6ad95951b241d2c"
@@ -657,7 +657,7 @@
     "name": "Kushi TV",
     "language": "Tamil",
     "logo": "https://sund-images.sunnxt.com/194346/960x540_KushiTV_194346_b0eff97b-4670-42fb-9d87-49d78fab6f3a.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://livestream.sunnxt.com/4a736d41608849758a0aed36949ded30/KushiTVB_IN_index.mpd",
     "drm": "clearkey",
     "license": "e16421cf7c374c57a8f7e91049f58cd9:b7e01aba2c307b1f05057e91a9d150d2"
@@ -667,7 +667,7 @@
     "name": "Chutti TV",
     "language": "Tamil",
     "logo": "https://sund-images.sunnxt.com/194390/640x360_ChuttiTV_194390_61005292-313a-45b4-b6a8-3ac5128a513e.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://livestream.sunnxt.com/3ed29d5b01b546eaa05d184cd87535f1/ChuttiTVB_IN_index.mpd",
     "drm": "clearkey",
     "license": "05da38a46fb7403088f41434e44de980:488046139a1e1d65323cfe4bb1b30b7b"
@@ -677,7 +677,7 @@
     "name": "Kochu TV",
     "language": "Malayalam",
     "logo": "https://sund-images.sunnxt.com/194348/960x540_KochuTV_194348_9777cbfd-685b-4e06-a7cc-f2902c1874e8.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://livestream.sunnxt.com/1893b9ab790747cb80a584873a608dcb/KochuTVB_IN_index.mpd",
     "drm": "clearkey",
     "license": "7354fb333b0c4159bc6c433c4db13d0f:fbf8b4a11febf7d2eed2283006979176"
@@ -687,7 +687,7 @@
     "name": "Chintu TV",
     "language": "Kannada",
     "logo": "https://sund-images.sunnxt.com/194347/960x540_ChintuTV_194347_64af5425-0ed0-4c8a-b071-00ef86eaefde.jpg",
-    "group": "SunNxt",
+    "group": "Chill Box",
     "url": "https://livestream.sunnxt.com/ed4c67ad957644b69361651d9101107e/ChintuTVB_IN_index.mpd",
     "drm": "clearkey",
     "license": "19d8a5cc002f411b89b33925acdc33e0:2a9aa7a3f69834c4f348430cc3f658bb"
@@ -697,7 +697,7 @@
     "name": "Star Bharat",
     "language": "Hindi",
     "logo": "https://i.imgur.com/Q8ajPij.png",
-    "group": "News",
+    "group": "Chill Box",
     "url": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
     "drm": "",
     "license": ""

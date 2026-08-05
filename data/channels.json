@@ -794,5 +794,20 @@
         "license": ""
       }
     ]
+  },
+  {
+    "id": "star_sports_hindi__720p_",
+    "name": "Star Sports Hindi (720p)",
+    "language": "",
+    "logo": "https://i.imgur.com/kHerF19.png",
+    "group": "Chill Box",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://tvsen5.aynaott.com/cXPB2LKkErN9/index.m3u8",
+        "drm": "",
+        "license": ""
+      }
+    ]
   }
 ]

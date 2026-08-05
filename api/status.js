@@ -9,7 +9,7 @@ export default function handler(req, res) {
     maintenance: false,
     
     // Set to true to force update
-    update: true,
+    update: false,
     
     // Maintenance screen settings
     title: "Server Maintenance",

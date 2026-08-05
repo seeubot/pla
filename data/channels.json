@@ -715,7 +715,7 @@
     "license": ""
   },
   {
-    "id": "suntv",
+    "id": "sun_tv",
     "name": "Sun TV",
     "language": "",
     "logo": "https://sund-images.sunnxt.com/194408/640x360_SunTV_194408_2617a80e-4f90-42fa-b13a-acc8d7c97f9e.jpg",
@@ -736,7 +736,7 @@
     ]
   },
   {
-    "id": "suryamovies",
+    "id": "surya_movies",
     "name": "Surya Movies",
     "language": "",
     "logo": "https://sund-images.sunnxt.com/194385/640x360_SuryaMovies_194385_2d5dbc38-915d-4e41-b8b0-ea98ca6c88d3.jpg",
@@ -751,7 +751,7 @@
     ]
   },
   {
-    "id": "suryamusic",
+    "id": "surya_music",
     "name": "Surya Music",
     "language": "",
     "logo": "https://sund-images.sunnxt.com/194338/640x360_SuryaMusic_194338_7fe35164-9a93-45ad-92a1-31126e592a84.jpg",
@@ -766,7 +766,7 @@
     ]
   },
   {
-    "id": "suryacomedy",
+    "id": "surya_comedy",
     "name": "Surya Comedy",
     "language": "",
     "logo": "https://sund-images.sunnxt.com/194400/640x360_UdayaComedy_194400_476f38f8-3104-4816-a540-968b36f27a5f.jpg",
@@ -777,6 +777,21 @@
         "url": "https://livestream.sunnxt.com/6505e922bf164423ad122f404747356a/SuryaComedyB_IN_index.mpd",
         "drm": "clearkey",
         "license": "https://sony-token.vercel.app/api/results.php?keyid=11563b00a46b43f2a0f80ecf42a4fb77&key=9bad28ad6f23dbb917c63ee680f66a1f"
+      }
+    ]
+  },
+  {
+    "id": "star_sports_1_hindi",
+    "name": "Star Sports 1 Hindi",
+    "language": "",
+    "logo": "https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/runded/1-by-xfireflix.png",
+    "group": "Chill Box",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://cdn10.zohanayaan.com:1686/hls/starhindi.m3u8?md5=Xk-b-6LTOyQq0sQlDW_KMA&expires=1785936023",
+        "drm": "",
+        "license": ""
       }
     ]
   }

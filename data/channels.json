@@ -469,6 +469,18 @@
         "url": "https://livestream.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_index.mpd",
         "drm": "clearkey",
         "license": "eae838ccd75d4a1fbff6fd7dd1c97780:8259ce0c112725a4d2c94d154207425f"
+      },
+      {
+        "name": "HD",
+        "url": "https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=eae838ccd75d4a1fbff6fd7dd1c97780&key=8259ce0c112725a4d2c94d154207425f"
+      },
+      {
+        "name": "SD",
+        "url": "https://livestream6.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=56e1f5b5b72e4e45a98b6f287c265ab9&key=6dee8663e63cc8f8dda8478b8b2f3b71"
       }
     ]
   },
@@ -701,5 +713,71 @@
     "url": "https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
     "drm": "",
     "license": ""
+  },
+  {
+    "id": "suntv",
+    "name": "Sun TV",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194408/640x360_SunTV_194408_2617a80e-4f90-42fa-b13a-acc8d7c97f9e.jpg",
+    "group": "Chill Box",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream1.sunnxt.com/05b5df1221764bca9867054c5e65ee62/SunTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=6752015acf084572a08dfe21796f8b45&key=ff823ddbe5625c35d3e93f0ed4520115"
+      },
+      {
+        "name": "HD",
+        "url": "https://livestream2.sunnxt.com/19ee29194c4d4fc286c3e697362e60cd/SunTVHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=3891557f1cb14dedb7545bf52499d748&key=fb662f742e5f5e0c61a7c1c66d2b019a"
+      }
+    ]
+  },
+  {
+    "id": "suryamovies",
+    "name": "Surya Movies",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194385/640x360_SuryaMovies_194385_2d5dbc38-915d-4e41-b8b0-ea98ca6c88d3.jpg",
+    "group": "Chill Box",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/e24ee14c395945bd8ccb065e1bce8b9b/SuryaMoviesB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=6b67bccef7024f2da29b42e10dc13f89&key=2e8460c47d3f01693e193dba5963a5e1"
+      }
+    ]
+  },
+  {
+    "id": "suryamusic",
+    "name": "Surya Music",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194338/640x360_SuryaMusic_194338_7fe35164-9a93-45ad-92a1-31126e592a84.jpg",
+    "group": "Chill Box",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/8c2352ff54954e7b9a4188045dcf3b27/SuryaMusicB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=25a1d2a4c3f848b1aed911ad691fe232&key=3c8b2cf8611c343e6a231b6a9c7c8b58"
+      }
+    ]
+  },
+  {
+    "id": "suryacomedy",
+    "name": "Surya Comedy",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194400/640x360_UdayaComedy_194400_476f38f8-3104-4816-a540-968b36f27a5f.jpg",
+    "group": "Chill Box",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/6505e922bf164423ad122f404747356a/SuryaComedyB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=11563b00a46b43f2a0f80ecf42a4fb77&key=9bad28ad6f23dbb917c63ee680f66a1f"
+      }
+    ]
   }
 ]

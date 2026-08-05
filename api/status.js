@@ -6,7 +6,7 @@ export default function handler(req, res) {
   // ===== CONFIGURATION - Edit these to control the app =====
   const config = {
     // Set to true to show maintenance screen
-    maintenance: false,
+    maintenance: true,
     
     // Set to true to force update
     update: false,

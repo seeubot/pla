@@ -1,4 +1,26 @@
 {
   "mode": "whitelist",
-  "groups": {}
+  "groups": {
+    "SunNxt": {
+      "keywords": [
+        "Gemini",
+        "Sun TV",
+        "Sun Music",
+        "KTV",
+        "Kushi",
+        "Chutti",
+        "Adithya",
+        "Kochu",
+        "Chintu",
+        "Sun Bangla",
+        "Sun Life",
+        "Sun Marathi",
+        "Sun News",
+        "Sun Neo",
+        "Surya",
+        "Udaya"
+      ],
+      "mergeSimilar": true
+    }
+  }
 }

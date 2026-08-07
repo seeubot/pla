@@ -2,7 +2,7 @@
   {
     "name": "Sunnxt M3U",
     "url": "https://raw.githubusercontent.com/amitfunny/sunnxt.m3u/refs/heads/main/index.html",
-    "enabled": true
+    "enabled": false 
   },
   {
     "name": "Sony TV Hub",
@@ -12,7 +12,7 @@
   {
     "name": "allinone",
     "url": "https://raw.githubusercontent.com/sportlive18/All-Playlist/refs/heads/main/combined.m3u",
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Clarity TV",

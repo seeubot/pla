@@ -55,7 +55,10 @@ export default async function handler(req, res) {
 
         try {
           debugInfo.push(`${source.name}: Fetching...`);
-          const content = await fetchUrl(source.url);
+          
+          // Pass custom headers if defined in source config
+          const customHeaders = source.headers || {};
+          const content = await fetchUrl(source.url, 0, customHeaders);
           
           if (!content || content.length < 10) {
             debugInfo.push(`${source.name}: EMPTY response`);
@@ -185,6 +188,11 @@ export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
     
+    // Add debug info in development
+    if (process.env.NODE_ENV === 'development') {
+      res.setHeader('X-Debug-Info', debugInfo.join(' | '));
+    }
+    
     res.status(200).send(playlist);
 
   } catch (e) {
@@ -217,7 +225,7 @@ function extractName(line) {
   return 'Unknown';
 }
 
-function fetchUrl(url, redirects = 0) {
+function fetchUrl(url, redirects = 0, customHeaders = {}) {
   return new Promise((resolve) => {
     if (redirects > 5) {
       resolve('');
@@ -225,18 +233,25 @@ function fetchUrl(url, redirects = 0) {
     }
 
     const client = url.startsWith('https') ? https : http;
-    const req = client.get(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': '*/*',
-        'Accept-Language': 'en-US,en;q=0.9',
-        'Connection': 'keep-alive'
-      },
+    
+    // Merge default headers with custom headers
+    const headers = {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      'Accept': '*/*',
+      'Accept-Language': 'en-US,en;q=0.9',
+      'Connection': 'keep-alive',
+      ...customHeaders // Custom headers override defaults
+    };
+    
+    const options = {
+      headers,
       timeout: 15000
-    }, (response) => {
+    };
+    
+    const req = client.get(url, options, (response) => {
       // Handle redirects
       if (response.statusCode >= 300 && response.statusCode < 400 && response.headers.location) {
-        fetchUrl(response.headers.location, redirects + 1).then(resolve);
+        fetchUrl(response.headers.location, redirects + 1, customHeaders).then(resolve);
         return;
       }
       

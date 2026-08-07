@@ -1,7 +1,7 @@
 [
   {
     "name": "Sunnxt M3U",
-    "url": "https://raw.githubusercontent.com/amitfunny/sunnxt.m3u/refs/heads/main/index.html",
+    "url": "https://cdn.jsdelivr.net/gh/amitfunny/sunnxt.m3u@main/index.html",
     "enabled": true
   },
   {
@@ -11,7 +11,7 @@
   },
   {
     "name": "allinone",
-    "url": "https://raw.githubusercontent.com/sportlive18/All-Playlist/refs/heads/main/combined.m3u",
+    "url": "https://cdn.jsdelivr.net/gh/sportlive18/All-Playlist@main/combined.m3u",
     "enabled": true
   },
   {

@@ -1,26 +1,13 @@
 {
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "*" }
       ]
-    },
-    {
-      "source": "/api/playlist",
-      "headers": [
-        { "key": "Content-Type", "value": "audio/x-mpegurl" }
-      ]
-    }
-  ],
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
     }
   ]
 }

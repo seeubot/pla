@@ -5,6 +5,11 @@
     "enabled": true
   },
   {
+    "name": "Sony TV Hub",
+    "url": "https://servertvhub.site/sony/playlist.php",
+    "enabled": true
+  },
+  {
     "name": "Sports Live",
     "url": "https://raw.githubusercontent.com/sportlive18/All-Playlist/refs/heads/main/combined.m3u",
     "enabled": true

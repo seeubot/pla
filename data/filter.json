@@ -1,82 +1,115 @@
 {
   "mode": "whitelist",
-  "whitelist": [
-    "& Pictures",
-    "& TV",
-    "Adithya TV",
-    "And Pictures",
-    "And TV",
-    "Chintu TV",
-    "Chutti TV",
-    "Discovery Investigation",
-    "Discovery Kids",
-    "Discovery Science",
-    "Discovery Turbo",
-    "Discovey",
-    "Gemini",
-    "Gemini Comedy",
-    "Gemini Life",
-    "Gemini Movies",
-    "Gemini Music",
-    "Gemini TV",
-    "KTV",
-    "Kochu",
-    "Korean Drama Active",
-    "Kushi TV",
-    "SET",
-    "SET SonyLiv",
-    "Sony Aath",
-    "Sony BBC earth English SonyLiv",
-    "Sony MAX",
-    "Sony MAX 2 SonyLiv",
-    "SONY Max SonyLiv",
-    "Sony Marathi",
-    "Sony Pal",
-    "Sony PAL SonyLiv",
-    "Sony Pix English SonyLiv",
-    "Sony SAB",
-    "Sony SAB SonyLiv",
-    "Sony Sports Ten 1 SonyLiv",
-    "Sony Sports Ten 2 SonyLiv",
-    "Sony Sports Ten 3 Hindi SonyLiv",
-    "Sony Sports Ten 5 SonyLiv",
-    "Sony Ten 1 SonyLiv",
-    "Sony WAH SonyLiv",
-    "Sony Yay",
-    "Sony YAY SonyLiv",
-    "Shorts Tv Active",
-    "Sun Bangla",
-    "Sun Life",
-    "Sun Marathi",
-    "Sun Music",
-    "Sun News",
-    "Sun TV",
-    "Surya",
-    "Surya Comedy",
-    "Surya Movies",
-    "Surya Music",
-    "TLC",
-    "Udaya",
-    "Udaya Comedy",
-    "Udaya Movies",
-    "Udaya Music",
-    "Zee Action",
-    "Zee Anmol",
-    "Zee Anoml Cinema",
-    "Zee Bangala",
-    "Zee Bihar Jharkhand",
-    "Zee Bollywood",
-    "Zee Business",
-    "Zee Cinema",
-    "Zee Hindustan",
-    "Zee Kannada",
-    "Zee Marathi",
-    "Zee Sarthak",
-    "Zee TV",
-    "Zee Talkies",
-    "Zee Tamil",
-    "Zee Telugu",
-    "Zing",
-    "Zoom"
-  ]
+  "groups": {
+    "Sun Nxt": {
+      "keywords": [
+        "Adithya",
+        "Chintu",
+        "Chutti",
+        "Gemini",
+        "KTV",
+        "Kochu",
+        "Kushi",
+        "Sun",
+        "Surya",
+        "Udaya"
+      ],
+      "mergeSimilar": true
+    },
+    "Sony Entertainment": {
+      "keywords": [
+        "SET",
+        "SONY",
+        "Sony"
+      ],
+      "mergeSimilar": true
+    },
+    "Sony Sports": {
+      "keywords": [
+        "Sony"
+      ],
+      "mergeSimilar": true
+    },
+    "Other": {
+      "keywords": [
+        "&",
+        "&TV",
+        "&flix",
+        "&xplor",
+        "1.",
+        "10",
+        "3.0",
+        "4",
+        "6",
+        "7X"
+      ],
+      "mergeSimilar": true
+    },
+    "Discovery": {
+      "keywords": [
+        "Discovery",
+        "Investigation",
+        "TLC"
+      ],
+      "mergeSimilar": true
+    },
+    "Movies": {
+      "keywords": [
+        "&",
+        "&Pictures",
+        "Animax",
+        "Anmol",
+        "B4U",
+        "Colors",
+        "J",
+        "Jaya",
+        "Maa",
+        "Maha"
+      ],
+      "mergeSimilar": true
+    },
+    "Kids": {
+      "keywords": [
+        "Cartoon",
+        "Disney",
+        "Hungama",
+        "Nick",
+        "Nickelodeon",
+        "Pogo",
+        "Power",
+        "ZB"
+      ],
+      "mergeSimilar": true
+    },
+    "News": {
+      "keywords": [
+        "22Scope",
+        "AB",
+        "ABP",
+        "ANB",
+        "ANN",
+        "AOne",
+        "ATV",
+        "Aaj",
+        "Apex",
+        "Argus"
+      ],
+      "mergeSimilar": true
+    },
+    "Sports": {
+      "keywords": [
+        "Colors",
+        "Super",
+        "Superfine"
+      ],
+      "mergeSimilar": true
+    },
+    "Zee Network": {
+      "keywords": [
+        "ZOOM",
+        "Zee"
+      ],
+      "mergeSimilar": true
+    }
+  }
 }

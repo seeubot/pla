@@ -45,23 +45,28 @@ export default async function handler(req, res) {
         
         try {
           console.log(`Fetching: ${source.name}`);
-          const content = await fetchUrl(source.url);
-          const parsed = parseM3U(content);
-          console.log(`  Parsed: ${parsed.length} channels`);
+          const content = await fetchUrlWithRetry(source.url, source.name);
+          
+          if (!content || content.length < 10) {
+            console.log(`  Empty response from ${source.name}`);
+            continue;
+          }
+          
+          // Try multiple parsers
+          let parsed = parseM3U(content);
+          
+          // If first parser found nothing, try alternative
+          if (parsed.length === 0) {
+            parsed = parseM3UAlt(content);
+          }
+          
+          console.log(`  Parsed: ${parsed.length} channels from ${source.name}`);
           
           let kept = 0;
           for (const ch of parsed) {
-            // Skip channels without URL
-            if (!ch.url || ch.url === 'undefined') {
-              continue;
-            }
-            
-            // APPLY FILTER
-            if (!shouldKeep(ch, filter)) {
-              continue;
-            }
+            if (!ch.url || ch.url === 'undefined' || ch.url.length < 5) continue;
+            if (!shouldKeep(ch, filter)) continue;
             kept++;
-            
             addCh(channelMap, ch);
           }
           console.log(`  Kept after filter: ${kept}`);
@@ -74,13 +79,6 @@ export default async function handler(req, res) {
     const channels = Object.values(channelMap);
     console.log(`Total filtered channels: ${channels.length}`);
     
-    // Show merged channels
-    for (const ch of channels) {
-      if (ch.servers && ch.servers.length > 1) {
-        console.log(`  ${ch.name}: ${ch.servers.length} servers (${ch.servers.map(s => s.name).join(', ')})`);
-      }
-    }
-    
     // Generate M3U playlist
     let playlist = '#EXTM3U\n';
     playlist += `# CHILL BOX - ${channels.length} channels\n`;
@@ -88,7 +86,6 @@ export default async function handler(req, res) {
     for (const ch of channels) {
       if (ch.servers && ch.servers.length > 0) {
         for (const srv of ch.servers) {
-          // SKIP undefined or empty URLs
           if (!srv.url || srv.url === 'undefined' || srv.url.length < 5) continue;
           
           playlist += `#EXTINF:-1 tvg-language="${ch.language||''}" tvg-logo="${ch.logo||''}" group-title="${ch.group||'Chill Box'}" server-name="${srv.name}",${ch.name}\n`;
@@ -96,9 +93,6 @@ export default async function handler(req, res) {
           if (srv.license) playlist += `#KODIPROP:inputstream.adaptive.license_key=${srv.license}\n`;
           playlist += `${srv.url}\n`;
         }
-      } else if (ch.url && ch.url !== 'undefined' && ch.url.length > 5) {
-        playlist += `#EXTINF:-1 group-title="${ch.group||'Chill Box'}",${ch.name}\n`;
-        playlist += `${ch.url}\n`;
       }
     }
     
@@ -112,23 +106,205 @@ export default async function handler(req, res) {
   }
 }
 
+// ========== FETCH WITH RETRY & MULTIPLE HEADER SETS ==========
+
+async function fetchUrlWithRetry(url, sourceName) {
+  // Try different header combinations
+  const headerSets = [
+    // Set 1: Standard browser
+    {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      'Accept': '*/*',
+      'Accept-Language': 'en-US,en;q=0.9',
+    },
+    // Set 2: IPTV player
+    {
+      'User-Agent': 'IPTVPlayer/1.0',
+      'Accept': 'audio/x-mpegurl, application/x-mpegurl, */*',
+    },
+    // Set 3: VLC
+    {
+      'User-Agent': 'VLC/3.0.18 LibVLC/3.0.18',
+      'Accept': '*/*',
+    },
+    // Set 4: Mobile
+    {
+      'User-Agent': 'Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36',
+      'Accept': '*/*',
+    }
+  ];
+  
+  // Add Referer for specific sources
+  if (url.includes('servertvhub')) {
+    headerSets.forEach(h => h['Referer'] = 'https://servertvhub.site/');
+  }
+  
+  for (const headers of headerSets) {
+    try {
+      const content = await fetchUrl(url, headers);
+      if (content && content.length > 50) {
+        // Check if it's HTML (error page)
+        if (content.includes('<!DOCTYPE') || content.includes('<html')) {
+          console.log(`  Got HTML from ${sourceName}, trying next headers...`);
+          continue;
+        }
+        return content;
+      }
+    } catch(e) {
+      continue;
+    }
+  }
+  
+  console.log(`  All header sets failed for ${sourceName}`);
+  return '';
+}
+
+function fetchUrl(url, headers) {
+  return new Promise((resolve, reject) => {
+    const client = url.startsWith('https') ? https : http;
+    const options = {
+      headers: headers,
+      timeout: 15000
+    };
+    
+    client.get(url, options, (response) => {
+      // Handle redirects
+      if (response.statusCode >= 300 && response.statusCode < 400 && response.headers.location) {
+        fetchUrl(response.headers.location, headers).then(resolve).catch(reject);
+        return;
+      }
+      
+      // Skip non-200
+      if (response.statusCode !== 200) {
+        resolve('');
+        return;
+      }
+      
+      let data = '';
+      response.on('data', chunk => data += chunk);
+      response.on('end', () => resolve(data));
+      response.on('error', reject);
+    }).on('error', (e) => resolve('')).on('timeout', () => resolve(''));
+  });
+}
+
+// ========== PRIMARY PARSER (Handles KODIPROP before EXTINF) ==========
+
+function parseM3U(content) {
+  const lines = content.split('\n');
+  const channels = {};
+  let cur = { name: '', logo: null, group: 'Chill Box', language: '', clearKey: null, url: null, serverName: null };
+  let pendingClearKey = null;
+  let pendingDrm = null;
+  
+  for (const line of lines) {
+    const l = line.trim();
+    if (!l) continue;
+    
+    // Handle KODIPROP before EXTINF (Sunnxt format)
+    if (l.startsWith('#KODIPROP:') && l.includes('license_key=')) {
+      pendingClearKey = l.split('license_key=')[1]?.trim();
+      continue;
+    }
+    if (l.startsWith('#KODIPROP:') && l.includes('license_type=')) {
+      pendingDrm = l.split('license_type=')[1]?.trim();
+      continue;
+    }
+    
+    if (l.startsWith('#EXTINF:')) {
+      // Save previous channel
+      if (cur.url && cur.name && cur.url.length > 5) {
+        addCh(channels, cur);
+      }
+      
+      // Parse new channel - get name from end after comma
+      const nameMatch = l.match(/,([^,]+)$/);
+      cur = {
+        name: nameMatch ? nameMatch[1].trim() : 'Unknown',
+        logo: (l.match(/tvg-logo="([^"]+)"/) || [])[1] || null,
+        group: (l.match(/group-title="([^"]+)"/) || [])[1] || 'Chill Box',
+        language: (l.match(/tvg-language="([^"]+)"/) || [])[1] || '',
+        clearKey: pendingClearKey,
+        drm: pendingDrm,
+        url: null,
+        serverName: (l.match(/server-name="([^"]+)"/) || [])[1] || null
+      };
+      pendingClearKey = null;
+      pendingDrm = null;
+      
+    } else if ((l.startsWith('https://') || l.startsWith('http://')) && !l.startsWith('#')) {
+      cur.url = l;
+      if (cur.name && cur.url.length > 5) {
+        addCh(channels, cur);
+        cur = { name: '', logo: null, group: 'Chill Box', language: '', clearKey: null, url: null, serverName: null };
+      }
+    }
+  }
+  
+  // Last channel
+  if (cur.url && cur.name && cur.url.length > 5) {
+    addCh(channels, cur);
+  }
+  
+  return Object.values(channels);
+}
+
+// ========== ALTERNATIVE PARSER (Handles Sony format - URL right after EXTINF) ==========
+
+function parseM3UAlt(content) {
+  const lines = content.split('\n');
+  const channels = {};
+  
+  for (let i = 0; i < lines.length; i++) {
+    const l = lines[i].trim();
+    if (!l || !l.startsWith('#EXTINF:')) continue;
+    
+    // Get channel name
+    const nameMatch = l.match(/,([^,]+)$/);
+    const name = nameMatch ? nameMatch[1].trim() : 'Unknown';
+    const logo = (l.match(/tvg-logo="([^"]+)"/) || [])[1] || null;
+    const group = (l.match(/group-title="([^"]+)"/) || [])[1] || 'Chill Box';
+    
+    // Look for URL in next few lines
+    let url = '';
+    for (let j = i + 1; j < Math.min(i + 10, lines.length); j++) {
+      const nl = lines[j].trim();
+      if (nl.startsWith('https://') || nl.startsWith('http://')) {
+        url = nl;
+        break;
+      }
+      if (nl.startsWith('#EXTINF:')) break; // Next channel
+    }
+    
+    if (url && url.length > 5) {
+      const ch = { name, logo, group, language: '', clearKey: null, url, serverName: null };
+      addCh(channels, ch);
+    }
+  }
+  
+  return Object.values(channels);
+}
+
+// ========== FILTER ==========
+
 function shouldKeep(channel, filter) {
   if (!filter) return true;
+  
+  const name = (channel.name || '').toLowerCase().trim();
+  
+  // Empty groups = allow all
   if (!filter.groups || Object.keys(filter.groups).length === 0) {
     if (filter.whitelist && filter.whitelist.length > 0) {
-      const name = (channel.name || '').toLowerCase().trim();
       return filter.whitelist.some(w => name.includes(w.toLowerCase().trim()));
     }
     return true;
   }
   
-  const name = (channel.name || '').toLowerCase().trim();
-  
+  // Check groups
   for (const groupConfig of Object.values(filter.groups)) {
     const keywords = groupConfig.keywords || [];
     for (const kw of keywords) {
-      const keyword = kw.toLowerCase().trim();
-      if (name.includes(keyword) || keyword.includes(name)) {
+      if (name.includes(kw.toLowerCase().trim()) || kw.toLowerCase().trim().includes(name)) {
         return true;
       }
     }
@@ -141,88 +317,11 @@ function shouldKeep(channel, filter) {
   return false;
 }
 
-function fetchUrl(url) {
-  return new Promise((resolve, reject) => {
-    const client = url.startsWith('https') ? https : http;
-    const options = {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-        'Accept': '*/*',
-      },
-      timeout: 15000
-    };
-    
-    client.get(url, options, (response) => {
-      if (response.statusCode >= 300 && response.statusCode < 400 && response.headers.location) {
-        fetchUrl(response.headers.location).then(resolve).catch(reject);
-        return;
-      }
-      
-      let data = '';
-      response.on('data', chunk => data += chunk);
-      response.on('end', () => resolve(data));
-      response.on('error', reject);
-    }).on('error', reject).on('timeout', () => { reject(new Error('Timeout')); });
-  });
-}
-
-function parseM3U(content) {
-  const lines = content.split('\n');
-  const channels = {};
-  let cur = { name: '', logo: null, group: 'Chill Box', language: '', clearKey: null, url: null, serverName: null };
-  
-  for (const line of lines) {
-    const l = line.trim();
-    if (!l) continue;
-    
-    if (l.startsWith('#EXTINF:')) {
-      // Save previous channel if it has URL
-      if (cur.url && cur.name && cur.url !== 'undefined' && cur.url.length > 5) {
-        addCh(channels, cur);
-      }
-      
-      // Parse new channel
-      cur = {
-        name: (l.match(/,([^,]+)$/) || ['', 'Unknown'])[1].trim(),
-        logo: (l.match(/tvg-logo="([^"]+)"/) || [])[1] || null,
-        group: (l.match(/group-title="([^"]+)"/) || [])[1] || 'Chill Box',
-        language: (l.match(/tvg-language="([^"]+)"/) || [])[1] || '',
-        clearKey: null,
-        url: null,
-        serverName: (l.match(/server-name="([^"]+)"/) || [])[1] || null
-      };
-      
-    } else if (l.startsWith('#KODIPROP:') && l.includes('license_key=')) {
-      cur.clearKey = l.split('license_key=')[1]?.trim();
-      
-    } else if ((l.startsWith('https://') || l.startsWith('http://')) && !l.startsWith('#')) {
-      // This is a URL line - assign to current channel
-      cur.url = l;
-      
-      // Save immediately if we have a name
-      if (cur.name && cur.url.length > 5) {
-        addCh(channels, cur);
-        // Reset for next channel
-        cur = { name: '', logo: null, group: 'Chill Box', language: '', clearKey: null, url: null, serverName: null };
-      }
-    }
-  }
-  
-  // Don't forget the last channel
-  if (cur.url && cur.name && cur.url !== 'undefined' && cur.url.length > 5) {
-    addCh(channels, cur);
-  }
-  
-  return Object.values(channels);
-}
+// ========== ADD CHANNEL ==========
 
 function addCh(dict, ch) {
-  // SKIP if no valid URL
-  if (!ch.url || ch.url === 'undefined' || ch.url.length < 5) {
-    return;
-  }
+  if (!ch.url || ch.url === 'undefined' || ch.url.length < 5) return;
   
-  // Clean base name
   let base = ch.name
     .replace(/\s*\(.*?\)\s*/g, '')
     .replace(/\s*\[.*?\]\s*/g, '')
@@ -231,7 +330,6 @@ function addCh(dict, ch) {
   
   if (!base || base.length < 2) base = ch.name.trim();
   
-  // Detect server name
   let srvName = ch.serverName;
   if (!srvName) {
     const qMatch = ch.name.match(/(4K|FHD|UHD|HD|SD|HEVC)/i);
@@ -249,8 +347,7 @@ function addCh(dict, ch) {
   
   if (!dict[id]) {
     dict[id] = { 
-      id: id, 
-      name: base, 
+      id, name: base, 
       language: ch.language, 
       logo: ch.logo, 
       group: ch.group || 'Chill Box', 
@@ -261,9 +358,8 @@ function addCh(dict, ch) {
       const sameName = dict[id].servers.filter(s => s.name === srvName);
       if (sameName.length > 0) {
         try {
-          const urlHost = new URL(ch.url).hostname;
-          const shortHost = urlHost.replace('www.', '').split('.')[0];
-          srv.name = srvName + ' (' + shortHost + ')';
+          const host = new URL(ch.url).hostname.replace('www.', '').split('.')[0];
+          srv.name = srvName + ' (' + host + ')';
         } catch {
           srv.name = srvName + ' (' + (sameName.length + 1) + ')';
         }

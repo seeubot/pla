@@ -55,7 +55,7 @@ export default async function handler(req, res) {
           
           for (const ch of parsed) {
             if (!ch.url || ch.url.length < 5) continue;
-            if (!shouldKeep(ch, filter)) continue;
+          //  if (!shouldKeep(ch, filter)) continue;
             addCh(channelMap, ch);
           }
         } catch (e) {

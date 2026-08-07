@@ -28,6 +28,7 @@ export default async function handler(req, res) {
     }
     
     let channelMap = {};
+    let debugInfo = [];
     
     if (fs.existsSync(sourcesPath)) {
       const sources = JSON.parse(fs.readFileSync(sourcesPath, 'utf-8'));
@@ -37,10 +38,20 @@ export default async function handler(req, res) {
         
         try {
           const content = await fetchUrl(source.url);
-          if (!content || content.length < 10) continue;
-          if (content.includes('<!DOCTYPE') || content.includes('<html')) continue;
+          debugInfo.push(`${source.name}: fetched ${content.length} bytes`);
+          
+          if (!content || content.length < 10) {
+            debugInfo.push(`${source.name}: EMPTY response`);
+            continue;
+          }
+          
+          if (content.includes('<!DOCTYPE') || content.includes('<html')) {
+            debugInfo.push(`${source.name}: Got HTML instead of M3U`);
+            continue;
+          }
           
           const parsed = parseM3U(content);
+          debugInfo.push(`${source.name}: parsed ${parsed.length} channels`);
           
           for (const ch of parsed) {
             if (!ch.url || ch.url.length < 5) continue;
@@ -48,7 +59,7 @@ export default async function handler(req, res) {
             addCh(channelMap, ch);
           }
         } catch (e) {
-          console.log(`Failed: ${source.name} - ${e.message}`);
+          debugInfo.push(`${source.name}: ERROR - ${e.message}`);
         }
       }
     }
@@ -57,6 +68,7 @@ export default async function handler(req, res) {
     
     let playlist = '#EXTM3U\n';
     playlist += `# CHILL BOX - ${channels.length} channels\n`;
+    playlist += `# Debug: ${debugInfo.join(' | ')}\n`;
     
     for (const ch of channels) {
       if (ch.servers && ch.servers.length > 0) {
@@ -93,12 +105,29 @@ function extractName(line) {
 function fetchUrl(url) {
   return new Promise((resolve) => {
     const client = url.startsWith('https') ? https : http;
-    client.get(url, { headers: { 'User-Agent': 'Mozilla/5.0', 'Accept': '*/*' }, timeout: 15000 }, (response) => {
-      if (response.statusCode !== 200) { resolve(''); return; }
+    const req = client.get(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': '*/*',
+        'Accept-Language': 'en-US,en;q=0.9',
+      },
+      timeout: 15000
+    }, (response) => {
+      if (response.statusCode >= 300 && response.statusCode < 400 && response.headers.location) {
+        fetchUrl(response.headers.location).then(resolve);
+        return;
+      }
+      if (response.statusCode !== 200) {
+        resolve('');
+        return;
+      }
       let data = '';
       response.on('data', chunk => data += chunk);
       response.on('end', () => resolve(data));
-    }).on('error', () => resolve(''));
+      response.on('error', () => resolve(''));
+    });
+    req.on('error', () => resolve(''));
+    req.on('timeout', () => { req.destroy(); resolve(''); });
   });
 }
 

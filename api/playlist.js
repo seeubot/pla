@@ -28,7 +28,7 @@ export default async function handler(req, res) {
     if (fs.existsSync(filterPath)) {
       try {
         filter = JSON.parse(fs.readFileSync(filterPath, 'utf-8'));
-        console.log('Filter loaded successfully');
+        console.log('Filter loaded');
       } catch(e) {
         console.log('Filter parse error:', e.message);
       }
@@ -51,6 +51,11 @@ export default async function handler(req, res) {
           
           let kept = 0;
           for (const ch of parsed) {
+            // Skip channels without URL
+            if (!ch.url || ch.url === 'undefined') {
+              continue;
+            }
+            
             // APPLY FILTER
             if (!shouldKeep(ch, filter)) {
               continue;
@@ -69,7 +74,7 @@ export default async function handler(req, res) {
     const channels = Object.values(channelMap);
     console.log(`Total filtered channels: ${channels.length}`);
     
-    // Show merged channels with multiple servers
+    // Show merged channels
     for (const ch of channels) {
       if (ch.servers && ch.servers.length > 1) {
         console.log(`  ${ch.name}: ${ch.servers.length} servers (${ch.servers.map(s => s.name).join(', ')})`);
@@ -83,12 +88,15 @@ export default async function handler(req, res) {
     for (const ch of channels) {
       if (ch.servers && ch.servers.length > 0) {
         for (const srv of ch.servers) {
+          // SKIP undefined or empty URLs
+          if (!srv.url || srv.url === 'undefined' || srv.url.length < 5) continue;
+          
           playlist += `#EXTINF:-1 tvg-language="${ch.language||''}" tvg-logo="${ch.logo||''}" group-title="${ch.group||'Chill Box'}" server-name="${srv.name}",${ch.name}\n`;
           if (srv.drm) playlist += `#KODIPROP:inputstream.adaptive.license_type=${srv.drm}\n`;
           if (srv.license) playlist += `#KODIPROP:inputstream.adaptive.license_key=${srv.license}\n`;
           playlist += `${srv.url}\n`;
         }
-      } else if (ch.url) {
+      } else if (ch.url && ch.url !== 'undefined' && ch.url.length > 5) {
         playlist += `#EXTINF:-1 group-title="${ch.group||'Chill Box'}",${ch.name}\n`;
         playlist += `${ch.url}\n`;
       }
@@ -105,7 +113,6 @@ export default async function handler(req, res) {
 }
 
 function shouldKeep(channel, filter) {
-  // If no filter or empty groups, allow everything
   if (!filter) return true;
   if (!filter.groups || Object.keys(filter.groups).length === 0) {
     if (filter.whitelist && filter.whitelist.length > 0) {
@@ -117,7 +124,6 @@ function shouldKeep(channel, filter) {
   
   const name = (channel.name || '').toLowerCase().trim();
   
-  // Check all groups
   for (const groupConfig of Object.values(filter.groups)) {
     const keywords = groupConfig.keywords || [];
     for (const kw of keywords) {
@@ -128,7 +134,6 @@ function shouldKeep(channel, filter) {
     }
   }
   
-  // Also check old whitelist
   if (filter.whitelist && filter.whitelist.length > 0) {
     return filter.whitelist.some(w => name.includes(w.toLowerCase().trim()));
   }
@@ -148,7 +153,6 @@ function fetchUrl(url) {
     };
     
     client.get(url, options, (response) => {
-      // Handle redirects
       if (response.statusCode >= 300 && response.statusCode < 400 && response.headers.location) {
         fetchUrl(response.headers.location).then(resolve).catch(reject);
         return;
@@ -172,28 +176,53 @@ function parseM3U(content) {
     if (!l) continue;
     
     if (l.startsWith('#EXTINF:')) {
-      if (cur.url && cur.name) addCh(channels, cur);
+      // Save previous channel if it has URL
+      if (cur.url && cur.name && cur.url !== 'undefined' && cur.url.length > 5) {
+        addCh(channels, cur);
+      }
+      
+      // Parse new channel
       cur = {
         name: (l.match(/,([^,]+)$/) || ['', 'Unknown'])[1].trim(),
         logo: (l.match(/tvg-logo="([^"]+)"/) || [])[1] || null,
         group: (l.match(/group-title="([^"]+)"/) || [])[1] || 'Chill Box',
         language: (l.match(/tvg-language="([^"]+)"/) || [])[1] || '',
-        clearKey: null, url: null,
+        clearKey: null,
+        url: null,
         serverName: (l.match(/server-name="([^"]+)"/) || [])[1] || null
       };
+      
     } else if (l.startsWith('#KODIPROP:') && l.includes('license_key=')) {
       cur.clearKey = l.split('license_key=')[1]?.trim();
+      
     } else if ((l.startsWith('https://') || l.startsWith('http://')) && !l.startsWith('#')) {
+      // This is a URL line - assign to current channel
       cur.url = l;
-      if (cur.name) { addCh(channels, cur); cur = { name: '', logo: null, group: 'Chill Box', language: '', clearKey: null, url: null, serverName: null }; }
+      
+      // Save immediately if we have a name
+      if (cur.name && cur.url.length > 5) {
+        addCh(channels, cur);
+        // Reset for next channel
+        cur = { name: '', logo: null, group: 'Chill Box', language: '', clearKey: null, url: null, serverName: null };
+      }
     }
   }
-  if (cur.url && cur.name) addCh(channels, cur);
+  
+  // Don't forget the last channel
+  if (cur.url && cur.name && cur.url !== 'undefined' && cur.url.length > 5) {
+    addCh(channels, cur);
+  }
+  
   return Object.values(channels);
 }
 
 function addCh(dict, ch) {
-  // Clean base name - remove quality suffixes for merging
+  // SKIP if no valid URL
+  if (!ch.url || ch.url === 'undefined' || ch.url.length < 5) {
+    return;
+  }
+  
+  // Clean base name
   let base = ch.name
     .replace(/\s*\(.*?\)\s*/g, '')
     .replace(/\s*\[.*?\]\s*/g, '')
@@ -216,7 +245,6 @@ function addCh(dict, ch) {
     license: ch.clearKey || '' 
   };
   
-  // Use cleaned base name as ID
   const id = base.toLowerCase().replace(/[^a-z0-9_]/g, '_');
   
   if (!dict[id]) {
@@ -229,9 +257,7 @@ function addCh(dict, ch) {
       servers: [srv] 
     };
   } else {
-    // Check for duplicate URL
     if (!dict[id].servers.some(s => s.url === ch.url)) {
-      // If server name already exists, add source suffix
       const sameName = dict[id].servers.filter(s => s.name === srvName);
       if (sameName.length > 0) {
         try {
@@ -244,7 +270,6 @@ function addCh(dict, ch) {
       }
       dict[id].servers.push(srv);
     }
-    // Update logo if missing
     if (ch.logo && !dict[id].logo) dict[id].logo = ch.logo;
   }
 }

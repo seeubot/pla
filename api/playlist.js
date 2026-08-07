@@ -52,10 +52,8 @@ export default async function handler(req, res) {
             continue;
           }
           
-          // Try multiple parsers
+          // Try both parsers
           let parsed = parseM3U(content);
-          
-          // If first parser found nothing, try alternative
           if (parsed.length === 0) {
             parsed = parseM3UAlt(content);
           }
@@ -106,35 +104,62 @@ export default async function handler(req, res) {
   }
 }
 
-// ========== FETCH WITH RETRY & MULTIPLE HEADER SETS ==========
+// ========== NAME EXTRACTION (Handles malformed EXTINF) ==========
+
+function extractName(line) {
+  // Try standard format: ...,Channel Name
+  const stdMatch = line.match(/,([^,]+)$/);
+  if (stdMatch && stdMatch[1].trim().length > 1) return stdMatch[1].trim();
+  
+  // Try malformed: ...group-title="X"Channel Name (no comma)
+  const quotes = line.split('"');
+  if (quotes.length >= 2) {
+    // Get everything after the last quote
+    const afterLastQuote = quotes[quotes.length - 1].trim();
+    if (afterLastQuote && afterLastQuote.length > 1 && !afterLastQuote.startsWith('http')) {
+      return afterLastQuote;
+    }
+    // Try second-to-last part after quote
+    if (quotes.length >= 3) {
+      const beforeLast = quotes[quotes.length - 2].trim();
+      if (beforeLast && beforeLast.length > 1 && !beforeLast.startsWith('http')) {
+        return beforeLast;
+      }
+    }
+  }
+  
+  // Try space after attributes
+  const spaceMatch = line.match(/\s+([^\s"]+)$/);
+  if (spaceMatch && spaceMatch[1].length > 1 && !spaceMatch[1].startsWith('http')) {
+    return spaceMatch[1].trim();
+  }
+  
+  return 'Unknown';
+}
+
+// ========== FETCH WITH RETRY ==========
 
 async function fetchUrlWithRetry(url, sourceName) {
-  // Try different header combinations
   const headerSets = [
-    // Set 1: Standard browser
     {
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
       'Accept': '*/*',
       'Accept-Language': 'en-US,en;q=0.9',
     },
-    // Set 2: IPTV player
     {
       'User-Agent': 'IPTVPlayer/1.0',
       'Accept': 'audio/x-mpegurl, application/x-mpegurl, */*',
     },
-    // Set 3: VLC
     {
       'User-Agent': 'VLC/3.0.18 LibVLC/3.0.18',
       'Accept': '*/*',
     },
-    // Set 4: Mobile
     {
       'User-Agent': 'Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36',
       'Accept': '*/*',
     }
   ];
   
-  // Add Referer for specific sources
   if (url.includes('servertvhub')) {
     headerSets.forEach(h => h['Referer'] = 'https://servertvhub.site/');
   }
@@ -143,9 +168,7 @@ async function fetchUrlWithRetry(url, sourceName) {
     try {
       const content = await fetchUrl(url, headers);
       if (content && content.length > 50) {
-        // Check if it's HTML (error page)
         if (content.includes('<!DOCTYPE') || content.includes('<html')) {
-          console.log(`  Got HTML from ${sourceName}, trying next headers...`);
           continue;
         }
         return content;
@@ -155,31 +178,23 @@ async function fetchUrlWithRetry(url, sourceName) {
     }
   }
   
-  console.log(`  All header sets failed for ${sourceName}`);
   return '';
 }
 
 function fetchUrl(url, headers) {
   return new Promise((resolve, reject) => {
     const client = url.startsWith('https') ? https : http;
-    const options = {
-      headers: headers,
-      timeout: 15000
-    };
+    const options = { headers, timeout: 15000 };
     
     client.get(url, options, (response) => {
-      // Handle redirects
       if (response.statusCode >= 300 && response.statusCode < 400 && response.headers.location) {
         fetchUrl(response.headers.location, headers).then(resolve).catch(reject);
         return;
       }
-      
-      // Skip non-200
       if (response.statusCode !== 200) {
         resolve('');
         return;
       }
-      
       let data = '';
       response.on('data', chunk => data += chunk);
       response.on('end', () => resolve(data));
@@ -188,7 +203,7 @@ function fetchUrl(url, headers) {
   });
 }
 
-// ========== PRIMARY PARSER (Handles KODIPROP before EXTINF) ==========
+// ========== PRIMARY PARSER ==========
 
 function parseM3U(content) {
   const lines = content.split('\n');
@@ -201,7 +216,7 @@ function parseM3U(content) {
     const l = line.trim();
     if (!l) continue;
     
-    // Handle KODIPROP before EXTINF (Sunnxt format)
+    // KODIPROP before EXTINF (Sunnxt format)
     if (l.startsWith('#KODIPROP:') && l.includes('license_key=')) {
       pendingClearKey = l.split('license_key=')[1]?.trim();
       continue;
@@ -212,15 +227,12 @@ function parseM3U(content) {
     }
     
     if (l.startsWith('#EXTINF:')) {
-      // Save previous channel
       if (cur.url && cur.name && cur.url.length > 5) {
         addCh(channels, cur);
       }
       
-      // Parse new channel - get name from end after comma
-      const nameMatch = l.match(/,([^,]+)$/);
       cur = {
-        name: nameMatch ? nameMatch[1].trim() : 'Unknown',
+        name: extractName(l),
         logo: (l.match(/tvg-logo="([^"]+)"/) || [])[1] || null,
         group: (l.match(/group-title="([^"]+)"/) || [])[1] || 'Chill Box',
         language: (l.match(/tvg-language="([^"]+)"/) || [])[1] || '',
@@ -241,7 +253,6 @@ function parseM3U(content) {
     }
   }
   
-  // Last channel
   if (cur.url && cur.name && cur.url.length > 5) {
     addCh(channels, cur);
   }
@@ -249,7 +260,7 @@ function parseM3U(content) {
   return Object.values(channels);
 }
 
-// ========== ALTERNATIVE PARSER (Handles Sony format - URL right after EXTINF) ==========
+// ========== ALTERNATIVE PARSER (Sony format) ==========
 
 function parseM3UAlt(content) {
   const lines = content.split('\n');
@@ -259,13 +270,10 @@ function parseM3UAlt(content) {
     const l = lines[i].trim();
     if (!l || !l.startsWith('#EXTINF:')) continue;
     
-    // Get channel name
-    const nameMatch = l.match(/,([^,]+)$/);
-    const name = nameMatch ? nameMatch[1].trim() : 'Unknown';
+    const name = extractName(l);
     const logo = (l.match(/tvg-logo="([^"]+)"/) || [])[1] || null;
     const group = (l.match(/group-title="([^"]+)"/) || [])[1] || 'Chill Box';
     
-    // Look for URL in next few lines
     let url = '';
     for (let j = i + 1; j < Math.min(i + 10, lines.length); j++) {
       const nl = lines[j].trim();
@@ -273,12 +281,11 @@ function parseM3UAlt(content) {
         url = nl;
         break;
       }
-      if (nl.startsWith('#EXTINF:')) break; // Next channel
+      if (nl.startsWith('#EXTINF:')) break;
     }
     
     if (url && url.length > 5) {
-      const ch = { name, logo, group, language: '', clearKey: null, url, serverName: null };
-      addCh(channels, ch);
+      addCh(channels, { name, logo, group, language: '', clearKey: null, url, serverName: null });
     }
   }
   
@@ -292,7 +299,6 @@ function shouldKeep(channel, filter) {
   
   const name = (channel.name || '').toLowerCase().trim();
   
-  // Empty groups = allow all
   if (!filter.groups || Object.keys(filter.groups).length === 0) {
     if (filter.whitelist && filter.whitelist.length > 0) {
       return filter.whitelist.some(w => name.includes(w.toLowerCase().trim()));
@@ -300,7 +306,6 @@ function shouldKeep(channel, filter) {
     return true;
   }
   
-  // Check groups
   for (const groupConfig of Object.values(filter.groups)) {
     const keywords = groupConfig.keywords || [];
     for (const kw of keywords) {

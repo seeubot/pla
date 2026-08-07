@@ -15,13 +15,13 @@
         "Sony TV",
         "T Sports"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "Business": {
       "keywords": [
         "Zee Business (720p)"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "Clarity TV | ZEE5": {
       "keywords": [
@@ -53,31 +53,31 @@
         "Zing",
         "Zoom"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "Classic": {
       "keywords": [
         "Zee Cine Classic (1080p)"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "Comedy": {
       "keywords": [
         "Zee Comedy Nation (1080p)"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "Documentary": {
       "keywords": [
         "MagellanTV Now (1080p)"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "Education": {
       "keywords": [
         "Midpen Media Center Youth Education and Sports Channel 28 (720p)"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "Entertainment": {
       "keywords": [
@@ -101,32 +101,32 @@
         "Zee One Français (720p)",
         "Zee One German (720p)"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "Entertainment;General": {
       "keywords": [
         "NTV (720p)"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "Kids": {
       "keywords": [
         "Sony Yay"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "LGTV": {
       "keywords": [
         "460 Fubo Sports"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "Lifestyle": {
       "keywords": [
         "FashionTV (720p)",
         "FashionTV Paris L'Original (1080p)"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "Movies": {
       "keywords": [
@@ -145,7 +145,7 @@
         "Sony Wah (1080p) [Geo-blocked]",
         "Zee South Flix (1080p)"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "Music": {
       "keywords": [
@@ -153,7 +153,7 @@
         "Orange Bangla TV (720p)",
         "Sangeet Bangla (720p)"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "News": {
       "keywords": [
@@ -183,13 +183,13 @@
         "Zee Uttar Pradesh/Uttarakhand (720p)",
         "ntv (720p)"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "News;Sports": {
       "keywords": [
         "Africa 24 Sport (1080p)"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "Other": {
       "keywords": [
@@ -209,7 +209,7 @@
       "keywords": [
         "Esport3 (1080p) [Not 24/7]"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "Religious": {
       "keywords": [
@@ -267,7 +267,7 @@
         "Sony Sports Ten 5 SD SonyLiv",
         "Sony Ten 1 SD SonyLiv"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "Sports": {
       "keywords": [
@@ -347,7 +347,7 @@
         "ČT Sport (720p)",
         "Астрахань.Ru Sport (720p)"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "SunNxt": {
       "keywords": [
@@ -378,7 +378,7 @@
         "Udaya Movies",
         "Udaya Music"
       ],
-      "mergeSimilar": false
+      "mergeSimilar": true
     },
     "Undefined": {
       "keywords": [

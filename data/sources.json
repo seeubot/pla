@@ -10,8 +10,8 @@
     "enabled": true
   },
   {
-    "name": "Sports Live",
-    "url": "https://raw.githubusercontent.com/sportlive18/All-Playlist/refs/heads/main/combined.m3u",
+    "name": "allinone",
+    "url": "https://raw.githubusercontent.com/Mrbotrx/All-FREE-TV/refs/heads/main/combined_playlist.m3u",
     "enabled": true
   },
   {
@@ -20,3 +20,6 @@
     "enabled": true
   }
 ]
+
+
+

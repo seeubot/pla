@@ -12,12 +12,12 @@
   {
     "name": "allinone",
     "url": "https://raw.githubusercontent.com/Mrbotrx/All-FREE-TV/refs/heads/main/combined_playlist.m3u",
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Clarity TV",
     "url": "https://clarity-tv.vercel.app/api/playlist/?id=ALLINONE",
-    "enabled": false
+    "enabled": true
   }
 ]
 

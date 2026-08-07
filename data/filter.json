@@ -1,17 +1,4 @@
 {
   "mode": "whitelist",
-  "whitelist": [
-    "SET",
-    "Sony SAB",
-    "Sony MAX",
-    "Sony Pal",
-    "Sony Yay",
-    "Sony Aath",
-    "Sony Marathi",
-    "Sony BBC",
-    "Sony Pix",
-    "Sony WAH",
-    "Sony Sports Ten",
-    "Sony Ten"
-  ]
+  "groups": {}
 }

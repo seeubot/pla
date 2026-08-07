@@ -28,6 +28,7 @@ export default async function handler(req, res) {
     if (fs.existsSync(filterPath)) {
       try { 
         filter = JSON.parse(fs.readFileSync(filterPath, 'utf-8')); 
+        console.log('Filter loaded:', JSON.stringify(filter, null, 2));
       } catch(e) {
         console.error('Error loading filter:', e);
       }
@@ -38,6 +39,8 @@ export default async function handler(req, res) {
     let hiddenTextRemoved = 0;
     let totalSources = 0;
     let successfulSources = 0;
+    let filteredCount = 0;
+    let totalChannelsFound = 0;
 
     if (fs.existsSync(sourcesPath)) {
       const sources = JSON.parse(fs.readFileSync(sourcesPath, 'utf-8'));
@@ -81,6 +84,7 @@ export default async function handler(req, res) {
           }
 
           successfulSources++;
+          totalChannelsFound += parsed.length;
 
           // Process each channel
           for (const ch of parsed) {
@@ -96,7 +100,17 @@ export default async function handler(req, res) {
             }
 
             // Apply filter if exists
-            if (filter && !shouldKeep(ch, filter)) continue;
+            if (filter) {
+              const filterResult = shouldKeep(ch, filter);
+              if (!filterResult.keep) {
+                filteredCount++;
+                continue;
+              }
+              // Update group if filter specifies a group
+              if (filterResult.group) {
+                ch.group = filterResult.group;
+              }
+            }
 
             // Add to channel map
             if (ch.servers && ch.servers.length > 0) {
@@ -134,7 +148,9 @@ export default async function handler(req, res) {
     playlist += `#EXTINF:-1,CHILL BOX - IPTV\n`;
     playlist += `# GENERATED: ${new Date().toISOString()}\n`;
     playlist += `# SOURCES: ${successfulSources}/${totalSources} successful\n`;
-    playlist += `# CHANNELS: ${channels.length}\n`;
+    playlist += `# TOTAL FOUND: ${totalChannelsFound} channels\n`;
+    playlist += `# FILTERED OUT: ${filteredCount} channels\n`;
+    playlist += `# INCLUDED: ${channels.length} channels\n`;
     if (hiddenTextRemoved > 0) {
       playlist += `# NOTE: ${hiddenTextRemoved} channel names cleaned\n`;
     }
@@ -384,25 +400,49 @@ function addParsedChannel(dict, ch) {
 }
 
 function shouldKeep(channel, filter) {
-  if (!filter || !filter.enabled) return true;
+  // Default response
+  const defaultResponse = { keep: true, group: null };
+  
+  if (!filter || !filter.groups || Object.keys(filter.groups).length === 0) {
+    return defaultResponse;
+  }
   
   const name = (channel.name || '').toLowerCase().trim();
+  const mode = filter.mode || 'whitelist';
   
-  // Check if channel should be included based on filter rules
-  if (filter.include && filter.include.length > 0) {
-    return filter.include.some(keyword => 
-      name.includes(keyword.toLowerCase().trim())
-    );
+  if (mode === 'whitelist') {
+    // In whitelist mode, only keep channels that match
+    for (const [groupName, groupConfig] of Object.entries(filter.groups)) {
+      if (groupConfig.keywords && Array.isArray(groupConfig.keywords)) {
+        for (const keyword of groupConfig.keywords) {
+          if (name.includes(keyword.toLowerCase().trim())) {
+            return { 
+              keep: true, 
+              group: groupName  // Assign to the matching group
+            };
+          }
+        }
+      }
+    }
+    // If no match found in whitelist, exclude
+    return { keep: false, group: null };
+    
+  } else if (mode === 'blacklist') {
+    // In blacklist mode, exclude channels that match
+    for (const [groupName, groupConfig] of Object.entries(filter.groups)) {
+      if (groupConfig.keywords && Array.isArray(groupConfig.keywords)) {
+        for (const keyword of groupConfig.keywords) {
+          if (name.includes(keyword.toLowerCase().trim())) {
+            return { keep: false, group: null };
+          }
+        }
+      }
+    }
+    // If no match found in blacklist, keep
+    return defaultResponse;
   }
   
-  // Check if channel should be excluded
-  if (filter.exclude && filter.exclude.length > 0) {
-    return !filter.exclude.some(keyword => 
-      name.includes(keyword.toLowerCase().trim())
-    );
-  }
-  
-  return true;
+  return defaultResponse;
 }
 
 function addCh(dict, ch) {

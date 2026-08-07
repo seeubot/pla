@@ -1,1 +1,992 @@
-
+[
+  {
+    "id": "zee_tv_sd",
+    "name": "Zee TV SD",
+    "language": "",
+    "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/yHNSuG1V.png",
+    "group": "Clarity TV | ZEE5",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeetv/default/manifest.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=ed068cf84f0640ccbc7c0e395c0a272e&key=bb722190f2bb446391020411a7d0828b"
+      }
+    ]
+  },
+  {
+    "id": "zee_bangala_sd",
+    "name": "Zee Bangala SD",
+    "language": "",
+    "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/9XHWylqs.png",
+    "group": "Clarity TV | ZEE5",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeebangla/default/manifest.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=1df83e058b864da896c9288eef63b113&key=fc32f26239054b56aab48225305598fe"
+      }
+    ]
+  },
+  {
+    "id": "zee_action",
+    "name": "Zee Action",
+    "language": "",
+    "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Action.png",
+    "group": "Clarity TV | ZEE5",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeeaction/default/main.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=9d7a1917ee3244d198193cdd1ff1feae&key=3c3e8d0259f748f1830f713a769760e7"
+      }
+    ]
+  },
+  {
+    "id": "zee_cinema_hd",
+    "name": "Zee Cinema HD",
+    "language": "",
+    "logo": "https://raw.githubusercontent.com/himanshu-temp/Logos/main/Customized_logos/zeecinemahd.png",
+    "group": "Clarity TV | ZEE5",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeecinemahd/default/manifest.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=f56beaac9f124616872c741c9ce4fa4e&key=5d40a903238f4ad98abbed1877d4e3d1"
+      }
+    ]
+  },
+  {
+    "id": "zee_hindustan",
+    "name": "Zee Hindustan",
+    "language": "",
+    "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/TknReKLD.png",
+    "group": "Clarity TV | ZEE5",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeehindustan/default/manifest.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=10616d7c4bee41f1825bd805c6295172&key=dc85f2112f63477fb39fc149493c49be"
+      }
+    ]
+  },
+  {
+    "id": "zoom",
+    "name": "Zoom",
+    "language": "",
+    "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/jLvKrs62.png",
+    "group": "Clarity TV | ZEE5",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zoom2/default/manifest.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=86edec9e3b7d4042a4d4a1ca14f847ee&key=9def4315f0004019a3705bcb3cf30ca3"
+      }
+    ]
+  },
+  {
+    "id": "zee_kannada_sd",
+    "name": "Zee Kannada SD",
+    "language": "",
+    "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/1PrOGXAh.png",
+    "group": "Clarity TV | ZEE5",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeekannada/default/manifest.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=50e714b65ead453cbfab9b20bed5c79d&key=bc08e108b9ee4f65b99cb9dad9532f3f"
+      }
+    ]
+  },
+  {
+    "id": "zee_telugu_sd",
+    "name": "Zee Telugu SD",
+    "language": "",
+    "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/6vNzRaRK.png",
+    "group": "Clarity TV | ZEE5",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeetelgu/default/manifest.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=1ce5cd75a6ad44a38a7d1b8dbaf9c330&key=657fc8e7d533456cb0644fe03458a4b2"
+      }
+    ]
+  },
+  {
+    "id": "zee_anmol",
+    "name": "Zee Anmol",
+    "language": "",
+    "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/QjKdER9Z.png",
+    "group": "Clarity TV | ZEE5",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeeanmol/default/manifest.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=4023613457774cbeb71a62c339970e63&key=1c3e9fce5f014542be9cd1f749181204"
+      }
+    ]
+  },
+  {
+    "id": "zee_marathi",
+    "name": "Zee Marathi",
+    "language": "",
+    "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/4bimlHJj.png",
+    "group": "Clarity TV | ZEE5",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeemarathi/default/manifest.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=2a8d6c938ea647248f7a10eedc39f097&key=7d81feb84ed84bd88fdc5ca9de3c16da"
+      }
+    ]
+  },
+  {
+    "id": "zee_bollywood",
+    "name": "Zee Bollywood",
+    "language": "",
+    "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/EqDlflgi.png",
+    "group": "Clarity TV | ZEE5",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeebollywood/default/manifest.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=e61523260c614746b25b9a5523fe9a39&key=72ddbf37f76f49acbb8e140e7279e7a1"
+      }
+    ]
+  },
+  {
+    "id": "zee_business",
+    "name": "Zee Business",
+    "language": "",
+    "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/vExrDK9r.png",
+    "group": "Clarity TV | ZEE5",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeebusiness/default/manifest.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=bef87892e58c446d893b16a848703b70&key=51959fcbc8fe4091b570ba254bf749ae"
+      }
+    ]
+  },
+  {
+    "id": "zing",
+    "name": "Zing",
+    "language": "",
+    "logo": "https://imagesdishtvd2h.whatsonindia.com/dasimages/channel/landscape/360x270/Nyi83z1G.png",
+    "group": "Clarity TV | ZEE5",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zing/default/manifest.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=f0fb14eebe474a6ab74c8301d55a7224&key=f9f8b2e30704458b8db844a285ce32be"
+      }
+    ]
+  },
+  {
+    "id": "zee_tamil_sd",
+    "name": "Zee Tamil SD",
+    "language": "",
+    "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Tamil.png",
+    "group": "Clarity TV | ZEE5",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://linearjitp-playback.astro.com.my/dash-wv/linear/2311/default_ott.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=0d4e3e7dac2d58b93bf819a72fe8d510&key=667a33f4d5bb3587f2d5209886839eac"
+      }
+    ]
+  },
+  {
+    "id": "zee_tv_hd",
+    "name": "Zee TV HD",
+    "language": "",
+    "logo": "https://raw.githubusercontent.com/himanshu-temp/Logos/main/Customized_logos/zeetvhd.png",
+    "group": "Clarity TV | ZEE5",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeetvhd/default/index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=65c3633157574361b191059e46e72968&key=78450b11381340c297d96c13183d3744"
+      }
+    ]
+  },
+  {
+    "id": "sun_tv_hd",
+    "name": "Sun TV HD",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194403/640x360_SunTVHD_194403_522c701c-4770-4934-a6d3-47045b0d4fa5.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream2.sunnxt.com/19ee29194c4d4fc286c3e697362e60cd/SunTVHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=3891557f1cb14dedb7545bf52499d748&key=fb662f742e5f5e0c61a7c1c66d2b019a"
+      }
+    ]
+  },
+  {
+    "id": "sun_tv",
+    "name": "Sun TV",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194408/640x360_SunTV_194408_2617a80e-4f90-42fa-b13a-acc8d7c97f9e.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream1.sunnxt.com/05b5df1221764bca9867054c5e65ee62/SunTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=6752015acf084572a08dfe21796f8b45&key=ff823ddbe5625c35d3e93f0ed4520115"
+      }
+    ]
+  },
+  {
+    "id": "sony_max_hd_sonyliv",
+    "name": "Sony MAX HD SonyLiv",
+    "language": "",
+    "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_MAX_HD/images/LOGO_HD/image.png",
+    "group": "SonyLiv | Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009247&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_sports_ten_2_hd_sonyliv",
+    "name": "Sony Sports Ten 2 HD SonyLiv",
+    "language": "",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Ten2_HD.png",
+    "group": "SonyLiv | Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009277&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_sab_hd_sonyliv",
+    "name": "Sony SAB HD SonyLiv",
+    "language": "",
+    "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_SAB_HD/images/LOGO_HD/image.png",
+    "group": "SonyLiv | Entertainment",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009248&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_ten_1_sd_sonyliv",
+    "name": "Sony Ten 1 SD SonyLiv",
+    "language": "",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Ten_1.png",
+    "group": "SonyLiv | Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009280&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_sports_ten_2_sd_sonyliv",
+    "name": "Sony Sports Ten 2 SD SonyLiv",
+    "language": "",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Ten_2.png",
+    "group": "SonyLiv | Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009279&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_pix_hd_english_sonyliv",
+    "name": "Sony Pix HD English SonyLiv",
+    "language": "",
+    "logo": "https://brand-websites-prod.s3.ap-south-1.amazonaws.com/sonypicturesnetworksindia/logo/34_252.png",
+    "group": "SonyLiv | Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009258&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_sports_ten_3_hindi_sd_sonyliv",
+    "name": "Sony Sports Ten 3 Hindi SD SonyLiv",
+    "language": "",
+    "logo": "https://brand-websites-prod.s3.ap-south-1.amazonaws.com/sonypicturesnetworksindia/logo/24_274.png",
+    "group": "SonyLiv | Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009283&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_sports_ten_1_hd_sonyliv",
+    "name": "Sony Sports Ten 1 HD SonyLiv",
+    "language": "",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Ten_HD.png",
+    "group": "SonyLiv | Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009276&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_yay_sonyliv",
+    "name": "Sony YAY SonyLiv",
+    "language": "",
+    "logo": "https://brand-websites-prod.s3.ap-south-1.amazonaws.com/sonypicturesnetworksindia/logo/12_259.png",
+    "group": "SonyLiv | Kids",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000001971&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_max_sd_sonyliv",
+    "name": "SONY Max SD SonyLiv",
+    "language": "",
+    "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SONY_MAX/images/LOGO_HD/image.png",
+    "group": "SonyLiv | Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009249&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_wah_sonyliv",
+    "name": "Sony WAH SonyLiv",
+    "language": "",
+    "logo": "https://brand-websites-prod.s3.ap-south-1.amazonaws.com/sonypicturesnetworksindia/logo/10_258.png",
+    "group": "SonyLiv | Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009253&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_sports_ten_5_sd_sonyliv",
+    "name": "Sony Sports Ten 5 SD SonyLiv",
+    "language": "",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Six_SD.png",
+    "group": "SonyLiv | Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009281&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "set_hd_sonyliv",
+    "name": "SET HD SonyLiv",
+    "language": "",
+    "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SET_HD/images/LOGO_HD/image.png",
+    "group": "SonyLiv | Entertainment",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009246&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_sports_ten_3_hd_hindi_sonyliv",
+    "name": "Sony Sports Ten 3 HD Hindi SonyLiv",
+    "language": "",
+    "logo": "https://brand-websites-prod.s3.ap-south-1.amazonaws.com/sonypicturesnetworksindia/logo/25_276.png",
+    "group": "SonyLiv | Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009278&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_bbc_earth_hd_english_sonyliv",
+    "name": "Sony BBC earth HD English SonyLiv",
+    "language": "",
+    "logo": "https://brand-websites-prod.s3.ap-south-1.amazonaws.com/sonypicturesnetworksindia/logo/32_254.png",
+    "group": "SonyLiv | Knowledge",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009252&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_sports_ten_5_hd_sonyliv",
+    "name": "Sony Sports Ten 5 HD SonyLiv",
+    "language": "",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Six_HD.png",
+    "group": "SonyLiv | Sports",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009275&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_pal_sonyliv",
+    "name": "Sony PAL SonyLiv",
+    "language": "",
+    "logo": "https://brand-websites-prod.s3.ap-south-1.amazonaws.com/sonypicturesnetworksindia/logo/6_257.png",
+    "group": "SonyLiv | Entertainment",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009273&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sony_max_2_sonyliv",
+    "name": "Sony MAX 2 SonyLiv",
+    "language": "",
+    "logo": "https://brand-websites-prod.s3.ap-south-1.amazonaws.com/sonypicturesnetworksindia/logo/2_250.png",
+    "group": "SonyLiv | Movies",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000044878&uid=8004188626&pass=61498d15",
+        "drm": "",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sun_music",
+    "name": "Sun Music",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194410/640x360_SunMusic_194410_d4d08876-9d23-432c-aab4-b5c70c58aaac.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/585bb66e95c84ccea3f828c96b3567b5/SunMusicB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=21ddc14c4da94c079d4f4c343ecdcd80&key=5701bee4ee9b625d0c8ed7de032a7478"
+      }
+    ]
+  },
+  {
+    "id": "udaya_comedy",
+    "name": "Udaya Comedy",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194400/640x360_UdayaComedy_194400_476f38f8-3104-4816-a540-968b36f27a5f.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/8a3d3d8d679b4f9f83a8305b4ead0644/UdayaComedyB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=71329783aeb74e6e9e1014fb9e4c30f4&key=1e025a9ed7e50fa35b8de2c96cccdd6b"
+      }
+    ]
+  },
+  {
+    "id": "udaya_movies",
+    "name": "Udaya Movies",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194386/640x360_UdayaMovies_194386_429c7b3b-44a9-4328-8be3-645621c6e167.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/1c02547243c041eea5dab1c343018e90/UdayaMoviesB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=b4dbffb517824732a955ca02dd6aacd9&key=83c2aa2946432f1ded7c049efe79feef"
+      }
+    ]
+  },
+  {
+    "id": "sun_music_hd",
+    "name": "Sun Music HD",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194406/640x360_SunMusicHD_194406_87e8d029-f695-477c-9ace-a3c2cbe15004.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/d434796d90fa4dc9b7ecfacedbe683f1/SunMusicHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=b5a2c6d13b9748de9ceebc0a8adc8af3&key=e806fec1bf1c8a844216118c94bad020"
+      }
+    ]
+  },
+  {
+    "id": "surya_music",
+    "name": "Surya Music",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194338/640x360_SuryaMusic_194338_7fe35164-9a93-45ad-92a1-31126e592a84.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/8c2352ff54954e7b9a4188045dcf3b27/SuryaMusicB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=25a1d2a4c3f848b1aed911ad691fe232&key=3c8b2cf8611c343e6a231b6a9c7c8b58"
+      }
+    ]
+  },
+  {
+    "id": "ktv",
+    "name": "KTV",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194409/640x360_KTV_194409_91b39445-b996-4e46-bafa-b78548e4da2e.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/6ae70edd4c1440379f5311e8fbddc7c1/KTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=426117d115b04497b0b0d425e8095184&key=aa751ae8a41ac6f87141734163ffe3b2"
+      }
+    ]
+  },
+  {
+    "id": "sun_life",
+    "name": "Sun Life",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194391/640x360_SunLife_194391_d407948a-b7a2-4a1f-8409-56f7261cefa1.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/6b79451f54284b3fb680fd717ee008dc/SunLifeB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=81546df3f41c4a6dbc9a4efc7f2fb626&key=3928505f4054cf1fa935276fdbe40992"
+      }
+    ]
+  },
+  {
+    "id": "surya_movies",
+    "name": "Surya Movies",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194385/640x360_SuryaMovies_194385_2d5dbc38-915d-4e41-b8b0-ea98ca6c88d3.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/e24ee14c395945bd8ccb065e1bce8b9b/SuryaMoviesB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=6b67bccef7024f2da29b42e10dc13f89&key=2e8460c47d3f01693e193dba5963a5e1"
+      }
+    ]
+  },
+  {
+    "id": "ktv_hd",
+    "name": "KTV HD",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194405/640x360_KTVHD_194405_3c6880f0-468e-48f4-b09a-89fd5fed775d.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/61477b4c8d8d45d5a49e044cc1dffc60/KTVHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=351e547391bb45cbac66d2cb9ec0c294&key=3bd646753f4903eee3b404646c7819d3"
+      }
+    ]
+  },
+  {
+    "id": "udaya_music",
+    "name": "Udaya Music",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194401/640x360_UdayaMusic_194401_c6816391-ea32-4780-bf8f-25cb839cef89.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/8034b7519d6a4ab8929aa4279fda1f29/UdayaMusicB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": ""
+      }
+    ]
+  },
+  {
+    "id": "sun_bangla",
+    "name": "Sun Bangla",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/192537/640x360_GeminiMoviesHD_192537_abeec905-1e11-4abf-98fd-16d62fce60c8.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream7.sunnxt.com/bf76ee92dd01473bb2eb57d137294484/SunBanglaB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=01f7b9f7bf7e425f86d6dfd478390e3f&key=5fde68100a7856d055038236ffc7c84a"
+      }
+    ]
+  },
+  {
+    "id": "surya",
+    "name": "Surya",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194398/640x360_SuryaTV_194398_45a56617-7aa9-4ced-a1c8-82b80adb83a7.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream6.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=56e1f5b5b72e4e45a98b6f287c265ab9&key=6dee8663e63cc8f8dda8478b8b2f3b71"
+      }
+    ]
+  },
+  {
+    "id": "sun_marathi",
+    "name": "Sun Marathi",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194387/640x360_SunMarathi_194387_441db2e2-0fa1-48ca-be59-7f5dd70f66cb.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream9.sunnxt.com/b0aacde03b744564870634ecb10e8a31/SunMarathiB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=5ea90a1f3b1e4a0a9b72c8e0f4a9bf31&key=30899fda5ca4dfb5a4535ce10c4d7341"
+      }
+    ]
+  },
+  {
+    "id": "surya_comedy",
+    "name": "Surya Comedy",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194400/640x360_UdayaComedy_194400_476f38f8-3104-4816-a540-968b36f27a5f.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/6505e922bf164423ad122f404747356a/SuryaComedyB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=11563b00a46b43f2a0f80ecf42a4fb77&key=9bad28ad6f23dbb917c63ee680f66a1f"
+      }
+    ]
+  },
+  {
+    "id": "sun_news",
+    "name": "Sun News",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194404/640x360_SunNews_194404_0af09ceb-cb6f-48e6-9f5c-395749f0fcee.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream3.sunnxt.com/491c99fb6d0c49e88e6349170d890a2f/SunNewsB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=4df8f920386e4346ba6b7d7ae935d668&key=c5fcaa8df5663365d938a50987f71b84"
+      }
+    ]
+  },
+  {
+    "id": "surya_hd",
+    "name": "Surya HD",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194397/640x360_SuryaTVHD_194397_7b54e231-bbb9-48d2-8aae-35a5886deed3.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=eae838ccd75d4a1fbff6fd7dd1c97780&key=8259ce0c112725a4d2c94d154207425f"
+      }
+    ]
+  },
+  {
+    "id": "kushi_tv",
+    "name": "Kushi TV",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194346/960x540_KushiTV_194346_b0eff97b-4670-42fb-9d87-49d78fab6f3a.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/4a736d41608849758a0aed36949ded30/KushiTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=e16421cf7c374c57a8f7e91049f58cd9&key=b7e01aba2c307b1f05057e91a9d150d2"
+      }
+    ]
+  },
+  {
+    "id": "gemini_movies",
+    "name": "Gemini Movies",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194384/640x360_GeminiMovies_194384_bc1cee7f-1f8a-4b8e-83ea-da41279c9d40.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/6a59979ff0044fd3b6e0cb85d6f44432/GeminiMoviesB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=0c37231880034787bce9fd3607aa09ea&key=e063bb30351dac572bac24ed43d304b2"
+      }
+    ]
+  },
+  {
+    "id": "gemini_comedy",
+    "name": "Gemini Comedy",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194394/640x360_GeminiComedy_194394_f3c8c427-351c-4b4f-a67f-616ec0feb1d2.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/167c40e9521b470b87b4cf921fd0e146/GeminiComedyB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=93e686ceac134f30b0a7bc3ce5a76b26&key=2c37e97fa0646751e1f2b85bc4b9ff8a"
+      }
+    ]
+  },
+  {
+    "id": "gemini_music_hd",
+    "name": "Gemini Music HD",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194393/640x360_GeminiMusicHD_194393_dbfc3b93-0581-4d7c-985b-c160e0031a73.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/6a6520e446604c6e9840e5bf3a3a7d95/GeminiMusicHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=76230567f3c04513a7e5d1249ab65983&key=4ee6dc9a99d894dc41b0878d6ea22790"
+      }
+    ]
+  },
+  {
+    "id": "gemini_tv",
+    "name": "Gemini TV",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194396/640x360_GeminiTV_194396_b5217fee-8105-4d55-bdb6-f282715761d1.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream4.sunnxt.com/a1a61fa1811c4d20a5c2d5e14cdc0cd2/GeminiTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=2ec6fa5b77ff4223a376c2b98032fbf8&key=afe96f602fd6abedcd9c2c8cdf799afd"
+      }
+    ]
+  },
+  {
+    "id": "gemini_hd",
+    "name": "Gemini HD",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194392/640x360_GeminiTVHD_194392_f0f60f9d-f692-4ab4-b335-cb971893af2f.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream14.sunnxt.com/e778d9c98488494b9c9b38f9c48b63ec/GeminiTVHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=880dc94460af4197bbbf43a176fb3a95&key=0beb7012ffd133360889d5d56e20de4d"
+      }
+    ]
+  },
+  {
+    "id": "gemini_movies_hd",
+    "name": "Gemini Movies HD",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/192537/640x360_GeminiMoviesHD_192537_abeec905-1e11-4abf-98fd-16d62fce60c8.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/ec0d4961a002442295f91efc9d675c9d/GeminiMoviesHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=0c37231880034787bce9fd3607aa09ea&key=e063bb30351dac572bac24ed43d304b2"
+      }
+    ]
+  },
+  {
+    "id": "udaya",
+    "name": "Udaya",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/193239/640x360_TestChannel_193239_e9155a54-81ab-49a1-9b95-0cd81b234dc0.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream5.sunnxt.com/e2f36b5d0be74780a041a8f5b65bc7e6/UdayaTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=3084683c80234b6bbf69abfd5bb258a0&key=4ae6b547e5c8f51329a12d7953ee4c72"
+      }
+    ]
+  },
+  {
+    "id": "adithya_tv",
+    "name": "Adithya TV",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194407/960x540_AdithyaTV_194407_b6f8fa30-255b-4f4a-8f8f-4264abda8b33.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/4d0eb3cde30247ada4ade679fdfbaf86/AdithyaTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=d674a1a7f43641a29bd8867d87c7259a&key=812f55dcde68619fc6ad95951b241d2c"
+      }
+    ]
+  },
+  {
+    "id": "gemini_music",
+    "name": "Gemini Music",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194410/640x360_SunMusic_194410_d4d08876-9d23-432c-aab4-b5c70c58aaac.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/52b94f70c6e64692b2497f5023b629cd/GeminiMusicB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=0faa2e9469fc45fdaf1728333351ec71&key=ffcf9dee6ede62bd8740dacfaa0c1e59"
+      }
+    ]
+  },
+  {
+    "id": "gemini_life",
+    "name": "Gemini Life",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194337/640x360_TestGeminiLife_194337_1927e76e-b04a-428b-a0fc-6aa5ed06fa88.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/a4b4f71a8b4344f3a280e906657a517a/GeminiLifeB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=96d5157791ea4817a66a419e285a137f&key=d6d0ad2a9a6cc56e18d7557c7c693a37"
+      }
+    ]
+  },
+  {
+    "id": "chutti_tv",
+    "name": "Chutti TV",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194390/640x360_ChuttiTV_194390_61005292-313a-45b4-b6a8-3ac5128a513e.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/3ed29d5b01b546eaa05d184cd87535f1/ChuttiTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=05da38a46fb7403088f41434e44de980&key=488046139a1e1d65323cfe4bb1b30b7b"
+      }
+    ]
+  },
+  {
+    "id": "kochu",
+    "name": "Kochu",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194348/960x540_KochuTV_194348_9777cbfd-685b-4e06-a7cc-f2902c1874e8.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/1893b9ab790747cb80a584873a608dcb/KochuTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=7354fb333b0c4159bc6c433c4db13d0f&key=fbf8b4a11febf7d2eed2283006979176"
+      }
+    ]
+  },
+  {
+    "id": "chintu_tv",
+    "name": "Chintu TV",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194347/960x540_ChintuTV_194347_64af5425-0ed0-4c8a-b071-00ef86eaefde.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream.sunnxt.com/ed4c67ad957644b69361651d9101107e/ChintuTVB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=19d8a5cc002f411b89b33925acdc33e0&key=2a9aa7a3f69834c4f348430cc3f658bb"
+      }
+    ]
+  },
+  {
+    "id": "udaya_hd",
+    "name": "Udaya HD",
+    "language": "",
+    "logo": "https://sund-images.sunnxt.com/194399/640x360_UdayaTVHD_194399_728eed6e-6e9e-469c-8ad4-b9d1ef48ca8c.jpg",
+    "group": "Clarity TV | SunNxt",
+    "servers": [
+      {
+        "name": "SD",
+        "url": "https://livestream16.sunnxt.com/a8d28f18944c4946ad7133938860e7cf/UdayaTVHDB_IN_index.mpd",
+        "drm": "clearkey",
+        "license": "https://sony-token.vercel.app/api/results.php?keyid=91b5f2d0205c4527b7aa3e41f35e1e7f&key=66ddb1a017753f966e20442ab2f91f18"
+      }
+    ]
+  }
+]

@@ -2,7 +2,7 @@
   {
     "name": "Sunnxt M3U",
     "url": "https://cdn.jsdelivr.net/gh/amitfunny/sunnxt.m3u@main/index.html",
-    "enabled": false 
+    "enabled": true 
   },
   {
     "name": "Sony TV Hub",
@@ -11,7 +11,7 @@
   },
   {
     "name": "allinone",
-    "url": "https://raw.githubusercontent.com/seeubot/pla/refs/heads/main/data/channels.m3u",
+    "url": "https://raw.githubusercontent.com/seeubot/pla/refs/heads/main/data/channels.json",
     "enabled": true
   },
   {

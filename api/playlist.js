@@ -21,55 +21,72 @@ export default async function handler(req, res) {
   try {
     const sourcesPath = path.join(process.cwd(), 'data', 'sources.json');
     const filterPath = path.join(process.cwd(), 'data', 'filter.json');
-    
+
     let filter = null;
     if (fs.existsSync(filterPath)) {
       try { filter = JSON.parse(fs.readFileSync(filterPath, 'utf-8')); } catch(e) {}
     }
-    
+
     let channelMap = {};
     let debugInfo = [];
-    
+
     if (fs.existsSync(sourcesPath)) {
       const sources = JSON.parse(fs.readFileSync(sourcesPath, 'utf-8'));
-      
+
       for (const source of sources) {
         if (!source.enabled) continue;
-        
+
         try {
           const content = await fetchUrl(source.url);
           debugInfo.push(`${source.name}: fetched ${content.length} bytes`);
-          
+
           if (!content || content.length < 10) {
             debugInfo.push(`${source.name}: EMPTY response`);
             continue;
           }
-          
+
           if (content.includes('<!DOCTYPE') || content.includes('<html')) {
             debugInfo.push(`${source.name}: Got HTML instead of M3U`);
             continue;
           }
-          
+
           const parsed = parseM3U(content);
           debugInfo.push(`${source.name}: parsed ${parsed.length} channels`);
-          
+
+          // FIX: parseM3U() returns channels shaped as
+          // { name, logo, group, language, servers: [{ name, url, drm, license }] }
+          // — there is NO top-level `ch.url`. The old code checked `ch.url` here,
+          // which is always undefined, so every channel was silently dropped.
+          // We now flatten each channel's servers back into the flat shape
+          // that addCh() expects, and merge those instead.
           for (const ch of parsed) {
-            if (!ch.url || ch.url.length < 5) continue;
-          //  if (!shouldKeep(ch, filter)) continue;
-            addCh(channelMap, ch);
+            if (!ch.servers || ch.servers.length === 0) continue;
+            for (const srv of ch.servers) {
+              if (!srv.url || srv.url.length < 5) continue;
+              const flat = {
+                name: ch.name,
+                logo: ch.logo,
+                group: ch.group,
+                language: ch.language,
+                clearKey: srv.drm ? srv.license : null,
+                url: srv.url
+              };
+              // if (!shouldKeep(flat, filter)) continue;
+              addCh(channelMap, flat);
+            }
           }
         } catch (e) {
           debugInfo.push(`${source.name}: ERROR - ${e.message}`);
         }
       }
     }
-    
+
     const channels = Object.values(channelMap);
-    
+
     let playlist = '#EXTM3U\n';
     playlist += `# CHILL BOX - ${channels.length} channels\n`;
     playlist += `# Debug: ${debugInfo.join(' | ')}\n`;
-    
+
     for (const ch of channels) {
       if (ch.servers && ch.servers.length > 0) {
         for (const srv of ch.servers) {
@@ -81,11 +98,11 @@ export default async function handler(req, res) {
         }
       }
     }
-    
+
     res.setHeader('Content-Type', 'audio/x-mpegurl');
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.status(200).send(playlist);
-    
+
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
@@ -136,7 +153,7 @@ function parseM3U(content) {
   const channels = {};
   let cur = { name: '', logo: null, group: 'Chill Box', language: '', clearKey: null, url: null, serverName: null };
   let pendingClearKey = null;
-  
+
   for (const line of lines) {
     const l = line.trim();
     if (!l) continue;

@@ -1,14 +1,13 @@
 import crypto from 'crypto';
 import fs from 'fs';
 import path from 'path';
-import https from 'http';
+import https from 'https';
 import http from 'http';
 
 export default async function handler(req, res) {
   const { token, expires } = req.query;
   const SECRET = process.env.API_SECRET;
 
-  // Auth
   if (token && expires) {
     const expected = crypto.createHmac('sha256', SECRET).update(`playlist:${expires}`).digest('hex');
     if (token !== expected) return res.status(403).send('Invalid token');
@@ -20,18 +19,8 @@ export default async function handler(req, res) {
   }
 
   try {
-    const channelsPath = path.join(process.cwd(), 'data', 'channels.json');
     const sourcesPath = path.join(process.cwd(), 'data', 'sources.json');
     const filterPath = path.join(process.cwd(), 'data', 'filter.json');
-    
-    // Load existing channels
-    let channelMap = {};
-    if (fs.existsSync(channelsPath)) {
-      const existing = JSON.parse(fs.readFileSync(channelsPath, 'utf-8'));
-      for (const ch of existing) {
-        channelMap[ch.id] = ch;
-      }
-    }
     
     // Load filter
     let filter = null;
@@ -39,7 +28,9 @@ export default async function handler(req, res) {
       filter = JSON.parse(fs.readFileSync(filterPath, 'utf-8'));
     }
     
-    // Fetch from sources
+    // Merge all channels from sources
+    let channelMap = {};
+    
     if (fs.existsSync(sourcesPath)) {
       const sources = JSON.parse(fs.readFileSync(sourcesPath, 'utf-8'));
       
@@ -67,19 +58,17 @@ export default async function handler(req, res) {
             }
           }
         } catch (e) {
-          console.log(`Failed: ${source.name} - ${e.message}`);
+          console.log(`Failed: ${source.name}`);
         }
       }
     }
     
-    // Save updated channels
     const channels = Object.values(channelMap);
-    if (fs.existsSync(channelsPath)) {
-      fs.writeFileSync(channelsPath, JSON.stringify(channels, null, 2));
-    }
     
-    // Generate M3U
+    // Generate M3U playlist
     let playlist = '#EXTM3U\n';
+    playlist += `# CHILL BOX - ${channels.length} channels\n`;
+    
     for (const ch of channels) {
       if (ch.servers && ch.servers.length > 0) {
         for (const srv of ch.servers) {
@@ -88,9 +77,6 @@ export default async function handler(req, res) {
           if (srv.license) playlist += `#KODIPROP:inputstream.adaptive.license_key=${srv.license}\n`;
           playlist += `${srv.url}\n`;
         }
-      } else if (ch.url) {
-        playlist += `#EXTINF:-1 group-title="${ch.group||'Chill Box'}",${ch.name}\n`;
-        playlist += `${ch.url}\n`;
       }
     }
     
@@ -105,7 +91,6 @@ export default async function handler(req, res) {
 
 function shouldKeep(channel, filter) {
   if (!filter || !filter.whitelist || filter.whitelist.length === 0) return true;
-  
   const name = (channel.name || '').toLowerCase();
   return filter.whitelist.some(w => name.includes(w.toLowerCase()));
 }

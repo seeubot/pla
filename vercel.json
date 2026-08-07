@@ -12,5 +12,15 @@
         { "key": "Content-Type", "value": "audio/x-mpegurl" }
       ]
     }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
   ]
 }

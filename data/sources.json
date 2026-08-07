@@ -11,12 +11,12 @@
   },
   {
     "name": "allinone",
-    "url": "https://cdn.jsdelivr.net/gh/sportlive18/All-Playlist@main/combined.m3u",
-    "enabled": false
+    "url": "https://raw.githubusercontent.com/seeubot/pla/refs/heads/main/data/channels.m3u",
+    "enabled": true
   },
   {
     "name": "Clarity TV",
     "url": "https://clarity-tv.vercel.app/api/playlist/?id=ALLINONE",
-    "enabled": true
+    "enabled": false
   }
 ]

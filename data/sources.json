@@ -15,6 +15,14 @@
     "enabled": true
   },
   {
+    "name": "ChillBox One",
+    "url": "https://chillbox-one.vercel.app/api/playlist",
+    "enabled": true,
+    "headers": {
+      "User-Agent": "ChillBox/1.0"
+    }
+  },
+  {
     "name": "Clarity TV",
     "url": "https://clarity-tv.vercel.app/api/playlist/?id=ALLINONE",
     "enabled": false

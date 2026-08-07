@@ -28,7 +28,7 @@ export default async function handler(req, res) {
     if (fs.existsSync(filterPath)) {
       try {
         filter = JSON.parse(fs.readFileSync(filterPath, 'utf-8'));
-        console.log('Filter loaded:', JSON.stringify(filter).substring(0, 100));
+        console.log('Filter loaded successfully');
       } catch(e) {
         console.log('Filter parse error:', e.message);
       }
@@ -57,17 +57,7 @@ export default async function handler(req, res) {
             }
             kept++;
             
-            if (channelMap[ch.id]) {
-              const urls = (channelMap[ch.id].servers || []).map(s => s.url);
-              for (const srv of (ch.servers || [])) {
-                if (!urls.includes(srv.url)) {
-                  channelMap[ch.id].servers.push(srv);
-                }
-              }
-            } else {
-              ch.group = ch.group || 'Chill Box';
-              channelMap[ch.id] = ch;
-            }
+            addCh(channelMap, ch);
           }
           console.log(`  Kept after filter: ${kept}`);
         } catch (e) {
@@ -78,6 +68,13 @@ export default async function handler(req, res) {
     
     const channels = Object.values(channelMap);
     console.log(`Total filtered channels: ${channels.length}`);
+    
+    // Show merged channels with multiple servers
+    for (const ch of channels) {
+      if (ch.servers && ch.servers.length > 1) {
+        console.log(`  ${ch.name}: ${ch.servers.length} servers (${ch.servers.map(s => s.name).join(', ')})`);
+      }
+    }
     
     // Generate M3U playlist
     let playlist = '#EXTM3U\n';
@@ -111,7 +108,6 @@ function shouldKeep(channel, filter) {
   // If no filter or empty groups, allow everything
   if (!filter) return true;
   if (!filter.groups || Object.keys(filter.groups).length === 0) {
-    // Check old whitelist format
     if (filter.whitelist && filter.whitelist.length > 0) {
       const name = (channel.name || '').toLowerCase().trim();
       return filter.whitelist.some(w => name.includes(w.toLowerCase().trim()));
@@ -197,23 +193,58 @@ function parseM3U(content) {
 }
 
 function addCh(dict, ch) {
-  const base = ch.name.replace(/\s*HD$/i, '').trim();
+  // Clean base name - remove quality suffixes for merging
+  let base = ch.name
+    .replace(/\s*\(.*?\)\s*/g, '')
+    .replace(/\s*\[.*?\]\s*/g, '')
+    .replace(/\s+(4K|FHD|UHD|HD|SD|HEVC|H264|H265|RAW|VIP)\s*$/gi, '')
+    .trim();
+  
+  if (!base || base.length < 2) base = ch.name.trim();
+  
+  // Detect server name
+  let srvName = ch.serverName;
+  if (!srvName) {
+    const qMatch = ch.name.match(/(4K|FHD|UHD|HD|SD|HEVC)/i);
+    srvName = qMatch ? qMatch[0].toUpperCase() : 'SD';
+  }
+  
   const srv = { 
-    name: ch.serverName || (ch.name.includes('HD') ? 'HD' : 'SD'), 
+    name: srvName, 
     url: ch.url, 
     drm: ch.clearKey ? 'clearkey' : '', 
     license: ch.clearKey || '' 
   };
   
-  if (!dict[base]) {
-    dict[base] = { 
-      id: base.toLowerCase().replace(/[^a-z0-9_]/g, '_'), 
-      name: base, language: ch.language, logo: ch.logo, 
-      group: ch.group || 'Chill Box', servers: [srv] 
+  // Use cleaned base name as ID
+  const id = base.toLowerCase().replace(/[^a-z0-9_]/g, '_');
+  
+  if (!dict[id]) {
+    dict[id] = { 
+      id: id, 
+      name: base, 
+      language: ch.language, 
+      logo: ch.logo, 
+      group: ch.group || 'Chill Box', 
+      servers: [srv] 
     };
   } else {
-    if (!dict[base].servers.some(s => s.url === ch.url)) {
-      dict[base].servers.push(srv);
+    // Check for duplicate URL
+    if (!dict[id].servers.some(s => s.url === ch.url)) {
+      // If server name already exists, add source suffix
+      const sameName = dict[id].servers.filter(s => s.name === srvName);
+      if (sameName.length > 0) {
+        try {
+          const urlHost = new URL(ch.url).hostname;
+          const shortHost = urlHost.replace('www.', '').split('.')[0];
+          srv.name = srvName + ' (' + shortHost + ')';
+        } catch {
+          srv.name = srvName + ' (' + (sameName.length + 1) + ')';
+        }
+      }
+      dict[id].servers.push(srv);
     }
+    // Update logo if missing
+    if (ch.logo && !dict[id].logo) dict[id].logo = ch.logo;
   }
 }

@@ -8,6 +8,7 @@ export default async function handler(req, res) {
   const { token, expires } = req.query;
   const SECRET = process.env.API_SECRET;
 
+  // Auth check
   if (token && expires) {
     const expected = crypto.createHmac('sha256', SECRET).update(`playlist:${expires}`).digest('hex');
     if (token !== expected) return res.status(403).send('Invalid token');
@@ -25,7 +26,12 @@ export default async function handler(req, res) {
     // Load filter
     let filter = null;
     if (fs.existsSync(filterPath)) {
-      filter = JSON.parse(fs.readFileSync(filterPath, 'utf-8'));
+      try {
+        filter = JSON.parse(fs.readFileSync(filterPath, 'utf-8'));
+        console.log('Filter loaded:', JSON.stringify(filter).substring(0, 100));
+      } catch(e) {
+        console.log('Filter parse error:', e.message);
+      }
     }
     
     // Merge all channels from sources
@@ -38,12 +44,18 @@ export default async function handler(req, res) {
         if (!source.enabled) continue;
         
         try {
+          console.log(`Fetching: ${source.name}`);
           const content = await fetchUrl(source.url);
           const parsed = parseM3U(content);
+          console.log(`  Parsed: ${parsed.length} channels`);
           
+          let kept = 0;
           for (const ch of parsed) {
             // APPLY FILTER
-            if (!shouldKeep(ch, filter)) continue;
+            if (!shouldKeep(ch, filter)) {
+              continue;
+            }
+            kept++;
             
             if (channelMap[ch.id]) {
               const urls = (channelMap[ch.id].servers || []).map(s => s.url);
@@ -53,17 +65,19 @@ export default async function handler(req, res) {
                 }
               }
             } else {
-              ch.group = 'Chill Box';
+              ch.group = ch.group || 'Chill Box';
               channelMap[ch.id] = ch;
             }
           }
+          console.log(`  Kept after filter: ${kept}`);
         } catch (e) {
-          console.log(`Failed: ${source.name}`);
+          console.log(`  Failed: ${source.name} - ${e.message}`);
         }
       }
     }
     
     const channels = Object.values(channelMap);
+    console.log(`Total filtered channels: ${channels.length}`);
     
     // Generate M3U playlist
     let playlist = '#EXTM3U\n';
@@ -77,6 +91,9 @@ export default async function handler(req, res) {
           if (srv.license) playlist += `#KODIPROP:inputstream.adaptive.license_key=${srv.license}\n`;
           playlist += `${srv.url}\n`;
         }
+      } else if (ch.url) {
+        playlist += `#EXTINF:-1 group-title="${ch.group||'Chill Box'}",${ch.name}\n`;
+        playlist += `${ch.url}\n`;
       }
     }
     
@@ -85,25 +102,67 @@ export default async function handler(req, res) {
     res.status(200).send(playlist);
     
   } catch (e) {
+    console.error('Error:', e);
     res.status(500).json({ error: e.message });
   }
 }
 
 function shouldKeep(channel, filter) {
-  if (!filter || !filter.whitelist || filter.whitelist.length === 0) return true;
-  const name = (channel.name || '').toLowerCase();
-  return filter.whitelist.some(w => name.includes(w.toLowerCase()));
+  // If no filter or empty groups, allow everything
+  if (!filter) return true;
+  if (!filter.groups || Object.keys(filter.groups).length === 0) {
+    // Check old whitelist format
+    if (filter.whitelist && filter.whitelist.length > 0) {
+      const name = (channel.name || '').toLowerCase().trim();
+      return filter.whitelist.some(w => name.includes(w.toLowerCase().trim()));
+    }
+    return true;
+  }
+  
+  const name = (channel.name || '').toLowerCase().trim();
+  
+  // Check all groups
+  for (const groupConfig of Object.values(filter.groups)) {
+    const keywords = groupConfig.keywords || [];
+    for (const kw of keywords) {
+      const keyword = kw.toLowerCase().trim();
+      if (name.includes(keyword) || keyword.includes(name)) {
+        return true;
+      }
+    }
+  }
+  
+  // Also check old whitelist
+  if (filter.whitelist && filter.whitelist.length > 0) {
+    return filter.whitelist.some(w => name.includes(w.toLowerCase().trim()));
+  }
+  
+  return false;
 }
 
 function fetchUrl(url) {
   return new Promise((resolve, reject) => {
     const client = url.startsWith('https') ? https : http;
-    client.get(url, { headers: { 'User-Agent': 'ChillBox/1.0' }, timeout: 15000 }, (response) => {
+    const options = {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'Accept': '*/*',
+      },
+      timeout: 15000
+    };
+    
+    client.get(url, options, (response) => {
+      // Handle redirects
+      if (response.statusCode >= 300 && response.statusCode < 400 && response.headers.location) {
+        fetchUrl(response.headers.location).then(resolve).catch(reject);
+        return;
+      }
+      
       let data = '';
       response.on('data', chunk => data += chunk);
       response.on('end', () => resolve(data));
       response.on('error', reject);
-    }).on('error', reject);
+    }).on('error', reject).on('timeout', () => { reject(new Error('Timeout')); });
   });
 }
 
@@ -115,10 +174,11 @@ function parseM3U(content) {
   for (const line of lines) {
     const l = line.trim();
     if (!l) continue;
+    
     if (l.startsWith('#EXTINF:')) {
       if (cur.url && cur.name) addCh(channels, cur);
       cur = {
-        name: (l.match(/,(.+)/) || ['', 'Unknown'])[1].trim(),
+        name: (l.match(/,([^,]+)$/) || ['', 'Unknown'])[1].trim(),
         logo: (l.match(/tvg-logo="([^"]+)"/) || [])[1] || null,
         group: (l.match(/group-title="([^"]+)"/) || [])[1] || 'Chill Box',
         language: (l.match(/tvg-language="([^"]+)"/) || [])[1] || '',
@@ -138,10 +198,22 @@ function parseM3U(content) {
 
 function addCh(dict, ch) {
   const base = ch.name.replace(/\s*HD$/i, '').trim();
-  const srv = { name: ch.serverName || (ch.name.includes('HD') ? 'HD' : 'SD'), url: ch.url, drm: ch.clearKey ? 'clearkey' : '', license: ch.clearKey || '' };
+  const srv = { 
+    name: ch.serverName || (ch.name.includes('HD') ? 'HD' : 'SD'), 
+    url: ch.url, 
+    drm: ch.clearKey ? 'clearkey' : '', 
+    license: ch.clearKey || '' 
+  };
+  
   if (!dict[base]) {
-    dict[base] = { id: base.toLowerCase().replace(/[^a-z0-9_]/g, '_'), name: base, language: ch.language, logo: ch.logo, group: 'Chill Box', servers: [srv] };
+    dict[base] = { 
+      id: base.toLowerCase().replace(/[^a-z0-9_]/g, '_'), 
+      name: base, language: ch.language, logo: ch.logo, 
+      group: ch.group || 'Chill Box', servers: [srv] 
+    };
   } else {
-    if (!dict[base].servers.some(s => s.url === ch.url)) dict[base].servers.push(srv);
+    if (!dict[base].servers.some(s => s.url === ch.url)) {
+      dict[base].servers.push(srv);
+    }
   }
 }

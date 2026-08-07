@@ -1,38 +1,91 @@
 import https from 'https';
+import fs from 'fs';
+import path from 'path';
 
 export default async function handler(req, res) {
-  const results = {};
+  // Fetch the M3U
+  const content = await fetchUrl('https://raw.githubusercontent.com/amitfunny/sunnxt.m3u/refs/heads/main/index.html');
   
-  // Test 1: Can Vercel reach GitHub?
-  try {
-    const data = await fetchUrl('https://raw.githubusercontent.com/amitfunny/sunnxt.m3u/refs/heads/main/index.html');
-    results.github = {
-      success: true,
-      length: data.length,
-      hasM3U: data.includes('#EXTINF:'),
-      preview: data.substring(0, 150)
-    };
-  } catch(e) {
-    results.github = { success: false, error: e.message };
+  // Parse it (same code as playlist.js)
+  const parsed = parseM3U(content);
+  
+  res.status(200).json({
+    contentLength: content.length,
+    parsedCount: parsed.length,
+    firstChannel: parsed[0],
+    allChannels: parsed.map(c => ({ name: c.name, url: c.url?.substring(0, 60), servers: c.servers?.length })),
+  });
+}
+
+function extractName(line) {
+  const stdMatch = line.match(/,([^,]+)$/);
+  if (stdMatch && stdMatch[1].trim().length > 1) return stdMatch[1].trim();
+  const quotes = line.split('"');
+  if (quotes.length >= 2) {
+    const after = quotes[quotes.length - 1].trim();
+    if (after && after.length > 1 && !after.startsWith('http')) return after;
   }
+  return 'Unknown';
+}
+
+function parseM3U(content) {
+  const lines = content.split('\n');
+  const channels = {};
+  let cur = { name: '', logo: null, group: 'Chill Box', language: '', clearKey: null, url: null, serverName: null };
+  let pendingClearKey = null;
   
-  // Test 2: Can Vercel reach any HTTPS?
-  try {
-    const data = await fetchUrl('https://httpbin.org/get');
-    results.httpbin = { success: true, length: data.length };
-  } catch(e) {
-    results.httpbin = { success: false, error: e.message };
+  for (const line of lines) {
+    const l = line.trim();
+    if (!l) continue;
+    
+    if (l.startsWith('#KODIPROP:') && l.includes('license_key=')) {
+      pendingClearKey = l.split('license_key=')[1]?.trim();
+      continue;
+    }
+    
+    if (l.startsWith('#EXTINF:')) {
+      if (cur.url && cur.name && cur.url.length > 5) addCh(channels, cur);
+      cur = {
+        name: extractName(l),
+        logo: (l.match(/tvg-logo="([^"]+)"/) || [])[1] || null,
+        group: (l.match(/group-title="([^"]+)"/) || [])[1] || 'Chill Box',
+        language: (l.match(/tvg-language="([^"]+)"/) || [])[1] || '',
+        clearKey: pendingClearKey,
+        url: null,
+        serverName: null
+      };
+      pendingClearKey = null;
+    } else if ((l.startsWith('https://') || l.startsWith('http://')) && !l.startsWith('#')) {
+      cur.url = l;
+      if (cur.name && cur.url.length > 5) {
+        addCh(channels, cur);
+        cur = { name: '', logo: null, group: 'Chill Box', language: '', clearKey: null, url: null, serverName: null };
+      }
+    }
   }
-  
-  res.status(200).json(results);
+  if (cur.url && cur.name && cur.url.length > 5) addCh(channels, cur);
+  return Object.values(channels);
+}
+
+function addCh(dict, ch) {
+  if (!ch.url || ch.url.length < 5) return;
+  let base = ch.name.replace(/\s+(HD|SD|4K|FHD|UHD)\s*$/gi, '').trim();
+  if (!base) base = ch.name.trim();
+  const srv = { name: 'SD', url: ch.url, drm: ch.clearKey ? 'clearkey' : '', license: ch.clearKey || '' };
+  const id = base.toLowerCase().replace(/[^a-z0-9_]/g, '_');
+  if (!dict[id]) {
+    dict[id] = { id, name: base, language: ch.language, logo: ch.logo, group: ch.group || 'Chill Box', servers: [srv] };
+  } else {
+    if (!dict[id].servers.some(s => s.url === ch.url)) dict[id].servers.push(srv);
+  }
 }
 
 function fetchUrl(url) {
-  return new Promise((resolve, reject) => {
-    https.get(url, { timeout: 10000 }, (response) => {
+  return new Promise((resolve) => {
+    https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 10000 }, (response) => {
       let data = '';
       response.on('data', chunk => data += chunk);
       response.on('end', () => resolve(data));
-    }).on('error', reject);
+    }).on('error', () => resolve(''));
   });
 }

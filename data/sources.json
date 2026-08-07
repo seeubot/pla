@@ -2,7 +2,7 @@
   {
     "name": "Sunnxt M3U",
     "url": "https://raw.githubusercontent.com/amitfunny/sunnxt.m3u/refs/heads/main/index.html",
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Sony TV Hub",

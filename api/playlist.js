@@ -35,40 +35,21 @@ export default async function handler(req, res) {
       for (const source of sources) {
         if (!source.enabled) continue;
         
-        try {
-          console.log(`Fetching: ${source.name} - ${source.url.substring(0, 60)}`);
-          const content = await fetchUrl(source.url);
-          
-          console.log(`  Response length: ${content.length}`);
-          
-          if (!content || content.length < 10) {
-            console.log(`  Empty/short response`);
-            continue;
-          }
-          
-          if (content.includes('<!DOCTYPE') || content.includes('<html')) {
-            console.log(`  Got HTML instead of M3U`);
-            continue;
-          }
-          
-          console.log(`  Content sample: ${content.substring(0, 80)}`);
-          
-          const parsed = parseM3U(content);
-          console.log(`  Parsed: ${parsed.length} channels`);
-          
-          for (const ch of parsed) {
-            if (!ch.url || ch.url.length < 5) continue;
-            if (!shouldKeep(ch, filter)) continue;
-            addCh(channelMap, ch);
-          }
-        } catch (e) {
-          console.log(`  Error: ${e.message}`);
+        const content = await fetchUrl(source.url);
+        if (!content || content.length < 10) continue;
+        if (content.includes('<!DOCTYPE') || content.includes('<html')) continue;
+        
+        const parsed = parseM3U(content);
+        
+        for (const ch of parsed) {
+          if (!ch.url || ch.url.length < 5) continue;
+          if (!shouldKeep(ch, filter)) continue;
+          addCh(channelMap, ch);
         }
       }
     }
     
     const channels = Object.values(channelMap);
-    console.log(`Total channels: ${channels.length}`);
     
     let playlist = '#EXTM3U\n';
     playlist += `# CHILL BOX - ${channels.length} channels\n`;
@@ -90,7 +71,6 @@ export default async function handler(req, res) {
     res.status(200).send(playlist);
     
   } catch (e) {
-    console.error('Fatal error:', e);
     res.status(500).json({ error: e.message });
   }
 }
@@ -98,65 +78,23 @@ export default async function handler(req, res) {
 function extractName(line) {
   const stdMatch = line.match(/,([^,]+)$/);
   if (stdMatch && stdMatch[1].trim().length > 1) return stdMatch[1].trim();
-  
   const quotes = line.split('"');
   if (quotes.length >= 2) {
     const after = quotes[quotes.length - 1].trim();
     if (after && after.length > 1 && !after.startsWith('http')) return after;
   }
-  
   return 'Unknown';
 }
 
 function fetchUrl(url) {
   return new Promise((resolve) => {
-    console.log(`  Requesting: ${url.substring(0, 80)}`);
-    
     const client = url.startsWith('https') ? https : http;
-    const req = client.get(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': '*/*',
-        'Accept-Language': 'en-US,en;q=0.9',
-      },
-      timeout: 15000
-    }, (response) => {
-      console.log(`  Status: ${response.statusCode}`);
-      
-      if (response.statusCode >= 300 && response.statusCode < 400 && response.headers.location) {
-        console.log(`  Redirect to: ${response.headers.location}`);
-        fetchUrl(response.headers.location).then(resolve);
-        return;
-      }
-      
-      if (response.statusCode !== 200) {
-        console.log(`  Non-200 status`);
-        resolve('');
-        return;
-      }
-      
+    client.get(url, { headers: { 'User-Agent': 'Mozilla/5.0', 'Accept': '*/*' }, timeout: 15000 }, (response) => {
+      if (response.statusCode !== 200) { resolve(''); return; }
       let data = '';
       response.on('data', chunk => data += chunk);
-      response.on('end', () => {
-        console.log(`  Received: ${data.length} bytes`);
-        resolve(data);
-      });
-      response.on('error', (e) => {
-        console.log(`  Response error: ${e.message}`);
-        resolve('');
-      });
-    });
-    
-    req.on('error', (e) => {
-      console.log(`  Request error: ${e.message}`);
-      resolve('');
-    });
-    
-    req.on('timeout', () => {
-      console.log(`  Request timeout`);
-      req.destroy();
-      resolve('');
-    });
+      response.on('end', () => resolve(data));
+    }).on('error', () => resolve(''));
   });
 }
 
@@ -169,15 +107,12 @@ function parseM3U(content) {
   for (const line of lines) {
     const l = line.trim();
     if (!l) continue;
-    
     if (l.startsWith('#KODIPROP:') && l.includes('license_key=')) {
       pendingClearKey = l.split('license_key=')[1]?.trim();
       continue;
     }
-    
     if (l.startsWith('#EXTINF:')) {
       if (cur.url && cur.name && cur.url.length > 5) addCh(channels, cur);
-      
       cur = {
         name: extractName(l),
         logo: (l.match(/tvg-logo="([^"]+)"/) || [])[1] || null,
@@ -185,10 +120,9 @@ function parseM3U(content) {
         language: (l.match(/tvg-language="([^"]+)"/) || [])[1] || '',
         clearKey: pendingClearKey,
         url: null,
-        serverName: (l.match(/server-name="([^"]+)"/) || [])[1] || null
+        serverName: null
       };
       pendingClearKey = null;
-      
     } else if ((l.startsWith('https://') || l.startsWith('http://')) && !l.startsWith('#')) {
       cur.url = l;
       if (cur.name && cur.url.length > 5) {
@@ -197,7 +131,6 @@ function parseM3U(content) {
       }
     }
   }
-  
   if (cur.url && cur.name && cur.url.length > 5) addCh(channels, cur);
   return Object.values(channels);
 }
@@ -216,21 +149,13 @@ function shouldKeep(channel, filter) {
 
 function addCh(dict, ch) {
   if (!ch.url || ch.url.length < 5) return;
-  
-  let base = ch.name.replace(/\s+(4K|FHD|UHD|HD|SD|HEVC|H264|H265|RAW|VIP)\s*$/gi, '').trim();
-  if (!base || base.length < 2) base = ch.name.trim();
-  
-  let srvName = ch.serverName || (ch.name.match(/(4K|FHD|UHD|HD|SD|HEVC)/i)?.[0]?.toUpperCase() || 'SD');
-  
-  const srv = { name: srvName, url: ch.url, drm: ch.clearKey ? 'clearkey' : '', license: ch.clearKey || '' };
+  let base = ch.name.replace(/\s+(HD|SD|4K|FHD|UHD)\s*$/gi, '').trim();
+  if (!base) base = ch.name.trim();
+  const srv = { name: 'SD', url: ch.url, drm: ch.clearKey ? 'clearkey' : '', license: ch.clearKey || '' };
   const id = base.toLowerCase().replace(/[^a-z0-9_]/g, '_');
-  
   if (!dict[id]) {
     dict[id] = { id, name: base, language: ch.language, logo: ch.logo, group: ch.group || 'Chill Box', servers: [srv] };
   } else {
-    if (!dict[id].servers.some(s => s.url === ch.url)) {
-      dict[id].servers.push(srv);
-    }
-    if (ch.logo && !dict[id].logo) dict[id].logo = ch.logo;
+    if (!dict[id].servers.some(s => s.url === ch.url)) dict[id].servers.push(srv);
   }
 }

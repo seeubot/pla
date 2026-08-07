@@ -36,15 +36,22 @@ export default async function handler(req, res) {
     let channelMap = {};
     let debugInfo = [];
     let hiddenTextRemoved = 0;
+    let totalSources = 0;
+    let successfulSources = 0;
 
     if (fs.existsSync(sourcesPath)) {
       const sources = JSON.parse(fs.readFileSync(sourcesPath, 'utf-8'));
 
       for (const source of sources) {
-        if (!source.enabled) continue;
+        if (!source.enabled) {
+          debugInfo.push(`${source.name}: DISABLED`);
+          continue;
+        }
+        
+        totalSources++;
 
         try {
-          debugInfo.push(`Fetching ${source.name}...`);
+          debugInfo.push(`${source.name}: Fetching...`);
           const content = await fetchUrl(source.url);
           
           if (!content || content.length < 10) {
@@ -53,18 +60,37 @@ export default async function handler(req, res) {
           }
 
           if (content.includes('<!DOCTYPE') || content.includes('<html')) {
-            debugInfo.push(`${source.name}: Got HTML instead of M3U`);
+            debugInfo.push(`${source.name}: Got HTML instead of playlist`);
             continue;
           }
 
-          const parsed = parseM3U(content, source.name);
-          debugInfo.push(`${source.name}: ${parsed.length} channels`);
+          let parsed = [];
+
+          // Auto-detect format (M3U or JSON)
+          if (content.trim().startsWith('#EXTM3U') || content.includes('#EXTINF:')) {
+            // M3U format
+            parsed = parseM3U(content, source.name);
+            debugInfo.push(`${source.name}: M3U format - ${parsed.length} channels`);
+          } else if (content.trim().startsWith('[') || content.trim().startsWith('{')) {
+            // JSON format
+            parsed = parseJSON(content, source.name);
+            debugInfo.push(`${source.name}: JSON format - ${parsed.length} channels`);
+          } else {
+            debugInfo.push(`${source.name}: Unknown format`);
+            continue;
+          }
+
+          successfulSources++;
 
           // Process each channel
           for (const ch of parsed) {
             // Remove @rtxcric from channel names
             const originalName = ch.name;
-            ch.name = ch.name.replace(/@rtxcric/gi, '').replace(/\s+/g, ' ').trim();
+            ch.name = ch.name
+              .replace(/@rtxcric/gi, '')
+              .replace(/\s+/g, ' ')
+              .trim();
+            
             if (originalName !== ch.name) {
               hiddenTextRemoved++;
             }
@@ -106,8 +132,9 @@ export default async function handler(req, res) {
     // Generate M3U playlist
     let playlist = '#EXTM3U\n';
     playlist += `#EXTINF:-1,CHILL BOX - IPTV\n`;
-    playlist += `# CHANNELS: ${channels.length}\n`;
     playlist += `# GENERATED: ${new Date().toISOString()}\n`;
+    playlist += `# SOURCES: ${successfulSources}/${totalSources} successful\n`;
+    playlist += `# CHANNELS: ${channels.length}\n`;
     if (hiddenTextRemoved > 0) {
       playlist += `# NOTE: ${hiddenTextRemoved} channel names cleaned\n`;
     }
@@ -142,11 +169,6 @@ export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
     
-    // Add debug info in development
-    if (process.env.NODE_ENV === 'development') {
-      res.setHeader('X-Debug-Info', debugInfo.join(' | '));
-    }
-    
     res.status(200).send(playlist);
 
   } catch (e) {
@@ -158,11 +180,18 @@ export default async function handler(req, res) {
   }
 }
 
-// Helper Functions
+// ============ HELPER FUNCTIONS ============
+
 function extractName(line) {
+  // Try standard M3U format first
   const stdMatch = line.match(/,([^,]+)$/);
-  if (stdMatch && stdMatch[1].trim().length > 1) return stdMatch[1].trim();
+  if (stdMatch && stdMatch[1].trim().length > 1) {
+    const name = stdMatch[1].trim();
+    // Make sure it's not a URL
+    if (!name.startsWith('http')) return name;
+  }
   
+  // Try to get name from quotes
   const quotes = line.split('"');
   if (quotes.length >= 2) {
     const after = quotes[quotes.length - 1].trim();
@@ -182,7 +211,7 @@ function fetchUrl(url, redirects = 0) {
     const client = url.startsWith('https') ? https : http;
     const req = client.get(url, {
       headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
         'Accept': '*/*',
         'Accept-Language': 'en-US,en;q=0.9',
         'Connection': 'keep-alive'
@@ -283,6 +312,39 @@ function parseM3U(content, sourceName = '') {
   return Object.values(channels);
 }
 
+function parseJSON(content, sourceName = '') {
+  try {
+    const data = JSON.parse(content);
+    let channels = [];
+
+    // Handle different JSON structures
+    if (Array.isArray(data)) {
+      // Direct array of channels
+      channels = data;
+    } else if (data.channels && Array.isArray(data.channels)) {
+      // Object with channels array
+      channels = data.channels;
+    } else if (data.data && Array.isArray(data.data)) {
+      // Object with data array
+      channels = data.data;
+    }
+
+    // Convert JSON channels to M3U-like structure
+    return channels.map(ch => ({
+      name: ch.name || ch.title || 'Unknown',
+      logo: ch.logo || ch.tvgLogo || null,
+      group: ch.group || ch.groupTitle || 'Chill Box',
+      language: ch.language || '',
+      drm: ch.drm || '',
+      license: ch.license || ch.licenseKey || '',
+      servers: ch.servers || (ch.url ? [{ name: 'SD', url: ch.url, drm: ch.drm || '', license: ch.license || '' }] : [])
+    }));
+  } catch (e) {
+    console.error(`Error parsing JSON from ${sourceName}:`, e);
+    return [];
+  }
+}
+
 function addParsedChannel(dict, ch) {
   if (!ch.url || ch.url.length < 5) return;
   
@@ -375,7 +437,7 @@ function addCh(dict, ch) {
     };
   } else {
     // Update group if it was default and new one is not
-    if (dict[id].group === 'Chill Box' && ch.group !== 'Chill Box') {
+    if (dict[id].group === 'Chill Box' && ch.group && ch.group !== 'Chill Box') {
       dict[id].group = ch.group;
     }
     // Update logo if exists

@@ -1,115 +1,58 @@
 {
   "mode": "whitelist",
   "groups": {
-    "Sun Nxt": {
-      "keywords": [
-        "Adithya",
-        "Chintu",
-        "Chutti",
-        "Gemini",
-        "KTV",
-        "Kochu",
-        "Kushi",
-        "Sun",
-        "Surya",
-        "Udaya"
-      ],
-      "mergeSimilar": true
-    },
-    "Sony Entertainment": {
+    "Entertainment": {
       "keywords": [
         "SET",
-        "SONY",
-        "Sony"
+        "Sony Aath",
+        "Sony Marathi",
+        "Sony Pal",
+        "Sony SAB"
       ],
-      "mergeSimilar": true
-    },
-    "Sony Sports": {
-      "keywords": [
-        "Sony"
-      ],
-      "mergeSimilar": true
-    },
-    "Other": {
-      "keywords": [
-        "&",
-        "&TV",
-        "&flix",
-        "&xplor",
-        "1.",
-        "10",
-        "3.0",
-        "4",
-        "6",
-        "7X"
-      ],
-      "mergeSimilar": true
-    },
-    "Discovery": {
-      "keywords": [
-        "Discovery",
-        "Investigation",
-        "TLC"
-      ],
-      "mergeSimilar": true
-    },
-    "Movies": {
-      "keywords": [
-        "&",
-        "&Pictures",
-        "Animax",
-        "Anmol",
-        "B4U",
-        "Colors",
-        "J",
-        "Jaya",
-        "Maa",
-        "Maha"
-      ],
-      "mergeSimilar": true
+      "mergeSimilar": false
     },
     "Kids": {
       "keywords": [
-        "Cartoon",
-        "Disney",
-        "Hungama",
-        "Nick",
-        "Nickelodeon",
-        "Pogo",
-        "Power",
-        "ZB"
+        "Sony Yay"
       ],
-      "mergeSimilar": true
+      "mergeSimilar": false
     },
-    "News": {
+    "Movies": {
       "keywords": [
-        "22Scope",
-        "AB",
-        "ABP",
-        "ANB",
-        "ANN",
-        "AOne",
-        "ATV",
-        "Aaj",
-        "Apex",
-        "Argus"
+        "Sony MAX",
+        "Sony PIX",
+        "Sony WAH"
       ],
-      "mergeSimilar": true
+      "mergeSimilar": false
     },
     "Sports": {
       "keywords": [
-        "Colors",
-        "Super",
-        "Superfine"
+        "Sony Sports Ten"
       ],
-      "mergeSimilar": true
+      "mergeSimilar": false
     },
-    "Zee Network": {
+    "SunNxt": {
       "keywords": [
-        "ZOOM",
-        "Zee"
+        "Adithya TV",
+        "Chintu TV",
+        "Chutti TV",
+        "Gemini Comedy",
+        "Gemini Life",
+        "Gemini Movies",
+        "Gemini Music",
+        "KTV",
+        "Kochu",
+        "Kushi TV",
+        "Sun Life",
+        "Sun Music",
+        "Surya Comedy",
+        "Surya Movies",
+        "Surya Music",
+        "Udaya Comedy",
+        "Udaya Movies",
+        "Udaya Music"
       ],
-      "mergeSimilar": true
+      "mergeSimilar": false
     }
   }
 }

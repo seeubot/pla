@@ -1,39 +1,29 @@
 {
   "mode": "whitelist",
-  "groups": {
-    "Sony Sports": {
-      "keywords": [
-        "Sony Sports Ten",
-        "Sony Ten",
-        "Gemini TV",
-        "Gemini",
-        "Sun Music HD",
-  "Sun Life",
-  "Surya Music",
-  "Udaya Movies",
-  "KTV",
-  "KTV HD",
-  "Sun Music",
-  "Gemini Life",
-  "Gemini Music HD",
-  "Gemini Comedy",
-  "Surya Comedy",
-  "Gemini Music",
-  "Gemini Movies HD",
-  "Gemini Movies",
-  "Adithya TV",
-  "Udaya Music",
-  "Kochu",
-  "Chutti TV",
-        "Zee TV",
-        "KTV",
-        "Zee Telugu HD",
-        "gemini",
-        "zee tv",
-        "Zee Telugu",
-        "Zee"
-      ],
-      "mergeSimilar": true
-    }
-  }
+  "whitelist": [
+    "Sony Sports Ten",
+    "Sony Ten",
+    "Gemini",
+    "KTV",
+    "Kushi",
+    "Chutti",
+    "Adithya",
+    "Kochu",
+    "Sun TV",
+    "Sun Music",
+    "Sun Life",
+    "Sun Bangla",
+    "Sun Marathi",
+    "Sun News",
+    "Surya",
+    "Udaya",
+    "Zee TV",
+    "Zee Telugu",
+    "Zee Cinema",
+    "Zee Tamil",
+    "Zee Kannada",
+    "Zee Marathi",
+    "Zee Bangala",
+    "Zee Bollywood"
+  ]
 }

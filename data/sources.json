@@ -2,7 +2,7 @@
   {
     "name": "Sunnxt M3U",
     "url": "https://cdn.jsdelivr.net/gh/amitfunny/sunnxt.m3u@main/index.html",
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Sony TV Hub",
@@ -21,10 +21,4 @@
     "headers": {
       "User-Agent": "ChillBox/1.0"
     }
-  },
-  {
-    "name": "Clarity TV",
-    "url": "https://clarity-tv.vercel.app/api/playlist/?id=ALLINONE",
-    "enabled": true
   }
-]

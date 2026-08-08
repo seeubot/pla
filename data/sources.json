@@ -7,12 +7,12 @@
   {
     "name": "Sony TV Hub",
     "url": "https://servertvhub.site/sony/playlist.php",
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "allinone",
     "url": "https://raw.githubusercontent.com/seeubot/pla/refs/heads/main/data/channels.json",
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "ChillBox One",

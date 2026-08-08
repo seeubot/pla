@@ -8,13 +8,12 @@ export default async function handler(req, res) {
   const { token, expires } = req.query;
   const SECRET = process.env.API_SECRET;
 
-  // Authentication
   if (token && expires) {
     const expected = crypto.createHmac('sha256', SECRET).update(`playlist:${expires}`).digest('hex');
     if (token !== expected) return res.status(403).send('Invalid token');
     if (Date.now() > parseInt(expires)) return res.status(403).send('Token expired');
   } else if (req.headers['x-api-key'] === SECRET) {
-    // Valid API key
+    // Valid
   } else {
     return res.status(404).send('Not found');
   }
@@ -23,485 +22,202 @@ export default async function handler(req, res) {
     const sourcesPath = path.join(process.cwd(), 'data', 'sources.json');
     const filterPath = path.join(process.cwd(), 'data', 'filter.json');
 
-    // Load filter configuration
     let filter = null;
     if (fs.existsSync(filterPath)) {
-      try { 
-        filter = JSON.parse(fs.readFileSync(filterPath, 'utf-8')); 
-        console.log('Filter loaded:', JSON.stringify(filter, null, 2));
-      } catch(e) {
-        console.error('Error loading filter:', e);
-      }
+      try { filter = JSON.parse(fs.readFileSync(filterPath, 'utf-8')); } catch(e) {}
     }
 
     let channelMap = {};
     let debugInfo = [];
-    let hiddenTextRemoved = 0;
-    let totalSources = 0;
-    let successfulSources = 0;
-    let filteredCount = 0;
-    let totalChannelsFound = 0;
 
     if (fs.existsSync(sourcesPath)) {
       const sources = JSON.parse(fs.readFileSync(sourcesPath, 'utf-8'));
+      const enabledSources = sources.filter(s => s.enabled);
 
-      for (const source of sources) {
-        if (!source.enabled) {
-          debugInfo.push(`${source.name}: DISABLED`);
+      // Fetch all sources in parallel instead of one-at-a-time.
+      // Sequential awaits meant total time = sum of every source's fetch time
+      // (up to 15s each), which could exceed the client timeout or Vercel's
+      // function execution limit. Now total time = slowest single source.
+      const results = await Promise.all(
+        enabledSources.map(async (source) => {
+          try {
+            const content = await fetchUrl(source.url);
+            return { source, content, error: null };
+          } catch (e) {
+            return { source, content: null, error: e.message };
+          }
+        })
+      );
+
+      for (const { source, content, error } of results) {
+        if (error) {
+          debugInfo.push(`${source.name}: ERROR - ${error}`);
           continue;
         }
-        
-        totalSources++;
 
-        try {
-          debugInfo.push(`${source.name}: Fetching...`);
-          
-          // Pass custom headers if defined in source config
-          const customHeaders = source.headers || {};
-          const content = await fetchUrl(source.url, 0, customHeaders);
-          
-          if (!content || content.length < 10) {
-            debugInfo.push(`${source.name}: EMPTY response`);
-            continue;
+        debugInfo.push(`${source.name}: fetched ${content.length} bytes`);
+
+        if (!content || content.length < 10) {
+          debugInfo.push(`${source.name}: EMPTY response`);
+          continue;
+        }
+
+        if (content.includes('<!DOCTYPE') || content.includes('<html')) {
+          debugInfo.push(`${source.name}: Got HTML instead of M3U`);
+          continue;
+        }
+
+        const parsed = parseM3U(content);
+        debugInfo.push(`${source.name}: parsed ${parsed.length} channels`);
+
+        // parseM3U() returns channels shaped as
+        // { name, logo, group, language, servers: [{ name, url, drm, license }] }
+        // — there is NO top-level `ch.url`. We flatten each channel's servers
+        // back into the flat shape that addCh() expects, and merge those.
+        for (const ch of parsed) {
+          if (!ch.servers || ch.servers.length === 0) continue;
+          for (const srv of ch.servers) {
+            if (!srv.url || srv.url.length < 5) continue;
+            const flat = {
+              name: ch.name,
+              logo: ch.logo,
+              group: ch.group,
+              language: ch.language,
+              clearKey: srv.drm ? srv.license : null,
+              url: srv.url
+            };
+            // if (!shouldKeep(flat, filter)) continue;
+            addCh(channelMap, flat);
           }
-
-          if (content.includes('<!DOCTYPE') || content.includes('<html')) {
-            debugInfo.push(`${source.name}: Got HTML instead of playlist`);
-            continue;
-          }
-
-          let parsed = [];
-
-          // Auto-detect format (M3U or JSON)
-          if (content.trim().startsWith('#EXTM3U') || content.includes('#EXTINF:')) {
-            // M3U format
-            parsed = parseM3U(content, source.name);
-            debugInfo.push(`${source.name}: M3U format - ${parsed.length} channels`);
-          } else if (content.trim().startsWith('[') || content.trim().startsWith('{')) {
-            // JSON format
-            parsed = parseJSON(content, source.name);
-            debugInfo.push(`${source.name}: JSON format - ${parsed.length} channels`);
-          } else {
-            debugInfo.push(`${source.name}: Unknown format`);
-            continue;
-          }
-
-          successfulSources++;
-          totalChannelsFound += parsed.length;
-
-          // Process each channel
-          for (const ch of parsed) {
-            // Remove @rtxcric from channel names
-            const originalName = ch.name;
-            ch.name = ch.name
-              .replace(/@rtxcric/gi, '')
-              .replace(/\s+/g, ' ')
-              .trim();
-            
-            if (originalName !== ch.name) {
-              hiddenTextRemoved++;
-            }
-
-            // Apply filter if exists
-            if (filter) {
-              const filterResult = shouldKeep(ch, filter);
-              if (!filterResult.keep) {
-                filteredCount++;
-                continue;
-              }
-              // Update group if filter specifies a group
-              if (filterResult.group) {
-                ch.group = filterResult.group;
-              }
-            }
-
-            // Add to channel map
-            if (ch.servers && ch.servers.length > 0) {
-              for (const srv of ch.servers) {
-                if (!srv.url || srv.url.length < 5) continue;
-                
-                const flat = {
-                  name: ch.name,
-                  logo: ch.logo,
-                  group: ch.group || 'Chill Box',
-                  language: ch.language,
-                  drm: srv.drm || '',
-                  license: srv.license || '',
-                  url: srv.url,
-                  serverName: srv.name || 'SD'
-                };
-                
-                addCh(channelMap, flat);
-              }
-            }
-          }
-        } catch (e) {
-          debugInfo.push(`${source.name}: ERROR - ${e.message}`);
         }
       }
     }
 
     const channels = Object.values(channelMap);
 
-    // Sort channels alphabetically
-    channels.sort((a, b) => a.name.localeCompare(b.name));
-
-    // Generate M3U playlist
     let playlist = '#EXTM3U\n';
-    playlist += `#EXTINF:-1,CHILL BOX - IPTV\n`;
-    playlist += `# GENERATED: ${new Date().toISOString()}\n`;
-    playlist += `# SOURCES: ${successfulSources}/${totalSources} successful\n`;
-    playlist += `# TOTAL FOUND: ${totalChannelsFound} channels\n`;
-    playlist += `# FILTERED OUT: ${filteredCount} channels\n`;
-    playlist += `# INCLUDED: ${channels.length} channels\n`;
-    if (hiddenTextRemoved > 0) {
-      playlist += `# NOTE: ${hiddenTextRemoved} channel names cleaned\n`;
-    }
-    playlist += `\n`;
+    playlist += `# CHILL BOX - ${channels.length} channels\n`;
+    playlist += `# Debug: ${debugInfo.join(' | ')}\n`;
 
     for (const ch of channels) {
       if (ch.servers && ch.servers.length > 0) {
         for (const srv of ch.servers) {
           if (!srv.url || srv.url.length < 5) continue;
-          
-          playlist += `#EXTINF:-1 `;
-          if (ch.language) playlist += `tvg-language="${ch.language}" `;
-          if (ch.logo) playlist += `tvg-logo="${ch.logo}" `;
-          playlist += `group-title="${ch.group || 'Chill Box'}" `;
-          if (srv.name) playlist += `server-name="${srv.name}" `;
-          playlist += `,${ch.name}\n`;
-          
-          if (srv.drm) {
-            playlist += `#KODIPROP:inputstream.adaptive.license_type=${srv.drm}\n`;
-          }
-          if (srv.license) {
-            playlist += `#KODIPROP:inputstream.adaptive.license_key=${srv.license}\n`;
-          }
-          
+          playlist += `#EXTINF:-1 tvg-language="${ch.language||''}" tvg-logo="${ch.logo||''}" group-title="${ch.group||'Chill Box'}" server-name="${srv.name}",${ch.name}\n`;
+          if (srv.drm) playlist += `#KODIPROP:inputstream.adaptive.license_type=${srv.drm}\n`;
+          if (srv.license) playlist += `#KODIPROP:inputstream.adaptive.license_key=${srv.license}\n`;
           playlist += `${srv.url}\n`;
         }
       }
     }
 
-    // Set headers
     res.setHeader('Content-Type', 'audio/x-mpegurl');
     res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-    
-    // Add debug info in development
-    if (process.env.NODE_ENV === 'development') {
-      res.setHeader('X-Debug-Info', debugInfo.join(' | '));
-    }
-    
     res.status(200).send(playlist);
 
   } catch (e) {
-    console.error('Playlist generation error:', e);
-    res.status(500).json({ 
-      error: 'Failed to generate playlist',
-      message: e.message 
-    });
+    res.status(500).json({ error: e.message });
   }
 }
 
-// ============ HELPER FUNCTIONS ============
-
 function extractName(line) {
-  // Try standard M3U format first
   const stdMatch = line.match(/,([^,]+)$/);
-  if (stdMatch && stdMatch[1].trim().length > 1) {
-    const name = stdMatch[1].trim();
-    // Make sure it's not a URL
-    if (!name.startsWith('http')) return name;
-  }
-  
-  // Try to get name from quotes
+  if (stdMatch && stdMatch[1].trim().length > 1) return stdMatch[1].trim();
   const quotes = line.split('"');
   if (quotes.length >= 2) {
     const after = quotes[quotes.length - 1].trim();
     if (after && after.length > 1 && !after.startsWith('http')) return after;
   }
-  
   return 'Unknown';
 }
 
-function fetchUrl(url, redirects = 0, customHeaders = {}) {
+function fetchUrl(url) {
   return new Promise((resolve) => {
-    if (redirects > 5) {
-      resolve('');
-      return;
-    }
-
     const client = url.startsWith('https') ? https : http;
-    
-    // Merge default headers with custom headers
-    const headers = {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-      'Accept': '*/*',
-      'Accept-Language': 'en-US,en;q=0.9',
-      'Connection': 'keep-alive',
-      ...customHeaders // Custom headers override defaults
-    };
-    
-    const options = {
-      headers,
-      timeout: 15000
-    };
-    
-    const req = client.get(url, options, (response) => {
-      // Handle redirects
+    const req = client.get(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': '*/*',
+        'Accept-Language': 'en-US,en;q=0.9',
+      },
+      timeout: 8000
+    }, (response) => {
       if (response.statusCode >= 300 && response.statusCode < 400 && response.headers.location) {
-        fetchUrl(response.headers.location, redirects + 1, customHeaders).then(resolve);
+        fetchUrl(response.headers.location).then(resolve);
         return;
       }
-      
       if (response.statusCode !== 200) {
         resolve('');
         return;
       }
-      
       let data = '';
       response.on('data', chunk => data += chunk);
       response.on('end', () => resolve(data));
       response.on('error', () => resolve(''));
     });
-    
     req.on('error', () => resolve(''));
-    req.on('timeout', () => { 
-      req.destroy(); 
-      resolve(''); 
-    });
+    req.on('timeout', () => { req.destroy(); resolve(''); });
   });
 }
 
-function parseM3U(content, sourceName = '') {
+function parseM3U(content) {
   const lines = content.split('\n');
   const channels = {};
-  let currentChannel = null;
-  let pendingDrm = null;
-  let pendingLicense = null;
+  let cur = { name: '', logo: null, group: 'Chill Box', language: '', clearKey: null, url: null, serverName: null };
+  let pendingClearKey = null;
 
   for (const line of lines) {
-    const trimmed = line.trim();
-    if (!trimmed) continue;
-
-    // Handle KODIPROP for DRM
-    if (trimmed.startsWith('#KODIPROP:')) {
-      if (trimmed.includes('license_type=')) {
-        pendingDrm = trimmed.split('license_type=')[1]?.trim();
-      }
-      if (trimmed.includes('license_key=')) {
-        pendingLicense = trimmed.split('license_key=')[1]?.trim();
-      }
+    const l = line.trim();
+    if (!l) continue;
+    if (l.startsWith('#KODIPROP:') && l.includes('license_key=')) {
+      pendingClearKey = l.split('license_key=')[1]?.trim();
       continue;
     }
-
-    // Handle EXTINF
-    if (trimmed.startsWith('#EXTINF:')) {
-      // Save previous channel
-      if (currentChannel && currentChannel.url) {
-        addParsedChannel(channels, currentChannel);
-      }
-
-      // Extract channel info
-      const name = extractName(trimmed);
-      const logo = (trimmed.match(/tvg-logo="([^"]+)"/) || [])[1] || null;
-      const group = (trimmed.match(/group-title="([^"]+)"/) || [])[1] || 'Chill Box';
-      const language = (trimmed.match(/tvg-language="([^"]+)"/) || [])[1] || '';
-      const serverName = (trimmed.match(/server-name="([^"]+)"/) || [])[1] || 'SD';
-
-      currentChannel = {
-        name,
-        logo,
-        group,
-        language,
-        drm: pendingDrm || '',
-        license: pendingLicense || '',
+    if (l.startsWith('#EXTINF:')) {
+      if (cur.url && cur.name && cur.url.length > 5) addCh(channels, cur);
+      cur = {
+        name: extractName(l),
+        logo: (l.match(/tvg-logo="([^"]+)"/) || [])[1] || null,
+        group: (l.match(/group-title="([^"]+)"/) || [])[1] || 'Chill Box',
+        language: (l.match(/tvg-language="([^"]+)"/) || [])[1] || '',
+        clearKey: pendingClearKey,
         url: null,
-        serverName
+        serverName: null
       };
-
-      // Reset pending DRM
-      pendingDrm = null;
-      pendingLicense = null;
-      continue;
-    }
-
-    // Handle URLs
-    if ((trimmed.startsWith('https://') || trimmed.startsWith('http://')) && currentChannel) {
-      currentChannel.url = trimmed;
-      addParsedChannel(channels, currentChannel);
-      currentChannel = null;
+      pendingClearKey = null;
+    } else if ((l.startsWith('https://') || l.startsWith('http://')) && !l.startsWith('#')) {
+      cur.url = l;
+      if (cur.name && cur.url.length > 5) {
+        addCh(channels, cur);
+        cur = { name: '', logo: null, group: 'Chill Box', language: '', clearKey: null, url: null, serverName: null };
+      }
     }
   }
-
-  // Handle last channel
-  if (currentChannel && currentChannel.url) {
-    addParsedChannel(channels, currentChannel);
-  }
-
+  if (cur.url && cur.name && cur.url.length > 5) addCh(channels, cur);
   return Object.values(channels);
 }
 
-function parseJSON(content, sourceName = '') {
-  try {
-    const data = JSON.parse(content);
-    let channels = [];
-
-    // Handle different JSON structures
-    if (Array.isArray(data)) {
-      // Direct array of channels
-      channels = data;
-    } else if (data.channels && Array.isArray(data.channels)) {
-      // Object with channels array
-      channels = data.channels;
-    } else if (data.data && Array.isArray(data.data)) {
-      // Object with data array
-      channels = data.data;
-    }
-
-    // Convert JSON channels to M3U-like structure
-    return channels.map(ch => ({
-      name: ch.name || ch.title || 'Unknown',
-      logo: ch.logo || ch.tvgLogo || null,
-      group: ch.group || ch.groupTitle || 'Chill Box',
-      language: ch.language || '',
-      drm: ch.drm || '',
-      license: ch.license || ch.licenseKey || '',
-      servers: ch.servers || (ch.url ? [{ name: 'SD', url: ch.url, drm: ch.drm || '', license: ch.license || '' }] : [])
-    }));
-  } catch (e) {
-    console.error(`Error parsing JSON from ${sourceName}:`, e);
-    return [];
-  }
-}
-
-function addParsedChannel(dict, ch) {
-  if (!ch.url || ch.url.length < 5) return;
-  
-  // Clean channel name
-  let base = ch.name
-    .replace(/@rtxcric/gi, '')
-    .replace(/\s+(HD|SD|4K|FHD|UHD|HEVC|H265|H264)\s*$/gi, '')
-    .replace(/\s+/g, ' ')
-    .trim();
-  
-  if (!base) base = ch.name.trim();
-  
-  const id = base.toLowerCase().replace(/[^a-z0-9_]/g, '_');
-  
-  const server = {
-    name: ch.serverName || 'SD',
-    url: ch.url,
-    drm: ch.drm || '',
-    license: ch.license || ''
-  };
-
-  if (!dict[id]) {
-    dict[id] = {
-      id,
-      name: base,
-      language: ch.language || '',
-      logo: ch.logo,
-      group: ch.group || 'Chill Box',
-      servers: [server]
-    };
-  } else {
-    // Add server if not duplicate
-    if (!dict[id].servers.some(s => s.url === ch.url)) {
-      dict[id].servers.push(server);
-    }
-  }
-}
-
 function shouldKeep(channel, filter) {
-  // Default response
-  const defaultResponse = { keep: true, group: null };
-  
-  if (!filter || !filter.groups || Object.keys(filter.groups).length === 0) {
-    return defaultResponse;
-  }
-  
+  if (!filter) return true;
   const name = (channel.name || '').toLowerCase().trim();
-  const mode = filter.mode || 'whitelist';
-  
-  if (mode === 'whitelist') {
-    // In whitelist mode, only keep channels that match
-    for (const [groupName, groupConfig] of Object.entries(filter.groups)) {
-      if (groupConfig.keywords && Array.isArray(groupConfig.keywords)) {
-        for (const keyword of groupConfig.keywords) {
-          if (name.includes(keyword.toLowerCase().trim())) {
-            return { 
-              keep: true, 
-              group: groupName  // Assign to the matching group
-            };
-          }
-        }
-      }
+  if (!filter.groups || Object.keys(filter.groups).length === 0) return true;
+  for (const g of Object.values(filter.groups)) {
+    for (const kw of (g.keywords || [])) {
+      if (name.includes(kw.toLowerCase().trim())) return true;
     }
-    // If no match found in whitelist, exclude
-    return { keep: false, group: null };
-    
-  } else if (mode === 'blacklist') {
-    // In blacklist mode, exclude channels that match
-    for (const [groupName, groupConfig] of Object.entries(filter.groups)) {
-      if (groupConfig.keywords && Array.isArray(groupConfig.keywords)) {
-        for (const keyword of groupConfig.keywords) {
-          if (name.includes(keyword.toLowerCase().trim())) {
-            return { keep: false, group: null };
-          }
-        }
-      }
-    }
-    // If no match found in blacklist, keep
-    return defaultResponse;
   }
-  
-  return defaultResponse;
+  return false;
 }
 
 function addCh(dict, ch) {
   if (!ch.url || ch.url.length < 5) return;
-  
-  // Clean channel name
-  let base = ch.name
-    .replace(/@rtxcric/gi, '')
-    .replace(/\s+(HD|SD|4K|FHD|UHD|HEVC|H265|H264)\s*$/gi, '')
-    .replace(/\s+/g, ' ')
-    .trim();
-  
+  let base = ch.name.replace(/\s+(HD|SD|4K|FHD|UHD)\s*$/gi, '').trim();
   if (!base) base = ch.name.trim();
-  
+  const srv = { name: 'SD', url: ch.url, drm: ch.clearKey ? 'clearkey' : '', license: ch.clearKey || '' };
   const id = base.toLowerCase().replace(/[^a-z0-9_]/g, '_');
-  
-  const server = {
-    name: ch.serverName || 'SD',
-    url: ch.url,
-    drm: ch.drm || '',
-    license: ch.license || ''
-  };
-
   if (!dict[id]) {
-    dict[id] = {
-      id,
-      name: base,
-      language: ch.language || '',
-      logo: ch.logo,
-      group: ch.group || 'Chill Box',
-      servers: [server]
-    };
+    dict[id] = { id, name: base, language: ch.language, logo: ch.logo, group: ch.group || 'Chill Box', servers: [srv] };
   } else {
-    // Update group if it was default and new one is not
-    if (dict[id].group === 'Chill Box' && ch.group && ch.group !== 'Chill Box') {
-      dict[id].group = ch.group;
-    }
-    // Update logo if exists
-    if (!dict[id].logo && ch.logo) {
-      dict[id].logo = ch.logo;
-    }
-    // Add server if not duplicate
-    if (!dict[id].servers.some(s => s.url === ch.url)) {
-      dict[id].servers.push(server);
-    }
+    if (!dict[id].servers.some(s => s.url === ch.url)) dict[id].servers.push(srv);
   }
 }

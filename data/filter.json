@@ -60,6 +60,31 @@
         "Zoom"
       ],
       "mergeSimilar": true
+    },
+    "Sports": {
+      "keywords": [
+        "Willow HD",
+        "PTV Sports"
+      ],
+      "mergeSimilar": true
+    },
+    "ETV": {
+      "keywords": [
+        "ETV Telugu"
+      ],
+      "mergeSimilar": true
+    },
+    "Colors": {
+      "keywords": [
+        "Colour Tamil HD"
+      ],
+      "mergeSimilar": true
+    },
+    "Star": {
+      "keywords": [
+        "Star Vijay HD"
+      ],
+      "mergeSimilar": true
     }
   }
 }

@@ -2,12 +2,12 @@
   {
     "name": "Sunnxt M3U",
     "url": "https://cdn.jsdelivr.net/gh/amitfunny/sunnxt.m3u@main/index.html",
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Sony TV Hub",
     "url": "https://servertvhub.site/sony/playlist.php",
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "testing",
@@ -17,7 +17,7 @@
   {
     "name": "ChillBox One",
     "url": "https://chillbox-one.vercel.app/api/playlist",
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Clarity TV",

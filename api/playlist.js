@@ -5,17 +5,11 @@ import https from 'https';
 import http from 'http';
 
 export default async function handler(req, res) {
-  // CORS: allow browser-based fetch() calls, including preflight requests
-  // triggered by custom headers like x-api-key. Native apps (NSPlayer, etc.)
-  // never send preflight requests, which is why this only affected the
-  // browser-based HTML page and not the direct M3U URL in a player app.
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'x-api-key, Content-Type');
 
-  if (req.method === 'OPTIONS') {
-    return res.status(204).end();
-  }
+  if (req.method === 'OPTIONS') return res.status(204).end();
 
   const { token, expires } = req.query;
   const SECRET = process.env.API_SECRET;
@@ -46,10 +40,6 @@ export default async function handler(req, res) {
       const sources = JSON.parse(fs.readFileSync(sourcesPath, 'utf-8'));
       const enabledSources = sources.filter(s => s.enabled);
 
-      // Fetch all sources in parallel instead of one-at-a-time.
-      // Sequential awaits meant total time = sum of every source's fetch time
-      // (up to 15s each), which could exceed the client timeout or Vercel's
-      // function execution limit. Now total time = slowest single source.
       const results = await Promise.all(
         enabledSources.map(async (source) => {
           try {
@@ -62,40 +52,52 @@ export default async function handler(req, res) {
       );
 
       for (const { source, content, fetchError } of results) {
-        if (fetchError) {
-          debugInfo.push(`${source.name}: FETCH FAILED - ${fetchError}`);
-          continue;
+        if (fetchError) { debugInfo.push(`${source.name}: FETCH FAILED`); continue; }
+        debugInfo.push(`${source.name}: ${content.length} bytes`);
+
+        if (!content || content.length < 10) { debugInfo.push(`${source.name}: EMPTY`); continue; }
+
+        // Try JSON first, then M3U
+        let parsed = [];
+        try {
+          const json = JSON.parse(content);
+          const list = json.channels || (Array.isArray(json) ? json : []);
+          if (list.length > 0) {
+            parsed = list.map(ch => ({
+              name: ch.name || 'Unknown',
+              logo: ch.logo || null,
+              group: ch.category || ch.group || 'General',
+              language: ch.language || '',
+              servers: [{
+                name: 'HD',
+                url: ch.mpd || ch.stream_url || ch.url,
+                drm: (ch.keyId || ch.key_id) ? 'clearkey' : '',
+                license: (ch.keyId || ch.key_id) + ':' + (ch.key || ''),
+                cookie: ch.cookie || '',
+                referer: 'https://www.jiotv.com/'
+              }]
+            }));
+          }
+        } catch {
+          if (content.includes('#EXTINF') || content.includes('#EXTM3U')) {
+            parsed = parseM3U(content);
+          } else if (content.includes('<!DOCTYPE') || content.includes('<html')) {
+            debugInfo.push(`${source.name}: HTML`);
+            continue;
+          }
         }
 
-        debugInfo.push(`${source.name}: fetched ${content.length} bytes`);
+        debugInfo.push(`${source.name}: ${parsed.length} channels`);
 
-        if (!content || content.length < 10) {
-          debugInfo.push(`${source.name}: EMPTY response`);
-          continue;
-        }
-
-        if (content.includes('<!DOCTYPE') || content.includes('<html')) {
-          debugInfo.push(`${source.name}: Got HTML instead of M3U`);
-          continue;
-        }
-
-        const parsed = parseM3U(content);
-        debugInfo.push(`${source.name}: parsed ${parsed.length} channels`);
-
-        // parseM3U() returns channels shaped as
-        // { name, logo, group, language, servers: [{ name, url, drm, license }] }
-        // — there is NO top-level `ch.url`. We flatten each channel's servers
-        // back into the flat shape that addCh() expects, and merge those.
         for (const ch of parsed) {
           if (!ch.servers || ch.servers.length === 0) continue;
           for (const srv of ch.servers) {
             if (!srv.url || srv.url.length < 5) continue;
             const flat = {
-              name: ch.name,
-              logo: ch.logo,
-              group: ch.group,
-              language: ch.language,
+              name: ch.name, logo: ch.logo, group: ch.group, language: ch.language,
               clearKey: srv.drm ? srv.license : null,
+              cookie: srv.cookie || '',
+              referer: srv.referer || '',
               url: srv.url
             };
             if (!shouldKeep(flat, filter)) continue;
@@ -106,7 +108,6 @@ export default async function handler(req, res) {
     }
 
     const channels = Object.values(channelMap);
-
     let playlist = '#EXTM3U\n';
     playlist += `# CHILL BOX - ${channels.length} channels\n`;
     playlist += `# Debug: ${debugInfo.join(' | ')}\n`;
@@ -118,6 +119,8 @@ export default async function handler(req, res) {
           playlist += `#EXTINF:-1 tvg-language="${ch.language||''}" tvg-logo="${ch.logo||''}" group-title="${ch.group||'Chill Box'}" server-name="${srv.name}",${ch.name}\n`;
           if (srv.drm) playlist += `#KODIPROP:inputstream.adaptive.license_type=${srv.drm}\n`;
           if (srv.license) playlist += `#KODIPROP:inputstream.adaptive.license_key=${srv.license}\n`;
+          if (srv.cookie) playlist += `#EXTVLCOPT:http-cookie=${srv.cookie}\n`;
+          if (srv.referer) playlist += `#EXTVLCOPT:http-referrer=${srv.referer}\n`;
           playlist += `${srv.url}\n`;
         }
       }
@@ -147,46 +150,47 @@ function fetchUrl(url) {
   return new Promise((resolve) => {
     const client = url.startsWith('https') ? https : http;
     const req = client.get(url, {
-      headers: {
-        // A realistic Chrome UA gets redirected by some sources (e.g. Clarity TV)
-        // to a promo/landing page instead of the real M3U. A plain, non-browser
-        // UA — matching what curl/cmd-line tools send — gets the real content.
-        'User-Agent': 'IPTVPlayer/1.0',
-        'Accept': '*/*',
-      },
+      headers: { 'User-Agent': 'IPTVPlayer/1.0', 'Accept': '*/*' },
       timeout: 20000
     }, (response) => {
       if (response.statusCode >= 300 && response.statusCode < 400 && response.headers.location) {
         fetchUrl(response.headers.location).then(resolve);
         return;
       }
-      if (response.statusCode !== 200) {
-        resolve({ content: '', error: `HTTP ${response.statusCode}` });
-        return;
-      }
+      if (response.statusCode !== 200) { resolve({ content: '', error: `HTTP ${response.statusCode}` }); return; }
       let data = '';
       response.on('data', chunk => data += chunk);
       response.on('end', () => resolve({ content: data, error: null }));
-      response.on('error', (err) => resolve({ content: '', error: `stream error: ${err.message}` }));
+      response.on('error', (err) => resolve({ content: '', error: err.message }));
     });
-    req.on('error', (err) => resolve({ content: '', error: `${err.code || 'ERROR'}: ${err.message}` }));
-    req.on('timeout', () => { req.destroy(); resolve({ content: '', error: 'timeout after 20s' }); });
+    req.on('error', (err) => resolve({ content: '', error: err.message }));
+    req.on('timeout', () => { req.destroy(); resolve({ content: '', error: 'timeout' }); });
   });
 }
 
 function parseM3U(content) {
   const lines = content.split('\n');
   const channels = {};
-  let cur = { name: '', logo: null, group: 'Chill Box', language: '', clearKey: null, url: null, serverName: null };
-  let pendingClearKey = null;
+  let cur = { name: '', logo: null, group: 'Chill Box', language: '', clearKey: null, cookie: null, referer: null, url: null };
+  let pendingClearKey = null, pendingCookie = null, pendingReferer = null;
 
   for (const line of lines) {
     const l = line.trim();
     if (!l) continue;
+
     if (l.startsWith('#KODIPROP:') && l.includes('license_key=')) {
       pendingClearKey = l.split('license_key=')[1]?.trim();
       continue;
     }
+    if (l.startsWith('#EXTVLCOPT:http-cookie=')) {
+      pendingCookie = l.split('http-cookie=')[1]?.trim();
+      continue;
+    }
+    if (l.startsWith('#EXTVLCOPT:http-referrer=')) {
+      pendingReferer = l.split('http-referrer=')[1]?.trim();
+      continue;
+    }
+
     if (l.startsWith('#EXTINF:')) {
       if (cur.url && cur.name && cur.url.length > 5) addCh(channels, cur);
       cur = {
@@ -195,15 +199,16 @@ function parseM3U(content) {
         group: (l.match(/group-title="([^"]+)"/) || [])[1] || 'Chill Box',
         language: (l.match(/tvg-language="([^"]+)"/) || [])[1] || '',
         clearKey: pendingClearKey,
-        url: null,
-        serverName: null
+        cookie: pendingCookie,
+        referer: pendingReferer,
+        url: null
       };
-      pendingClearKey = null;
+      pendingClearKey = null; pendingCookie = null; pendingReferer = null;
     } else if ((l.startsWith('https://') || l.startsWith('http://')) && !l.startsWith('#')) {
       cur.url = l;
       if (cur.name && cur.url.length > 5) {
         addCh(channels, cur);
-        cur = { name: '', logo: null, group: 'Chill Box', language: '', clearKey: null, url: null, serverName: null };
+        cur = { name: '', logo: null, group: 'Chill Box', language: '', clearKey: null, cookie: null, referer: null, url: null };
       }
     }
   }
@@ -212,7 +217,7 @@ function parseM3U(content) {
 }
 
 function shouldKeep(channel, filter) {
-  if (!filter) return true;
+  if (!filter || filter.mode === 'none') return true;
   const name = (channel.name || '').toLowerCase().trim();
   if (!filter.groups || Object.keys(filter.groups).length === 0) return true;
   for (const g of Object.values(filter.groups)) {
@@ -225,13 +230,24 @@ function shouldKeep(channel, filter) {
 
 function addCh(dict, ch) {
   if (!ch.url || ch.url.length < 5) return;
+  // Strip | suffix from Hotstar URLs
+  let cleanUrl = ch.url;
+  if (cleanUrl.includes('|')) cleanUrl = cleanUrl.substring(0, cleanUrl.indexOf('|'));
+  
   let base = ch.name.replace(/\s+(HD|SD|4K|FHD|UHD)\s*$/gi, '').trim();
   if (!base) base = ch.name.trim();
-  const srv = { name: 'SD', url: ch.url, drm: ch.clearKey ? 'clearkey' : '', license: ch.clearKey || '' };
+  const srv = {
+    name: 'SD',
+    url: cleanUrl,
+    drm: ch.clearKey ? 'clearkey' : '',
+    license: ch.clearKey || '',
+    cookie: ch.cookie || '',
+    referer: ch.referer || ''
+  };
   const id = base.toLowerCase().replace(/[^a-z0-9_]/g, '_');
   if (!dict[id]) {
     dict[id] = { id, name: base, language: ch.language, logo: ch.logo, group: ch.group || 'Chill Box', servers: [srv] };
   } else {
-    if (!dict[id].servers.some(s => s.url === ch.url)) dict[id].servers.push(srv);
+    if (!dict[id].servers.some(s => s.url === cleanUrl)) dict[id].servers.push(srv);
   }
 }

@@ -30,6 +30,11 @@
     "enabled": true
   },
   {
+    "name": "JioTV 1",
+    "url": "https://servertvhub.site/jio1290/app/playlist.php?id=Jiotv+",
+    "enabled": true
+  },
+  {
     "name": "sports",
     "url": "https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/refs/heads/main/ALL.m3u",
     "enabled": true

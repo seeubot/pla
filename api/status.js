@@ -15,6 +15,6 @@ export default function handler(req, res) {
     title: "Update Required",
     message: "Please update Chill Box to the latest version",
     apkUrl: "",
-    telegram: "https://t.me/+PEc2GpjasuExYzFl"
+    telegram: "https://t.me/livetvappiptv/37"
   });
 }

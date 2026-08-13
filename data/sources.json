@@ -4,6 +4,12 @@
     "url": "https://cdn.jsdelivr.net/gh/amitfunny/sunnxt.m3u@main/index.html",
     "enabled": true
   },
+  
+  {
+    "name": "willow M3U",
+    "url": "https://raw.githubusercontent.com/srhady/willow-event/refs/heads/main/live_sports.json",
+    "enabled": true
+  },
   {
     "name": "Mrgify BDIX IPTV",
     "url": "https://raw.githubusercontent.com/abusaeeidx/Mrgify-BDIX-IPTV/refs/heads/main/Channels_data.json",

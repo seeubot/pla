@@ -11,7 +11,7 @@ export default function handler(req, res) {
     maintenance: false,
     update: true, // Set to true when you want to force update
     version: "1.0.1",
-    versionCode: 2,
+    versionCode: 4,
     title: "Update Required",
     message: "Please update Chill Box to the latest version",
     apkUrl: "https://serverfile-sigma.vercel.app/chillbox-v1.0.1.apk",

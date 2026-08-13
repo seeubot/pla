@@ -6,6 +6,11 @@
   },
   
   {
+    "name": "star M3U",
+    "url": "https://raw.githubusercontent.com/sportlive18/Hotstar-Auto-Update/refs/heads/main/playlist.m3u",
+    "enabled": true
+  },
+  {
     "name": "willow M3U",
     "url": "https://raw.githubusercontent.com/srhady/willow-event/refs/heads/main/live_sports.json",
     "enabled": true

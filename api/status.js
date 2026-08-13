@@ -14,7 +14,7 @@ export default function handler(req, res) {
     versionCode: 4,
     title: "Update Required",
     message: "Please update Chill Box to the latest version",
-    apkUrl: "https://serverfile-sigma.vercel.app/chillbox-v1.0.1.apk",
+    apkUrl: "",
     telegram: "https://t.me/+PEc2GpjasuExYzFl"
   });
 }

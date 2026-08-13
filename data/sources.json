@@ -57,8 +57,8 @@
   },
   {
     "name": "allinone",
-    "url": "https://raw.githubusercontent.com/seeubot/pla/refs/heads/main/data/channels.json",
-    "enabled": false
+    "url": "https://raw.githubusercontent.com/seeubot/T/refs/heads/main/video.m3u",
+    "enabled": true
   },
   {
     "name": "Clarity TV",

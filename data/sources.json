@@ -114,7 +114,7 @@
     "url": "https://clarity-tv.vercel.app/api/playlist/?id=ALLINONE",
     "enabled": true,
     "filter": {
-      "keywords": ["Zee Telugu", "Zee Tamil", "sony"],
+      "keywords": ["Zee Telugu","SUN TV", "gemini", "Zee Tamil", "sony"],
       "groups": [],
       "exclude": []
     }
